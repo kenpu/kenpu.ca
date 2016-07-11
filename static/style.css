@@ -1,0 +1,70 @@
+body {
+    font-family: "ETBembo";
+    font-size: 14pt;
+    margin: 0;
+    padding: 0;
+}
+
+img.media-object {
+    max-width: 64px;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+img.media-object:hover {
+    opacity: 1.0;
+}
+
+h1,h2 {
+    font-family: Roboto;
+    font-weight: 300;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child {margin-top: 0;}
+
+h1 { border-bottom: thin solid #aaa; }
+
+p:last-child {
+    margin: 0;
+}
+
+hr {
+    border-color: #888;
+}
+
+table {
+    width: 100%;
+    font-family: Roboto;
+    font-size: 85%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+table td {
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+table th {
+    background: #eee;
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+/* =========== PDF ============== */
+div.pdf {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+div.pdf > a {
+    display: inline-block;
+    font-size: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div.pdf > canvas {
+    display: inline-block;
+}

@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+<div class="container">
+    <!-- ================================ -->
+    {{ range where .Site.Pages ".Params.frontpage" "yes"}}
+    <div class="{{.Params.name}}">
+        <a name="{{.Params.name}}"></a>
+        {{.Content}}
+    </div>
+    {{ end }}
+</div>
+
+
+{{ partial "footer.html" . }}
