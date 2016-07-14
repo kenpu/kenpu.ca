@@ -5,16 +5,17 @@ body {
     padding: 0;
 }
 
-img.media-object {
+/* ====== Media ========= */
+.index img.media-object {
     max-width: 64px;
-    border-radius: 50%;
     opacity: 0.6;
 }
-img.media-object:hover {
+.index img.media-object:hover {
     opacity: 1.0;
 }
+/* ====== End of Media ===== */
 
-h1,h2 {
+h1,h2,h3,h4,h5 {
     font-family: Roboto;
     font-weight: 300;
 }
@@ -22,7 +23,7 @@ h1:first-child,
 h2:first-child,
 h3:first-child {margin-top: 0;}
 
-h1 { border-bottom: thin solid #aaa; }
+.index > h1 { border-bottom: thin solid #aaa; }
 
 p:last-child {
     margin: 0;
@@ -30,6 +31,10 @@ p:last-child {
 
 hr {
     border-color: #888;
+}
+
+blockquote blockquote {
+    border-left: none;
 }
 
 table {
@@ -50,6 +55,11 @@ table th {
     border: 1px solid #aaa;
     border-collapse: collapse;
     padding: 10px;
+}
+
+.panel-body > h1 {
+    font-size: 100%;
+    font-weight: 500;
 }
 
 /* =========== PDF ============== */

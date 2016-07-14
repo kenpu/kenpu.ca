@@ -1,0 +1,82 @@
+{{define "pub"}}
+    <h1 style="font-family: ETBembo;
+               font-style: italic;">{{.year}}</h1>
+    <ul style="font-size:80%;
+               list-style: none">
+        {{range .papers}}
+        <li style="padding: 5px 0 15px 0">
+            <span>{{.authors}}</span>,
+            <span>{{.title}}</span>,
+            <span>{{.publication}}</span>
+        </li>
+        {{end}}
+    </ul>
+{{end}}
+
+<div class="row">
+    <div class="col-md-6">
+        <!-- ==== Journals ====== -->
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Journals
+                </h3>
+            </div>
+            <div class="panel-body">
+            {{ range .Site.Data.publications.journal }}
+                {{ block "pub" . }}{{end}}
+            {{ end }}
+            </div>
+        </div>
+
+        <!-- ==== Patents ====== -->
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Patents
+                </h3>
+            </div>
+            <div class="panel-body">
+            {{ range .Site.Data.publications.patent }}
+                {{ block "pub" . }}{{end}}
+            {{ end }}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+        <!-- ==== Conferences ====== -->
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Conferences
+                </h3>
+            </div>
+            <div class="panel-body">
+             {{ range .Site.Data.publications.conference }}
+                {{ block "pub" . }}{{end}}
+            {{ end }}
+           </div>
+        </div>
+        
+        <!-- ==== Reports ====== -->
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Theses & Technical Reports
+                </h3>
+            </div>
+            <div class="panel-body">
+            {{ range .Site.Data.publications.other }}
+                {{ block "pub" . }}{{end}}
+            {{ end }}
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</div>
