@@ -4,7 +4,9 @@ name = "hedrick"
 weight = 2015
 +++
 
-Adele Hedrick
+> **Adele Hedrick**
 
 > Master in Computer Science
+
+> *Building a mobile recommender system*
 

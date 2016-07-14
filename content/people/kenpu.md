@@ -3,13 +3,13 @@ role = "faculty"
 name = "kenpu"
 +++
 
-Ken Pu
-
+> **Ken Pu**
+>
 > Associate Professor <br>
 > [Computer Science](http://www.science.uoit.ca/undergraduate/programs-and-information-for-prospective-students/computing-science/) /
 > [Faculty of Science, UOIT](http://science.uoit.ca)
 
-Contact
+*Contact*
 
 > Email: `ken.pu@uoit.ca`
 >

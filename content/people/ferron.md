@@ -4,6 +4,8 @@ weight = 2014
 name = "ferron"
 +++
 
-Michael Ferron
-
+> **Michael Ferron**
+>
 > Master in Computer Science
+>
+> *Working on pixel level visualization of Big Data.*

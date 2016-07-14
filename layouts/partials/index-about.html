@@ -2,7 +2,11 @@
     <div class="media">
       <div class="media-left">
         <a href="#">
+            {{ if .Params.name }}
             <img class="media-object" src="/images/{{.Params.name}}.jpg">
+            {{ else }}
+            <i class="fa fa-user" style="font-size: 64px"></i>
+            {{ end }}
         </a>
       </div>
       <div class="media-body">{{.Content}}</div>

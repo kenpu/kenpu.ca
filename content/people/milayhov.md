@@ -1,8 +1,12 @@
 +++
 role = "undergrad"
-name = "mihaylov"
 weight = 2016
 +++
 
-Alex Mihaylov
+> **Alex Mihaylov**
+>
+> Summer research student
+>
+> *Working on boolean-decision diagram based algorithms*
+
 
