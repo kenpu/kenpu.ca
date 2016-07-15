@@ -1,46 +1,47 @@
 Authors,Type,Title,Publication,Volume,Number,Pages,Year,Publisher
-"Yu, Xiaohui; Pu, Ken Q; Koudas, Nick; ",conference,Monitoring k-nearest neighbor queries over moving objects,21st International Conference on Data Engineering (ICDE'05),,,631-642,2005,IEEE
-"Pu, Ken; Hristidis, Vagelis; Koudas, Nick; ",conference,Syntactic rule based approach toweb service composition,22nd International Conference on Data Engineering (ICDE'06),,,31-31,2006,IEEE
+"Pu, Ken Qian; ",conference,Theory Of Discrete Wavelet Transform And An Error Analysis Of The Pyramid Algorithm,,,,,1998,Citeseer
+"Pu, Ken; ",other,"Education BASc, University of Toronto, Division of Engineering Science, 1998 MASc, University of Toronto, Department of Electrical and Computer Engineering, 2000. Thesis title:“Modeling and control of hierarchical discrete event",,,,,1998,University of Ontario Institute of Technology
 "Pu, Ken Qian; ",conference,Modeling and control of discrete-event systems with hierarchical abstraction,,,,,2000,Citeseer
-"Pu, Ken Q; Yu, Xiaohui; ",journal,Keyword query cleaning,Proceedings of the VLDB Endowment,1,1,909-920,2008,VLDB Endowment
-"Zhu, Ying; Li, Baochun; Pu, Ken Qian; ",journal,Dynamic multicast in overlay networks with linear capacity constraints,IEEE Transactions on Parallel and Distributed Systems,20,7,925-939,2009,IEEE
-"Pu, Ken Q; Mendelzon, Alberto O; ",journal,Concise descriptions of subsets of structured sets,ACM Transactions on Database Systems (TODS),30,1,211-248,2005,ACM
+"Pu, KQ; ",other,Modeling and Control of Discrete-Event systems with Hierarchical abstraction. Ma sc,,,,,2000,"Thesis, Dept. of Electl. & Cmptr. Engrg., Univ. of Toronto"
 "Mendelzon, Alberto O; Pu, Ken Q; ",conference,Concise descriptions of subsets of structured sets,Proceedings of the twenty-second ACM SIGMOD-SIGACT-SIGART symposium on Principles of database systems,,,123-133,2003,ACM
+"Pu, Ken Q; ",conference,"Functional Integration of Relational, OLAP and XML Data",Proceedings of VLDB Workshop on Information Integration on the Web (IIWeb-2004),,,97,2004,
+"Yu, Xiaohui; Pu, Ken Q; Koudas, Nick; ",conference,Monitoring k-nearest neighbor queries over moving objects,21st International Conference on Data Engineering (ICDE'05),,,631-642,2005,IEEE
+"Pu, Ken Q; Mendelzon, Alberto O; ",journal,Concise descriptions of subsets of structured sets,ACM Transactions on Database Systems (TODS),30,1,211-248,2005,ACM
+"Pu, Ken Q; ",conference,"Modeling, querying and reasoning about OLAP databases: a functional approach",Proceedings of the 8th ACM international workshop on Data warehousing and OLAP,,,1-8,2005,ACM
+"Pu, Ken Q; Mendelzon, Alberto O; ",conference,Typed functional query languages with equational specifications,Proceedings of the 14th ACM international conference on Information and knowledge management,,,233-234,2005,ACM
+"Pu, Ken; Hristidis, Vagelis; Koudas, Nick; ",conference,Syntactic rule based approach toweb service composition,22nd International Conference on Data Engineering (ICDE'06),,,31-31,2006,IEEE
+"Pu, Qian Ken; ",other,On formal methods of multidimensional databases,,,,,2006,University of Toronto
+"Pu, Ken Q; ",other,Algorithm and Complexity of the Unification Problem of a Polymorphic Attribute-based Type System,,,,,2006,
+"Pu, Ken Q; Zhu, Ying; ",conference,Efficient indexing of heterogeneous data streams with automatic performance configurations,"Scientific and Statistical Database Management, 2007. SSBDM'07. 19th International Conference on",,,34-34,2007,IEEE
+"Chandel, Amit; Koudas, Nick; Pu, Ken Q; Srivastava, Divesh; ",conference,Fast identification of relational constraint violations,2007 IEEE 23rd International Conference on Data Engineering,,,776-785,2007,IEEE
+"Pu, Ken Q; ",conference,Service description and analysis from a type theoretic approach,"Data Engineering Workshop, 2007 IEEE 23rd International Conference on",,,379-386,2007,IEEE
+"Pu, Ken Q; Zhu, Ying; ",conference,Efficient Indexing of Heterogeneous Data Streams with Automatic Performance Tuning,SSDBM’07,,,34-42,2007,
+"Zhu, Ying; Pu, Ken Q; ",conference,Fast Archiving and Querying of Heterogeneous Sensor Data Streams,,,,,2007,
+"Pu, Ken Q; Yu, Xiaohui; ",journal,Keyword query cleaning,Proceedings of the VLDB Endowment,1,1,909-920,2008,VLDB Endowment
 "Malloy, William Earl; Pu, Ken Qian; ",patent,Methods to identify related data in a multidimensional database,,,,,2008,"US Patent 7,472,127"
+"Zhu, Ying; Pu, Ken Q; ",conference,Adaptive multicast tree construction for elastic data streams,IEEE GLOBECOM 2008-2008 IEEE Global Telecommunications Conference,,,1-5,2008,IEEE
+"Pu, Ken Q; Zhu, Ying; ",conference,Modeling and synthesis of service composition using tree automata,"Information Reuse and Integration, 2008. IRI 2008. IEEE International Conference on",,,46-51,2008,IEEE
+"Zhu, Ying; Li, Baochun; Pu, Ken Qian; ",journal,Dynamic multicast in overlay networks with linear capacity constraints,IEEE Transactions on Parallel and Distributed Systems,20,7,925-939,2009,IEEE
 "Pu, Ken Q; ",conference,Keyword query cleaning using hidden markov models,Proceedings of the First International Workshop on Keyword Search on Structured Data,,,27-32,2009,ACM
 "Bourennani, Farid; Pu, Ken Q; Zhu, Ying; ",conference,Visual integration tool for heterogeneous data type by unified vectorization,"Information Reuse & Integration, 2009. IRI'09. IEEE International Conference on",,,132-137,2009,IEEE
 "Bourennani, Farid; Pu, Ken Q; Zhu, Ying; ",conference,Visualization and integration of databases using self-organizing map,"Advances in Databases, Knowledge, and Data Applications, 2009. DBKDA'09. First International Conference on",,,155-160,2009,IEEE
-"Pu, Ken Q; Hassanzadeh, Oktie; Drake, Richard; Miller, Renée J; ",conference,Online annotation of text streams with structured entities,Proceedings of the 19th ACM international conference on Information and knowledge management,,,29-38,2010,ACM
 "Pu, Ken Q; Yu, Xiaohui; ",conference,Frisk: Keyword query cleaning and processing in action,2009 IEEE 25th International Conference on Data Engineering,,,1531-1534,2009,IEEE
-"Pu, Ken Q; ",conference,"Modeling, querying and reasoning about OLAP databases: a functional approach",Proceedings of the 8th ACM international workshop on Data warehousing and OLAP,,,1-8,2005,ACM
-"Pu, Ken Q; Zhu, Ying; ",conference,Efficient indexing of heterogeneous data streams with automatic performance configurations,"Scientific and Statistical Database Management, 2007. SSBDM'07. 19th International Conference on",,,34-34,2007,IEEE
-"Pu, Ken Q; Cheung, Russell; ",conference,Tag grid: supporting collaborative and fuzzy multidimensional queries of tagged datasets,"Information Reuse and Integration (IRI), 2010 IEEE International Conference on",,,364-367,2010,IEEE
-"Zhu, Ying; Pu, Ken Q; ",conference,Adaptive multicast tree construction for elastic data streams,IEEE GLOBECOM 2008-2008 IEEE Global Telecommunications Conference,,,1-5,2008,IEEE
-"Chandel, Amit; Koudas, Nick; Pu, Ken Q; Srivastava, Divesh; ",conference,Fast identification of relational constraint violations,2007 IEEE 23rd International Conference on Data Engineering,,,776-785,2007,IEEE
 "Zhu, Ying; Howard, William; Pu, Ken Q; ",conference,Spatial Inference Using Networks of RFID Receiver: A Bayesian Approach.,GLOBECOM,,,1-6,2009,
-"Pu, Qian Ken; ",other,On formal methods of multidimensional databases,,,,,2006,University of Toronto
-"Pu, Ken Q; Zhu, Ying; ",conference,Modeling and synthesis of service composition using tree automata,"Information Reuse and Integration, 2008. IRI 2008. IEEE International Conference on",,,46-51,2008,IEEE
 "Bourennani, Farid; Pu, Ken Q; Zhu, Ying; ",journal,Unified Vectorization of Numerical and Textual Data using Self-Organizing Map,"International Journal on Advances in Systems and Measurements Volume 2, Numbers 2&3, 2009",,,,2009,
-"Pu, Ken Q; ",conference,Service description and analysis from a type theoretic approach,"Data Engineering Workshop, 2007 IEEE 23rd International Conference on",,,379-386,2007,IEEE
-"Rachevsky, Lev; Pu, Ken Q; ",conference,Selection of features for surname classification,"Information Reuse and Integration (IRI), 2011 IEEE International Conference on",,,15-20,2011,IEEE
-"Pu, Ken Q; Mendelzon, Alberto O; ",conference,Typed functional query languages with equational specifications,Proceedings of the 14th ACM international conference on Information and knowledge management,,,233-234,2005,ACM
-"Pu, Ken Qian; ",conference,Theory Of Discrete Wavelet Transform And An Error Analysis Of The Pyramid Algorithm,,,,,1998,Citeseer
+"Pu, Ken Q; Hassanzadeh, Oktie; Drake, Richard; Miller, Renée J; ",conference,Online annotation of text streams with structured entities,Proceedings of the 19th ACM international conference on Information and knowledge management,,,29-38,2010,ACM
+"Pu, Ken Q; Cheung, Russell; ",conference,Tag grid: supporting collaborative and fuzzy multidimensional queries of tagged datasets,"Information Reuse and Integration (IRI), 2010 IEEE International Conference on",,,364-367,2010,IEEE
 "Q Pu, Ken; ",journal,Recent Patents on Information Retrieval Using Natural Language and Keyword Query,Recent Patents on Computer Science,3,3,186-194,2010,Bentham Science Publishers
-"Pu, Ken Q; Zhu, Ying; ",conference,Efficient Indexing of Heterogeneous Data Streams with Automatic Performance Tuning,SSDBM’07,,,34-42,2007,
-"Zhu, Ying; Pu, Ken Q; ",conference,Fast Archiving and Querying of Heterogeneous Sensor Data Streams,,,,,2007,
-"Pu, Ken Q; ",conference,"Functional Integration of Relational, OLAP and XML Data",Proceedings of VLDB Workshop on Information Integration on the Web (IIWeb-2004),,,97,2004,
+"Rachevsky, Lev; Pu, Ken Q; ",conference,Selection of features for surname classification,"Information Reuse and Integration (IRI), 2011 IEEE International Conference on",,,15-20,2011,IEEE
+"Hassanzadeh, Oktie; Pu, Ken Q; Yeganeh, Soheil Hassas; Miller, Renée J; Popa, Lucian; Hernández, Mauricio A; Ho, Howard; ",conference,Linkage Points over Web Data,Linking Semistructured Data on the Web. In WebDB,,,,2011,
 "Pu, Ken Q; Cheung, Russell; ",journal,Tag Grid: Supporting Multidimensional Queries of Tagged Datasets,Recent Trends in Information Reuse and Integration,,,331-342,2012,Springer Vienna
 "Malloy, William Earl; Pu, Ken Qian; ",patent,Systems and computer program products to identify related data in a multidimensional database,,,,,2012,"US Patent 8,126,871"
-"Pu, Ken Q; ",other,Algorithm and Complexity of the Unification Problem of a Polymorphic Attribute-based Type System,,,,,,
 "Helala, Mohamed A; Pu, Ken Q; Qureshi, Faisal Z; ",conference,Road boundary detection in challenging scenarios,"Advanced Video and Signal-Based Surveillance (AVSS), 2012 IEEE Ninth International Conference on",,,428-433,2012,IEEE
 "Hedrick, Adele; Pu, Ken Q; ",journal,Authoring relational queries on the mobile devices,Procedia Computer Science,10,,752-757,2012,Elsevier
 "Hassanzadeh, Oktie; Pu, Ken Q; Yeganeh, Soheil Hassas; Miller, Renée J; Popa, Lucian; Hernández, Mauricio A; Ho, Howard; ",journal,Discovering linkage points over web data,Proceedings of the VLDB Endowment,6,6,445-456,2013,VLDB Endowment
 "Helala, Mohamed A; Pu, Ken Q; Qureshi, Faisal Z; ",conference,A stream algebra for computer vision pipelines,Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops,,,786-793,2014,
 "Helala, Mohamed A; Pu, Ken Q; Qureshi, Faisal Z; ",conference,Towards Efficient Feedback Control in Streaming Computer Vision Pipelines,Asian Conference on Computer Vision,,,314-329,2014,Springer International Publishing
-"Yu, Ziqiang; Liu, Yang; Yu, Xiaohui; Pu, Ken Q; ",journal,Scalable distributed processing of K nearest neighbor queries over moving objects,IEEE Transactions on Knowledge and Data Engineering,27,5,1383-1396,2015,IEEE
 "Drake, Richard; Pu, Ken Q; ",conference,Using document space for relational search,"Information Reuse and Integration (IRI), 2014 IEEE 15th International Conference on",,,841-844,2014,IEEE
-"Pu, KQ; ",other,Modeling and Control of Discrete-Event systems with Hierarchical abstraction. Ma sc,,,,,2000,"Thesis, Dept. of Electl. & Cmptr. Engrg., Univ. of Toronto"
+"Yu, Ziqiang; Liu, Yang; Yu, Xiaohui; Pu, Ken Q; ",journal,Scalable distributed processing of K nearest neighbor queries over moving objects,IEEE Transactions on Knowledge and Data Engineering,27,5,1383-1396,2015,IEEE
 "Helala, Mohamed A; Qureshi, Faisal Z; Pu, Ken Q; ",journal,Automatic parsing of lane and road boundaries in challenging traffic scenes,Journal of Electronic Imaging,24,5,053020-053020,2015,International Society for Optics and Photonics
-"Hassanzadeh, Oktie; Pu, Ken Q; Yeganeh, Soheil Hassas; Miller, Renée J; Popa, Lucian; Hernández, Mauricio A; Ho, Howard; ",conference,Linkage Points over Web Data,Linking Semistructured Data on the Web. In WebDB,,,,2011,
-"Zhu, Erkang; Nargesian, Fatemeh; Pu, Ken Q; Miller, Renée J; ",other,LSH Ensemble: Internet Scale Domain Search,arXiv preprint arXiv:1603.07410,,,,2016,
-"Pu, Ken; ",other,"Education BASc, University of Toronto, Division of Engineering Science, 1998 MASc, University of Toronto, Department of Electrical and Computer Engineering, 2000. Thesis title:“Modeling and control of hierarchical discrete event",,,,,1998,University of Ontario Institute of Technology
+"Zhu, Erkang; Nargesian, Fatemeh; Pu, Ken Q; Miller, Renée J; ",journal,LSH Ensemble: Internet Scale Domain Search,Proceedings of the VLDB Endowment,,,to appear,2016,VLDB Endowment
+"Ferron, Michael; Pu, Ken Q; Szlichta, Jaroslaw;",conference,ARC: A Pipeline Approach Enabling Large-Scale Graph Visualization,The 2016 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining,,,to appear,2016,

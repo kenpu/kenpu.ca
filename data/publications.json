@@ -32,6 +32,19 @@
    "papers": [
     {
      "publisher": "", 
+     "authors": "Ferron, Michael; Pu, Ken Q; Szlichta, Jaroslaw;", 
+     "publication": "The 2016 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining pp. to appear, 2016", 
+     "title": "ARC: A Pipeline Approach Enabling Large-Scale Graph Visualization", 
+     "year": "2016", 
+     "type": "conference"
+    }
+   ], 
+   "year": "2016"
+  }, 
+  {
+   "papers": [
+    {
+     "publisher": "", 
      "authors": "Helala, Mohamed A; Pu, Ken Q; Qureshi, Faisal Z; ", 
      "publication": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops pp. 786-793, 2014", 
      "title": "A stream algebra for computer vision pipelines", 
@@ -322,6 +335,19 @@
   {
    "papers": [
     {
+     "publisher": "VLDB Endowment", 
+     "authors": "Zhu, Erkang; Nargesian, Fatemeh; Pu, Ken Q; Miller, Ren\u00e9e J; ", 
+     "publication": "Proceedings of the VLDB Endowment pp. to appear, 2016, VLDB Endowment", 
+     "title": "LSH Ensemble: Internet Scale Domain Search", 
+     "year": "2016", 
+     "type": "journal"
+    }
+   ], 
+   "year": "2016"
+  }, 
+  {
+   "papers": [
+    {
      "publisher": "IEEE", 
      "authors": "Yu, Ziqiang; Liu, Yang; Yu, Xiaohui; Pu, Ken Q; ", 
      "publication": "IEEE Transactions on Knowledge and Data Engineering 27 (5) pp. 1383-1396, 2015, IEEE", 
@@ -439,23 +465,18 @@
   {
    "papers": [
     {
-     "publisher": "", 
-     "authors": "Zhu, Erkang; Nargesian, Fatemeh; Pu, Ken Q; Miller, Ren\u00e9e J; ", 
-     "publication": "arXiv preprint arXiv:1603.07410, 2016", 
-     "title": "LSH Ensemble: Internet Scale Domain Search", 
-     "year": "2016", 
-     "type": "other"
-    }
-   ], 
-   "year": "2016"
-  }, 
-  {
-   "papers": [
-    {
      "publisher": "University of Toronto", 
      "authors": "Pu, Qian Ken; ", 
      "publication": ", 2006, University of Toronto", 
      "title": "On formal methods of multidimensional databases", 
+     "year": "2006", 
+     "type": "other"
+    }, 
+    {
+     "publisher": "", 
+     "authors": "Pu, Ken Q; ", 
+     "publication": ", 2006", 
+     "title": "Algorithm and Complexity of the Unification Problem of a Polymorphic Attribute-based Type System", 
      "year": "2006", 
      "type": "other"
     }
@@ -487,19 +508,6 @@
     }
    ], 
    "year": "1998"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "", 
-     "authors": "Pu, Ken Q; ", 
-     "publication": "", 
-     "title": "Algorithm and Complexity of the Unification Problem of a Polymorphic Attribute-based Type System", 
-     "year": "", 
-     "type": "other"
-    }
-   ], 
-   "year": "Others"
   }
  ]
 }

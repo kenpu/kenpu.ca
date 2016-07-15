@@ -1,16 +1,64 @@
 
-var RE = /col:md=(\d+)/;
+function resize_images() {
+    var re = /width=(\d+)/;
+    $("img[alt]").each(function() {
+        var $this = $(this);
+        var alt = $this.attr("alt");
+        var m = re.exec(alt);
+        if(m) {
+            w = m[1];
+            $this.attr("width", w);
+        }
+    });
+}
 
-var parse = function(text) {
-    var m = RE.exec(text);
-    if(m) {
-        console.debug(m[1]);
+function imaged_blocks() {
+    function imaged_block($b, $i, image_on_left) {
+        $i.detach();
+        $i = $("<figure>").append(
+                $i,
+                $("<figcaption>").text($i.attr("alt")));
+
+        var c1 = $("<div class='col-md-6'>");
+        var c2 = $("<div class='col-md-6'>");
+        var div = $("<div class='row imaged-block'>").append(c2);
+        if(image_on_left) {
+            $b.wrap(div).closest(".row").prepend(c1.append($i));
+            $i.css('float', 'right');
+        } else {
+            $b.wrap(div).closest(".row").append(c1.append($i));
+            $b.find("p").css({
+                textAlign: "right"
+            });
+        }
     }
-};
+
+    $("blockquote").each(function() {
+        var $blockquote = $(this);
+        var $img = $("img", $blockquote);
+        var $p = $img.parent();
+
+        if($img.size() == 1 && $p.children().size() == 1) {
+            if($p.index() == 0) {
+                imaged_block($blockquote, $img, true);
+            } else {
+                imaged_block($blockquote, $img, false);
+            }
+        }
+    });
+}
 
 $(function() {
-    $("a").each(function() {
-        var text = $(this).text();
-        parse(text);
-    });
+    resize_images();
+    imaged_blocks();
 });
+
+function row(a, c1, b, c2) {
+    var div = $("<div class=row>");
+    var col1 = $("<div class=col-md-" + c1 + ">");
+    var col2 = $("<div class=col-md-" + c2 + ">");
+    div.append(col1, col2);
+    col1.append(a);
+    col2.append(b);
+    return div;
+}

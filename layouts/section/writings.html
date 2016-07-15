@@ -1,0 +1,26 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+<div class="container-fluid"
+     style="padding-top: 50px" >
+    <div class="row">
+        <div class="col-md-2"
+             style="background: #afa;
+                    padding: 20px;">
+            <h2>Writings</h2>
+            <p style="font-style: italic;
+                      margin-top: 20px">
+            A Computer Scientist's view on things.
+            </p>
+        </div>
+        <div class="col-md-8" style="padding-top: 20px">
+            <div class="list-group">
+            {{ range .Data.Pages }}
+                {{ .Render "list" }}
+            {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
