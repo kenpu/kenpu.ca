@@ -3,7 +3,7 @@ TARGET = kenpuca.github.io
 dev: pubs
 	hugo server -w
 
-deploy: pubs db kenpu github
+deploy: pubs db github
 	hugo
 	cp -R ./public/* ../$(TARGET)/
 	cd ../$(TARGET)/; git add --all .; git commit -m 'new'; git push
