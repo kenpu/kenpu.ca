@@ -14,8 +14,14 @@
     </div>
 {{ end }}
 
-<div class="row">
-    {{ range .Site.Sections.projects }}
-    {{ block "project" .Page }}{{end}}
+<div class="research">
+    {{ range $i, $p := .Site.Sections.projects }}
+        {{ if modBool $i 3 }}
+        <div class="row">
+        {{ end }}
+        {{ block "project" $p.Page }}{{end}}
+        {{ if modBool (add $i 1) 3 }}
+        </div>
+        {{ end }}
     {{ end }}
 </div>
