@@ -1,4 +1,3 @@
-
 function resize_images() {
     var re = /width=(\d+)/;
     $("img[alt]").each(function() {
@@ -48,9 +47,28 @@ function imaged_blocks() {
     });
 }
 
+function commands() {
+    $("a").each(function() {
+        var text = $(this).text().trim();
+        if(text == "!") {
+            var cmds = $(this).attr("href").split(":");
+            var cmd, arg;
+            cmd = cmds[0];
+            if(cmds.length > 1) {
+                arg = cmds[1];
+            }
+            var f = COMMANDS[cmd];
+            if(f) {
+                f(this, arg);
+            }
+        }
+    });
+}
+
 $(function() {
     resize_images();
     imaged_blocks();
+    commands();
 });
 
 function row(a, c1, b, c2) {
@@ -61,4 +79,26 @@ function row(a, c1, b, c2) {
     col1.append(a);
     col2.append(b);
     return div;
+}
+
+/* ===== COMMANDS ======= */
+var COMMANDS = {};
+
+// converts a blockquote to a well.
+COMMANDS["well"] = function(a) {
+    $(a).closest("blockquote").each(function() {
+        $(this).addClass("plain-block").wrap($("<div>").addClass("well"));
+    });
+    $(a).remove();
+};
+
+// alerts
+COMMANDS["alert"] = function(a, style) {
+    if(! style) style = "info";
+
+    $(a).closest("blockquote").each(function() {
+        $(this).addClass("plain-block").wrap($("<div>").addClass("alert alert-" + style));
+    });
+    $(a).remove();
+
 }

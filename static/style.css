@@ -5,7 +5,7 @@ body {
     padding: 0;
 }
 
-/* ====== Media ========= */
+/* >>>>> Media >>>>>>>>> */
 .index img.media-object {
     max-width: 64px;
     opacity: 0.9;
@@ -13,7 +13,7 @@ body {
 .index img.media-object:hover {
     opacity: 1.0;
 }
-/* ====== End of Media ===== */
+/* <<<<<< End of Media <<<<<< */
 
 /* ====== Imaged Block ===== */
 .imaged-block figcaption {
@@ -28,6 +28,12 @@ body {
     max-height: 400px;
 }
 /* ====== End of Imaged Block ===== */
+
+/* >>>>>> Welled blockquote >>>> */
+blockquote.plain-block {
+    border: none;
+    margin: 0;
+}
 
 h1,h2,h3,h4,h5 {
     font-family: Roboto;

@@ -1,5 +1,28 @@
 <script src="/js/jquery-2.2.1.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+{{ if .Params.math }}
+    <script type="text/javascript">
+      window.MathJax = {
+        showProcessingMessages: false,
+        messageStyle: "none",
+        tex2jax: {
+          inlineMath: [['$', '$'], ["\\(", "\\)"]],
+          processEscapes: true
+        },
+        "fast-preview": {disabled: true},
+        CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } },
+        TeX: { noErrors: { disabled: true } },
+        MathMenu: {
+          styles: {
+            ".MathJax_Menu": {"z-index":2001}
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML-full"></script>
+{{ end }}
 {{ if .Params.pdf }}
 <script src="/js/pdf.js"></script>
 <script>
