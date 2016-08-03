@@ -32,7 +32,7 @@ be using the Python programming language.
 
 - Sorting (chapter 2.1, 2.3, 6, 7, 8)
 
-    - Insertion sort
+    - [Insertion sort](insert-sort)
     - Mergesort
     - Quicksort
     - Comparison based sorting vs numeric sorting

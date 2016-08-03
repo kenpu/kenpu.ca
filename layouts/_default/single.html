@@ -1,8 +1,12 @@
-{{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
+{{ if .Params.slide }}
+    {{ partial "index-slide.html" . }}
+{{ else }}
+    {{ partial "header.html" . }}
+    {{ partial "navbar.html" . }}
 
-<div class="container" style="padding-top: 70px">
-    <div>{{.Content}}</div>
-</div>
+    <div class="container" style="padding-top: 70px">
+        <div>{{.Content}}</div>
+    </div>
 
-{{ partial "footer.html" . }}
+    {{ partial "footer.html" . }}
+{{ end }}

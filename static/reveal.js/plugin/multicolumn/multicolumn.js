@@ -30,10 +30,16 @@
     }
 
     function parseColumnWidths(cmd) {
-        var widths = cmd.replace(/columns /, "").trim();
-        return widths.split(/:/).map(function(x) {
+        var widths = cmd.replace(/columns /, "").trim().split(/:/);
+        var total = 0;
+        widths.forEach(function(w) {
+            var n = parseInt(w, 10);
+            if(1 <= n && n <= 12) total += n;
+        });
+
+        return widths.map(function(x) {
             var w = parseInt(x, 10);
-            return (1 <= w && w <= 12) ? w : 12;
+            return (1 <= w && w <= 12) ? w : 12 - total;
         });
     }
 

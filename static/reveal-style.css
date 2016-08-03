@@ -1,9 +1,20 @@
 .reveal {
     font-family: "ETBembo";
-    font-size: 24px;
+    font-size: 20pt;
 }
 
 .reveal .slides { text-align: left; }
+.reveal:after {
+    content: "Copyright, Ken Pu";
+    font-family: Roboto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12pt;
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
+    color: brown;
+}
 
 .reveal h1,
 .reveal h2,
@@ -13,7 +24,7 @@
     font-weight: 500;
 }
 
-.reveal h1 {font-size: 150%; font-weight: 600}
+.reveal h1 {font-size: 150%; font-weight: 600; margin-bottom: 50px; border-bottom: 1px solid blue;}
 .reveal h2 {font-size: 130%;}
 .reveal h3 {font-size: 120%;}
 .reveal h4 {font-size: 100%;}
@@ -36,6 +47,22 @@
 .reveal p {
     margin: 0;
     margin-bottom: 20px;
+}
+
+.reveal pre {
+    font-size: 80%;
+    padding: 10px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    border-radius: 0;
+}
+.reveal pre code {
+    padding: 20px;
+    max-height: 700px;
 }
 
 .reveal .column {

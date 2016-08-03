@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>{{.Title}}</title>
+
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/bootstrap.css">
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/fonts/fonts.css">
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/reveal.js/css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/reveal.js/lib/css/zenburn.css">
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/reveal-style.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? '{{ .Site.BaseURL }}/reveal.js/css/print/pdf.css' : '{{.Site.BaseURL}}/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+        <div class="reveal">
+            <div class="slides">{{.Content}}</div>
+        </div>
+
+        <script src="/js/jquery-2.2.1.min.js"></script>
+        <script src="{{.Site.BaseURL}}/reveal.js/lib/js/head.min.js"></script>
+        <script src="{{.Site.BaseURL}}/reveal.js/js/reveal.js"></script>
+
+		<script>
+        // parsing the compiled markdown to Reveal structure
+        function isBreak($p) {
+            var a = $p.find("a:first");
+            if(a.size() > 0 &&
+                    a.text() == "!" && 
+                    a.attr("href") == "break") {
+                a.detach();
+                return true;
+            }
+            return false;
+        }
+        $(function() {
+            var $reveal = $(".reveal > .slides").hide();
+            var $elems = $reveal.children();
+            var $section = $("<section>");
+            for(var i=0; i < $elems.length; i++) {
+                var $elem = $($elems[i]);
+                if(isBreak($elem)) {
+                    $section.appendTo($reveal);
+                    $elem.appendTo($section)
+                        .wrap("<aside class='notes'>");
+                    $section = $("<section>");
+                } else {
+                    $elem.appendTo($section);
+                }
+            }
+            if($section.children().length > 0) {
+                $section.appendTo($reveal);
+            }
+
+            $reveal.show();
+
+            startReveal();
+        });
+
+        function startReveal() {
+			Reveal.initialize({
+				history: true,
+
+                slideNumber: true,
+
+                transition: "zoom",
+                transitionSpeed: "fast",
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+                    //{ src: '{{.Site.BaseURL}}/reveal.js/plugin/markdown/marked.js' },
+                    //{ src: '{{.Site.BaseURL}}/reveal.js/plugin/markdown/markdown.js' },
+                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/notes/notes.js', async: true },
+                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/math/math.js', async: true },
+                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/multicolumn/multicolumn.js', async: true }
+				]
+			});
+        }
+		</script>
+	</body>
+</html>
