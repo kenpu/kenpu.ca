@@ -101,4 +101,29 @@ COMMANDS["alert"] = function(a, style) {
     });
     $(a).remove();
 
-}
+};
+
+// panel list
+COMMANDS["panel"] = function(a, style) {
+    if(! style) style = "default";
+
+    $(a).closest("blockquote").each(function() {
+        var bq = $(this);
+        bq.addClass("plain-block")
+           .wrap($("<div class='panel panel-" + style + "'><div class='panel-body'></div></div>"));
+        var panel = bq.closest(".panel");
+
+        // add title
+        var h1 = $("h1:first,h2:first,h3:first,h4:first", bq);
+        if(h1.size() > 0) {
+            h1.remove().prependTo(panel).addClass("panel-title");
+            h1.wrap($("<div class=panel-heading>"));
+        }
+
+        // convert list
+        var ul = $("> ul", bq);
+        ul.addClass("list-group");
+        $("> li", ul).addClass("list-group-item");
+    });
+    $(a).remove();
+};

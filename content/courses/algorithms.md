@@ -5,9 +5,6 @@ title = "Algorithms"
 math = "yes"
 +++
 
-<div class="jumbotron">
-<h1>Design & Analysis of Algorithms</h1>
-</div>
 
 > [!](alert:info)
 > This course is about problem solving and computation via algorithms.
@@ -19,69 +16,99 @@ math = "yes"
 
 <!--more-->
 
-# Course description
+<div class="jumbotron">
+<h1>Design & Analysis of Algorithms</h1>
+</div>
 
-We follow the bottom-up approach to algorithm design.  Starting with the
-correctness and performance analysis of simple algorithms, we will progressively
-study more sophisticated data structures and algorithms.
-
-Students will gain working knowledge of algorithms and data structures.  We will
-be using the Python programming language.
+<div class=row>
+<div class=col-md-4>
+<img src="textbook.jpg" width=100%></img>
+</div>
+<div class=col-md-4>
+Introduction to Algorithms,
+<i>third edition</i>
+</div>
+</div>
 
 # Course Outline
 
-- Sorting (chapter 2.1, 2.3, 6, 7, 8)
+> [!](panel:info)
+> 
+> # Sorting 
+>
+> (chapter 2.1, 2.3, 6, 7, 8)
+> 
+>  - [Insertion sort](insert-sort)
+>  - Mergesort
+>  - Quicksort
+>  - Comparison based sorting vs numeric sorting
+>  - Counting sort and radix sort
+>  - Bucket sort
 
-    - [Insertion sort](insert-sort)
-    - Mergesort
-    - Quicksort
-    - Comparison based sorting vs numeric sorting
-    - Counting sort and radix sort
-    - Bucket sort
+<br>
 
-- Analysis of complexity (chapter 3, 4, 5)
+> [!](panel:info)
+>
+> # Analysis of complexity 
+>
+> (chapter 3, 4, 5)
+>
+> - Asymptotic notation $\Theta$, $\mathcal{O}$, $\Omega$
+> - Analysis of divide-and-conquer using recursion
+>     - Solving recurrence equations
+>
+> - (*Optional*) Probabilistic analysis and randomized algorithm
+>        
+>      - Bucket sort
+>      - Randomized quicksort
 
-    - Asymptotic notation $\Theta$, $\mathcal{O}$, $\Omega$
-    - Analysis of divide-and-conquer using recursion
+<br>
 
-        > Solving recurrence equations
+> [!](panel:info)
+> # Data structures (chapter 10, 11, 12)
+> 
+> - Elementary data structures and their operations
+> - Hash tables
+> - Trees
+> 
 
-    - (*Optional*) Probabilistic analysis and randomized algorithm
-        
-        > Bucket sort <br>
-        > Randomized quicksort
+<br>
 
-- Data structures (chapter 10, 11, 12)
+> [!](panel:info)
+> # Design of optimization algorithms (chapter 15, 16)
+> 
+> - Dynamic programming
+> - Greedy algorithms
+> 
 
-    - Elementary data structures and their operations
-    - Hash tables
-    - Trees
+<br>
 
-- Design of optimization algorithms (chapter 15, 16)
+> [!](panel:info)
+> # *Graphs*
+> 
+> - Graphs and search
+> - Minimal spanning tree
+> - Shortest path
+> 
+>     > Bellman-Ford <br>
+>     > Dijkstra
+>     > Floyd-Washall
+> 
+> - Maxflow
+> 
 
-    - Dynamic programming
-    - Greedy algorithms
+<br>
 
-- *Graphs*
-
-    - Graphs and search
-    - Minimal spanning tree
-    - Shortest path
-
-        > Bellman-Ford <br>
-        > Dijkstra
-        > Floyd-Washall
-
-    - Maxflow
-
-- *NP-completeness & computational complexity*
-
-    - Decision problems and formal language
-    - Complexity classes
-    - (In)tractability
-    - Reduction
-    - NP-completeness
-    - Beyond NPC
+> [!](panel:info)
+> # *NP-completeness & computational complexity*
+> 
+> - Decision problems and formal language
+> - Complexity classes
+> - (In)tractability
+> - Reduction
+> - NP-completeness
+> - Beyond NPC
+> 
 
 # Marking Scheme
 
