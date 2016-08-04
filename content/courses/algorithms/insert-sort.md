@@ -188,7 +188,7 @@ plot.save("random-graph.png")
 [!](break)
 ===========================================================================
 
-# Insertion sorting
+# Insertion sort
 
 > It's a highly *inefficient* sorting algorithm.
 
@@ -196,3 +196,324 @@ It's simple enough that:
 
 1. It's intuitive.
 2. It can be fully analyzed relatively easily.
+
+[!](break)
+===========================================================================
+
+# Insertion sort
+
+[!](columns 4:)
+
+<img src=cards.png width=100%></img>
+
+Chapter 2, Figure 2.1 of textbook.
+
+[!](split)
+
+~~~python
+def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i >= 0 and A[i] > key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+~~~
+
+[!](break)
+===========================================================================
+
+# Analysis of correctness
+
+- Intuition only takes us part way, *not the whole way*.
+
+- Sometimes, we can formally prove that an algorithm is correct.
+
+      But first, we need some machineries. 
+
+[!](break)
+===========================================================================
+
+
+## Loop invariance
+
+[!](columns 4:)
+
+Consider a loop:
+
+~~~python
+total = 0
+count = 0
+
+for v in array:
+  total += v
+  count += 1
+
+avg = total / count
+~~~
+
+[!](split)
+
+- Precondition of a loop: 
+  a statement that is **always** *true at the start of
+  the loop.
+
+- Postcondition of a loop:
+  a statement that is **always** true at by the end of
+  the loop.
+
+  <br>
+
+- **Loop invariance**:
+  a statement that is **always** true 
+  <span style=color:#44f;font-size:120%>right at the end</span> 
+  of each iteration of
+  the loop.
+
+    > - `count $\not=$ 0` 
+    > - `total``$_{i+1} \geq$` `total``$_i$`
+    >
+    >       Note: for loop-invariance, we can refer to the iteration index
+    >       $i\geq 0$.
+
+[!](break)
+=================================================================
+
+# Correctness of `INSERTION SORT` by loop-invariance
+
+[!](columns 5:)
+
+~~~{python small}
+def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i >= 0 and A[i] > key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+~~~
+
+[!](split)
+
+There are two loops, with `while`-loop nested in the `for`-loop.
+
+[!](break)
+=================================================================
+
+# Correctness of `INSERTION SORT` by loop-invariance
+
+[!](columns 5:)
+
+~~~{python small}
+def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i >= 0 and A[i] > key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+~~~
+
+[!](split)
+
+**Inner-loop invariance**
+
+> `i` is an index such that 
+
+> - `A[0 .. i]` are all smaller than `key`.
+> - `A[i+2 .. j]` are larger or equal to `key`. 
+> - `A[i] = A[i+1]`
+
+---
+
+> Can we say anything about `A[j+1]` to `A[len(A)-1]`?
+
+[!](break)
+=================================================================
+
+# Correctness of `INSERTION SORT` by loop-invariance
+
+[!](columns 5:)
+
+~~~{python small}
+def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i >= 0 and A[i] > key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+~~~
+
+[!](split)
+
+**Outer-loop invariance**
+
+> The subarray `A[0 .. j]` is sorted after the $j$-th iteration of the `for`-loop.
+
+*Proof*: We prove by induction on $j$.
+
+*Base case*
+
+> $j=0$, trivially true
+
+*Induction*
+
+> If `A[0 .. j-1]` is sorted, by the inner-loop invariance, moving key to
+> `A[i+1]` makes `A[0 .. j]` sorted.
+
+
+[!](break)
+=================================================================
+
+# Correctness of `INSERTION SORT` by loop-invariance
+
+[!](columns 5:)
+
+~~~{python small}
+def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i >= 0 and A[i] > key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+~~~
+
+[!](split)
+
+*Theorem*:
+
+> The `insertion_sort` algorithm always correctly sorts the input array.
+
+*Proof*:
+
+> By the outer-loop invariance, by the end of the last iteration,
+> with $j=$`len(A)-1`, the entire array `A[0 .. len(A)-1]` is sorted.
+
+
+[!](break)
+=================================================================
+
+# Performance analysis
+
+[!](break)
+=================================================================
+
+### Every statement takes the same amount of time.
+
+> This is not exactly correct, but it is accurate enough to gauge the
+> performance of algorithms.
+
+----
+
+### *Corollary*
+
+> We measure the number of lines executed by the program before an array is
+> completely sorted by `insertion_sort`.
+
+> $T_\mathrm{LOC}(\mathrm{length}(A)) \Rightarrow T(n)$
+
+[!](break)
+=================================================================
+
+[!](columns 5:)
+
+~~~{python small}
+def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i >= 0 and A[i] > key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+~~~
+
+[!](split)
+
+- Best case analysis
+
+- **Worst case analysis**
+
+- Average case analysis
+
+[!](break)
+=================================================================
+
+[!](columns 5:)
+
+~~~{python small}
+def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i >= 0 and A[i] > key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+~~~
+
+[!](split)
+
+**Worst case analysis**
+
+Let $n = \mathrm{length}(A)$
+
+> - The outer-loop *always* iterates $n$ times.
+> 
+> - The inner loop iterates *in the worst case* $j$ times.
+
+---
+
+`$$ T(n) = \sum_{j=0}^n j = \frac{n(n-1)}{2}$$`
+
+
+[!](break)
+=================================================================
+
+[!](columns 6:)
+
+
+`insert_sort` is a pretty inefficient algorithm.
+
+| n | T | time (1M LOC/s)|
+|---|---|------|
+| 10 | 45 | 45 $\mu s$ |
+| 100 | 4950 | 5 $ms$ |
+| 1000 | 499500 | 0.5 $s$ |
+| 1000000 | 499999500000 | 5.9 days |
+
+[!](split)
+
+A more efficient algorithm (to be discussed later):
+
+| n | T | time (1M LOC/s)|
+|---|---|------|
+| 10 | 23 | 23 $\mu s$ |
+| 100 | 460 | 0.46 $ms$ |
+| 1000 | 6907 | 6.9 $s$ |
+| 1000000 | 13815510 | 13.8 $s$ |
+
+
+[!](break)
+====================================================================
+
+[!](columns 4:)
+
+## Summary
+
+[!](split)
+
+- INSERTION sort
+- Analysis of correctness by loop-invariance
+- Performance analysis by counting lines executed
+
+---
+
+Text: 2.1, 2.2,

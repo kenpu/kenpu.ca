@@ -48,7 +48,7 @@
 
         for(var i=0; i < columns.length; i++) {
             var column = columns[i];
-            var col = $("<div>").addClass("column col-md-" + column.width);
+            var col = $("<div>").addClass("column col-sm-" + column.width);
             column.children.forEach(function(x) {
                 col.append(x);
             });
