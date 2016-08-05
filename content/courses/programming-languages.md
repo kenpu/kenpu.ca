@@ -35,7 +35,7 @@ This course is divided into three parts.
 > [!](panel:info)
 > # Computation
 > - [Stateful computation](stateful-computation)
-> - Functional computation
+> - [Functional computation](functional-computation)
 
 <br>
 

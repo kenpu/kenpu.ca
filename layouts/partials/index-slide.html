@@ -76,15 +76,19 @@
 
                 slideNumber: true,
 
+                center: false,
+
                 transition: "zoom",
                 transitionSpeed: "fast",
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-                    //{ src: '{{.Site.BaseURL}}/reveal.js/plugin/markdown/marked.js' },
-                    //{ src: '{{.Site.BaseURL}}/reveal.js/plugin/markdown/markdown.js' },
-                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/notes/notes.js', async: true },
-                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/notes/notes.js', 
+                        async: true },
+                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/highlight/highlight.js', 
+                        async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/chalkboard/chalkboard.js',
+                        async: false },
                     { src: '{{.Site.BaseURL}}/reveal.js/plugin/math/math.js', async: true },
                     { src: '{{.Site.BaseURL}}/reveal.js/plugin/multicolumn/multicolumn.js', async: true }
 				]
