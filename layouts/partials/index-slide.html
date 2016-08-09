@@ -31,6 +31,8 @@
         </div>
 
         <script src="/js/jquery-2.2.1.min.js"></script>
+        <script src="/js/pdf.js"></script>
+
         <script src="{{.Site.BaseURL}}/reveal.js/lib/js/head.min.js"></script>
         <script src="{{.Site.BaseURL}}/reveal.js/js/reveal.js"></script>
 
@@ -90,7 +92,10 @@
                     { src: '{{.Site.BaseURL}}/reveal.js/plugin/chalkboard/chalkboard.js',
                         async: false },
                     { src: '{{.Site.BaseURL}}/reveal.js/plugin/math/math.js', async: true },
-                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/multicolumn/multicolumn.js', async: true }
+                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/multicolumn/multicolumn.js',
+                        async: true },
+                    {src: '{{.Site.BaseURL}}/reveal.js/plugin/pdfviewer/pdfviewer.js', 
+                        async: true}
 				]
 			});
         }

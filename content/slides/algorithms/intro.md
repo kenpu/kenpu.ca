@@ -8,40 +8,19 @@ title = "Introduction to algorithms"
 
 [!](split)
 
-***
+Hello
 
-Sorting
+[!](break)
 
-***
-
-Hashing
-
-***
-
-Dynamic programming
-
-***
-
-NP-completeness
-
-***
-
-*and a lot more...*
-
-***
+Second page
+----
 
 ---
 
-[!](columns 4:8)
+[!](columns 8:)
 
-## A quiz
-
-> This quiz is to test
-> if you know how to do well.
+<div pdf="output.pdf" rotate="-90" scale="0.8"></div>
 
 [!](split)
 
-<iframe
-src="https://docs.google.com/a/uoit.net/forms/d/e/1FAIpQLScxttDyzhA213xka9MzWkJOmzFcohOM3GTkTEXFw8wdIIyBBw/viewform?embedded=true"
-width="760" height="500" frameborder="0" marginheight="0"
-marginwidth="0">Loading...</iframe>
+This is a PDF
