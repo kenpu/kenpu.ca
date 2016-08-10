@@ -72,8 +72,13 @@
         });
     }
 
-    console.debug("PDFVIEWER");
-    $("div[pdf]").each(function() {
-        process($(this));
+    function processSlide(el) {
+        $("div[pdf]", $(el)).each(function() { process($(this)); });
+    }
+
+    Reveal.addEventListener('slidechanged', function(e) {
+        processSlide(e.currentSlide);
     });
+
+    processSlide(Reveal.getCurrentSlide());
 })();
