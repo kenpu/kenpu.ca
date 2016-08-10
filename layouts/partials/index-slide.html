@@ -14,16 +14,20 @@
 
 		<!-- Theme used for syntax highlighting of code -->
         <link rel="stylesheet" href="{{ .Site.BaseURL }}/reveal.js/lib/css/zenburn.css">
-        <link rel="stylesheet" href="{{ .Site.BaseURL }}/reveal-style.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
+            if(window.location.search.match(/print-pdf/gi)) {
+                window.print_pdf = true;
+            }
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? '{{ .Site.BaseURL }}/reveal.js/css/print/pdf.css' : '{{.Site.BaseURL}}/reveal.js/css/print/paper.css';
+            link.href = window.print_pdf ? '{{ .Site.BaseURL }}/reveal.js/css/print/pdf.css' : '{{.Site.BaseURL}}/reveal.js/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/reveal-style.css">
 	</head>
 	<body>
         <div class="reveal">

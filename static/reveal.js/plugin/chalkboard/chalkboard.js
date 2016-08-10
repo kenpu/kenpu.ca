@@ -12,6 +12,10 @@
 ******************************************************************/
 
 var RevealChalkboard = window.RevealChalkboard || (function(){
+    if(window.print_pdf) {
+        return false;
+    }
+
 	var path = scriptPath();
 	function scriptPath() {
 		// obtain plugin path from the script element

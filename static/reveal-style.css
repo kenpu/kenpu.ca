@@ -4,6 +4,7 @@
 }
 
 .reveal .slides { text-align: left; }
+
 .reveal:after {
     content: "Copyright, Ken Pu";
     font-family: Roboto;
@@ -14,6 +15,10 @@
     bottom: 15px;
     left: 5px;
     color: brown;
+}
+
+.reveal .slides section {
+    min-height: 500px;
 }
 
 .reveal h1,

@@ -104,10 +104,16 @@
         }
     }
 
-    // Register reprocessing
-    Reveal.addEventListener('slidechanged', function(event) {
-        process(event.currentSlide);
-    });
+    if(window.print_pdf) {
+        $("section").each(function() {
+            process(this);
+        });
+    } else {
+        // Register reprocessing
+        Reveal.addEventListener('slidechanged', function(event) {
+            process(event.currentSlide);
+        });
 
-    process(Reveal.getCurrentSlide());
+        process(Reveal.getCurrentSlide());
+    }
 })();
