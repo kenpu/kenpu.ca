@@ -8,6 +8,11 @@
         fontSize: '80%',
     };
     function process($div) {
+        if($div.is(".processed"))
+            return;
+
+        $div.addClass("processed");
+
         var canvas=$("<canvas>");
         canvas.attr('width', $div.width()).css({
             marginLeft: 'auto',
@@ -27,6 +32,9 @@
         PDFJS.getDocument(url).then(function(pdf) {
             var n = pdf.numPages;
             var i = 1;
+            if($div.attr('page')) {
+                i = parseInt($div.attr('page'));
+            }
 
             $div.css({
                 position: 'relative',
