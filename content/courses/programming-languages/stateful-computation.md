@@ -105,6 +105,5 @@ slide = true
 
 # Turing Machine
 
-<div style=color:red>
-TM
-</div>
+<div pdf="turing-machine.pdf" scale=0.8></div>
+
