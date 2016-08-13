@@ -33,19 +33,20 @@ This course is divided into three parts.
 <br>
 
 > [!](panel:info)
+>
 > # Computation
+>
 > - [Stateful computation](stateful-computation)
 > - [Functional computation](functional-computation)
+> - [Programming languages: at a glance](intro-to-languages)
 
 <br>
 
 > [!](panel:info)
 > # Design of programming languages
 > 
-> - Organization of code
-> - Operational semantics
+> - Organization and semantics
 > - Type system
-> - Denotational semantics
 
 <br>
 
