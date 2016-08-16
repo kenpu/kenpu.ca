@@ -89,7 +89,7 @@ We assume that all functions are with arity 1.
 
 # The *weird* syntax of $\lambda$ calculus
 
-- $\lambda x: e$
+- $\lambda x.e$
 
     > This is a function taking *one* input, represented by the variable $x$.
     > It returns *one* value, which is evaluated as the expression $e$.
@@ -111,7 +111,27 @@ We assume that all functions are with arity 1.
 
 - Identity function
 
+    > `$\lambda x.x$`
+
+[!](columns 8:)
+
 - Functions with multiple arity
+
+    > Suppose we have a function $f(x,y,z) = e$ where the expression
+    involves all three input variables $x, y, z$.
+    >
+    > We can use the following expression to build $f$:
+    >
+    > `$\lambda x.(\lambda y.(\lambda z. e))$`
+
+    **This is a big deal.** <br>
+    **Functions as values in action here.**
+
+[!](split note)
+
+<div style=height:220px></div>
+
+We can write it conveniently as $\lambda xyz.e$
 
 [!](break)
 
