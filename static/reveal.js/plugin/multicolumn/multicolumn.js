@@ -21,10 +21,10 @@
     function isColumnSplit($p) {
         var a = $p.find("a:first");
         var result = false;
-        if(a.size() > 0) {
-            result = a.text() == "!" &&
-                a.attr("href") &&
-                a.attr("href").match(/split/);
+        if(a.size() > 0 && a.text() == "!" && a.attr("href")) {
+            if(a.attr("href").match(/split/)) {
+                result = a.attr("href");
+            }
         }
         return result;
     }
@@ -49,6 +49,10 @@
         for(var i=0; i < columns.length; i++) {
             var column = columns[i];
             var col = $("<div>").addClass("column col-sm-" + column.width);
+            var fontSize = column.fontSize;
+            if(fontSize) {
+                col.css('font-size', fontSize);
+            }
             column.children.forEach(function(x) {
                 col.append(x);
             });
@@ -83,6 +87,7 @@
             for(var i=0; i < widths.length; i++) {
                 columns.push({
                     width: widths[i],
+                    fontSize: null,
                     children: [],
                 });
             }
@@ -90,11 +95,18 @@
             // Distribute the inColumn children into the
             // corresponding columns
             var col = 0;
+            var fontSize = null;
             for(var i=0; i < inColumn.length; i++) {
                 var $c = $(inColumn[i]).detach();
 
-                if(isColumnSplit($c)) {
+                var split = isColumnSplit($c);
+
+                if(split) {
                     col = Math.min(widths.length-1, col + 1);
+
+                    if(split.match(/note/)) {
+                        columns[col].fontSize = "75%";
+                    }
                 } else {
                     columns[col].children.push($c);
                 }
