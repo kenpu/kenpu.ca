@@ -39,7 +39,7 @@ Introduction to Algorithms,
 > (chapter 2.1, 2.3, 6, 7, 8)
 > 
 >  - [Insertion sort](insert-sort)
->  - Mergesort
+>  - [Mergesort](merge-sort)
 >  - Quicksort
 >  - Comparison based sorting vs numeric sorting
 >  - Counting sort and radix sort
