@@ -1,108 +1,89 @@
 +++
 title = "Symposium"
+nochalk = true
+footnote = "Symposium on Teaching, Faculty of Science, 2016"
 +++
 
-[!](columns 7:5)
+Instant gratification 
+==========================================
 
-# Technology to enable instant gratification & evaluation
+<div style=height:400px></div>
 
-[!](split)
-
-## TL;TR
-
-> Powerpoint (Keynote, Openoffice) is no longer considered *technology*.
-
----
-
-## Mycamps - the right way
+## Ken Pu
 
 
-```sql
-SELECT * FROM schedule;
-```
+TL;TR
+===========================================
 
-[!](columns 8:4)
-
-<iframe src="http://localhost:" style=width:100%;height:400px></iframe>
-
-[!](split)
-> Haha.  Tricked you.  <i class="fa fa-smile-o"></i>
-
-
----
-
-## Mycamps - the right way
+> - Instant gratification is a powerful equalizer
+>   <br><br>
+>
+> - Instant gratification is dangerous
+>   <br><br>
+>
+> - Technology is almost there
+>   <br><br>
+>
+> - Yes, you can use it now
 
 
-```sql
-SELECT distinct semester FROM schedule;
-```
+The equalizer (1)
+============================================
 
-[!](columns 8:4)
+[!](columns 5:2:5)
 
-<iframe src="http://localhost:" style=width:100%;height:500px></iframe>
+<img class="fragment" src="degrasse.jpg"></img>
 
 [!](split)
 
-Try without the `distinct` keyword.
-
----
-
-## Mycamps - the right way
-
-```sql
-SELECT distinct semester, code 
-FROM schedule
-WHERE instructor like '%Ken%';
-```
-
-[!](columns 8:4)
-
-<iframe src="http://localhost:" style=width:100%;height:500px></iframe>
+<div style=margin-top:200px;font-size:500%>=</div>
 
 [!](split)
 
-Can you modify the query to suit your own needs?
+<img class="fragment" src="Instant-Gratification.jpg"></img>
 
 
-Can you see what the `LIKE` clause is doing?
 
----
+The equalizer (2)
+============================================
 
-## Mycamps - the right way
+[!](columns 10:)
 
-```sql
-SELECT distinct semester, code, weekday
-FROM schedule WHERE instructor like '%Ken%' ORDER BY semester, weekday;
-```
+<img src="engineer.jpg"></img>
 
-[!](columns 8:4)
-
-<iframe src="http://localhost:" style=width:100%;height:500px></iframe>
+> Google Engineer
 
 [!](split)
 
-How is your teaching assignment?
+<div style=font-size:500%>=</div>
 
----
 
-## Mycamps - the right way
 
-```sql
-SELECT distinct semester, code, weekday, starthour || ':' || startmin AS time
-FROM schedule WHERE instructor like '%Ken%' ORDER BY semester, weekday;
-```
 
-[!](columns 8:4)
 
-<iframe src="http://localhost:" style=width:100%;height:400px></iframe>
 
-[!](split)
 
-How is your teaching schedule?
+The equalizer (2)
+============================================
 
----
+<img style=height:500px src="women-in-cs.jpg"></img>
 
-# Where are we going with this?
+
+
+
+
+
+
+
+
+
+
+
+Example (1)
+==============================================
+
+> Common table expressions in SQL
+
+
 
 
