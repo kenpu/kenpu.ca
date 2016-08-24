@@ -28,6 +28,14 @@
 		</script>
 
         <link rel="stylesheet" href="{{ .Site.BaseURL }}/reveal-style.css">
+
+        {{ if .Params.footnote }}
+<style>
+.reveal:after {
+    content: "{{.Params.footnote}}" !important;
+}
+</style>
+        {{ end }}
 	</head>
 	<body>
         <div class="reveal">
@@ -42,7 +50,10 @@
 
 		<script>
         // parsing the compiled markdown to Reveal structure
-        function isBreak($p) {
+        function isBreak($p, $section) {
+            if($p.is("h1") && $section.children().size() > 0)
+                return true;
+
             var a = $p.find("a:first");
             if(a.size() > 0 &&
                     a.text() == "!" && 
@@ -58,11 +69,14 @@
             var $section = $("<section>");
             for(var i=0; i < $elems.length; i++) {
                 var $elem = $($elems[i]);
-                if(isBreak($elem)) {
+                if(isBreak($elem, $section)) {
                     $section.appendTo($reveal);
                     $elem.appendTo($section)
                         .wrap("<aside class='notes'>");
                     $section = $("<section>");
+                    if($elem.is("h1")) {
+                        $elem.appendTo($section);
+                    }
                 } else {
                     $elem.appendTo($section);
                 }
@@ -93,8 +107,11 @@
                         async: true },
                     { src: '{{.Site.BaseURL}}/reveal.js/plugin/highlight/highlight.js', 
                         async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/chalkboard/chalkboard.js',
-                        async: false },
+                    {{ if .Params.nochalk }}
+                        // slip chalkboard
+                    {{ else }}
+                        { src: '{{.Site.BaseURL}}/reveal.js/plugin/chalkboard/chalkboard.js', async: false },
+                    {{ end }}
                     { src: '{{.Site.BaseURL}}/reveal.js/plugin/math/math.js', async: true },
                     { src: '{{.Site.BaseURL}}/reveal.js/plugin/multicolumn/multicolumn.js',
                         async: true },

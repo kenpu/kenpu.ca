@@ -29,6 +29,12 @@
     font-weight: 500;
 }
 
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+    text-transform: none;
+}
+
 .reveal h1 {font-size: 150%; font-weight: 600; margin-bottom: 50px; border-bottom: 1px solid blue;}
 .reveal h2 {font-size: 130%;}
 .reveal h3 {font-size: 120%;}
