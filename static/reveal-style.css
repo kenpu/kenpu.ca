@@ -91,7 +91,9 @@
     max-height: 700px;
 }
 
-.reveal pre code.small {
+.reveal pre code.small,
+.reveal pre code.sm
+{
     font-size: 80%;
 }
 

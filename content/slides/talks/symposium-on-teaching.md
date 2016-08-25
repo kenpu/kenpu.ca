@@ -82,8 +82,38 @@ The equalizer (2)
 Example (1)
 ==============================================
 
-> Common table expressions in SQL
+> Finding the courses I teach.
+>
+```sql
+select distinct code, title from schedule where instructor like "Ken Pu";
+```
 
+<iframe class=fragment data-src="http://db.science.uoit.ca:8080" style="max-width:1024px; width:100%; height:400px"></iframe>
+
+Example (2)
+================================================
+
+> Anything that is early in the morning?
+>
+```{sql sm}
+select distinct code, title, weekday, starthour || ":" || startmin as t from schedule
+where starthour < 9 and instructor like "Ken Pu";
+```
+
+<iframe data-src="http://db.science.uoit.ca:8080" style="max-width:1024px; width:100%; height:300px"></iframe>
+
+Example (3)
+===============================================
+
+> Can I find an empty room?
+>
+```{sql sm}
+with R(room, weekday, t) as (
+    select distinct room, weekday, min(starthour) from schedule where room like '% A1 %' and weekday = "T" group by room order by room
+) select * from R where t >= 10;
+```
+
+<iframe data-src="http://db.science.uoit.ca:8080" style="max-width:1024px; width:100%; height:300px"></iframe>
 
 
 
