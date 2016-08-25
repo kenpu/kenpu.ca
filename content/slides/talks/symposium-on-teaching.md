@@ -117,3 +117,26 @@ with R(room, weekday, t) as (
 
 
 
+
+
+
+
+
+Data Science with Jupyter
+=========================
+
+<iframe data-src="http://db.science.uoit.ca:3000/notebooks/HelloWorld.ipynb" style="max-width:1024px; width:100%; height:500px"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
