@@ -9,7 +9,13 @@ Instant gratification
 
 <div style=height:400px></div>
 
-## Ken Pu
+<p style=text-align:right>
+<i>Ken Pu</i> <br>
+
+September 1, 2016 <br>
+
+Symposium on teaching
+</p>
 
 
 TL;TR
@@ -84,7 +90,7 @@ Example (1)
 
 > Finding the courses I teach.
 >
-```sql
+```{sql sm clipboard}
 select distinct code, title from schedule where instructor like "Ken Pu";
 ```
 
@@ -95,7 +101,7 @@ Example (2)
 
 > Anything that is early in the morning?
 >
-```{sql sm}
+```{sql sm clipboard}
 select distinct code, title, weekday, starthour || ":" || startmin as t from schedule
 where starthour < 9 and instructor like "Ken Pu";
 ```
@@ -107,7 +113,7 @@ Example (3)
 
 > Can I find an empty room?
 >
-```{sql sm}
+```{sql sm clipboard}
 with R(room, weekday, t) as (
     select distinct room, weekday, min(starthour) from schedule where room like '% A1 %' and weekday = "T" group by room order by room
 ) select * from R where t >= 10;
@@ -122,21 +128,151 @@ with R(room, weekday, t) as (
 
 
 
-Data Science with Jupyter
-=========================
+On the distribution of primes
+==============================
 
-<iframe data-src="http://db.science.uoit.ca:3000/notebooks/HelloWorld.ipynb" style="max-width:1024px; width:100%; height:500px"></iframe>
-
-
+<iframe class=fragment data-src="http://db.science.uoit.ca:3000/notebooks/HelloWorld.ipynb" style="max-width:1024px; width:100%; height:500px"></iframe>
 
 
+Data Science & Visualization
+============================
 
-
-
-
+<iframe data-src="http://db.science.uoit.ca:3000/notebooks/DataScience.ipynb" style="max-width:1024px; width:100%; height:500px"></iframe>
 
 
 
 
 
 
+
+
+
+
+[!](break)
+
+[!](columns 4:)
+
+## Danger of instant gratification
+
+[!](split)
+
+## Claim:
+
+*We just covered the following topics*:
+
+>
+> 1. Data analysis using relational query language
+> 2. Python list comprehension
+> 3. Numerical approximation of the distribution of the primes
+> 4. Visualization of potential fields
+
+
+<div style=height:150px></div>
+
+## Reality: *Zero working knowledge* even after hands on practice!
+
+
+
+
+
+
+
+# Instant gratification for the instructors
+
+# Don't discount Google Education App
+
+> UOIT is paying for it.
+
+# Activate your `uoit.net` account **today**.
+
+> https://ssbp.mycampus.ca/apex/f?p=340:101:17205337333607
+
+# The benefit
+
+- Google Drive <br><br>
+
+- Google Plus <br><br>
+
+- 
+    ## Google Quiz
+
+    > https://support.google.com/docs/answer/7032287?hl=en
+
+
+# Test your working knowledge
+
+[!](columns 8:)
+
+<iframe
+data-src="https://docs.google.com/forms/d/e/1FAIpQLScAHM9K4G_cZLIbOsjQUvIZJPzUYH33OI7qu-tvWckF45FMWw/viewform?embedded=true"
+width="760" height="500" frameborder="0" marginheight="0"
+marginwidth="0">Loading...</iframe>
+
+
+[!](split)
+
+Separate Window
+
+>
+> http://goo.gl/lijEIT
+
+Realtime monitoring
+
+>
+> http://goo.gl/xKUzKf
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Closing Remarks
+
+[!](break)
+
+> *First, I try to dramatically increase a student's self-expectations and, of
+> course, their knowledge about the subject. Being a good teacher means
+> stretching students without discouraging them or destroying their confidence.*
+>
+> Terence Parr, Professor of CS, University of San Francisco
+
+[!](break)
+
+Technology is inherently disruptive.  Disruptive technology is **bad** 51% of the time.
+
+<br><br>
+
+... but good 45% of the time.
+
+<br><br>
+
+... and transformational 3.99999% of the time.
+
+
+# AMA on
+
+[!](columns 6:)
+
+*Experimental technology*
+----
+
+- Docker
+- SSH over HTTPS
+- Jupyter Notebook
+
+[!](split)
+
+*Rock solid*
+---
+
+- Google Quiz
+
+   > Lots of improvements to be made.
+   > Foresee market for a professional testing service
