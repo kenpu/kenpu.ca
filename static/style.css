@@ -30,6 +30,9 @@ body {
 /* ====== End of Imaged Block ===== */
 
 /* >>>>>> Welled blockquote >>>> */
+blockquote {
+    font-size: inherit;
+}
 blockquote.plain-block {
     border: none;
     margin: 0;

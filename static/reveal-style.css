@@ -27,6 +27,7 @@
 .reveal h4 {
     font-family: "ETBembo";
     font-weight: 500;
+    color: inherit;
 }
 
 .reveal h2,

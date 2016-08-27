@@ -25,12 +25,35 @@
     function processCmd($a) {
         var cmd = ($a.attr('href') || "").split();
         console.debug("cmd:", cmd);
+        // =========================================
         if(cmd[0].startsWith("comfort")) {
             console.debug("ding");
             $a.closest("ul,ol").children().css({
                 marginBottom: 20,
             });
             $a.closest("li").detach();
+        }
+        // =========================================
+        else if(cmd[0].startsWith("---")) {
+            var n = cmd[0].length;
+            $a.after($("<hr>").css({
+                marginTop: 10*n,
+                marginBottom: 10*n,
+            }));
+            $a.detach();
+        }
+        else if(cmd[0] == "highlight") {
+            var div = $("<div>").css({
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: 600,
+            });
+            $a.closest("section").css({
+                background: "#888",
+                color: "white",
+            }).wrapInner(div);
+            $a.detach();
         }
     }
 
