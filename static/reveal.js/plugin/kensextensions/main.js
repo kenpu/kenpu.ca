@@ -1,6 +1,5 @@
 (function () {
-    function process($section) {
-        console.debug("copybtn process");
+    function processCopyBtn($section) {
         if($section.is(".copybtned"))
             return;
 
@@ -23,7 +22,26 @@
         });
     }
 
+    function processCmd($a) {
+        var cmd = ($a.attr('href') || "").split();
+        console.debug("cmd:", cmd);
+        if(cmd[0].startsWith("comfort")) {
+            console.debug("ding");
+            $a.closest("ul,ol").children().css({
+                marginBottom: 20,
+            });
+            $a.closest("li").detach();
+        }
+    }
+
     $(".slides section").each(function() {
-        process($(this));
+        processCopyBtn($(this));
+    });
+
+    $(".slides section a").each(function() {
+        var $a = $(this);
+        if($a.text() == "!") {
+            processCmd($a);
+        }
     });
 })();
