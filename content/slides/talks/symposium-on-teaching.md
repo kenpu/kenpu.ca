@@ -4,10 +4,10 @@ nochalk = true
 footnote = "Symposium on Teaching, Faculty of Science, 2016"
 +++
 
-Instant gratification 
-==========================================
+# Instant gratification 
 
-<div style=height:400px></div>
+[!](highlight)
+
 
 <p style=text-align:right>
 <i>Ken Pu</i> <br>
@@ -31,6 +31,11 @@ TL;TR
 >   <br><br>
 >
 > - Yes, you can use it now
+
+The Equalizer
+============================================
+
+[!](highlight)
 
 
 The equalizer (1)
@@ -73,9 +78,6 @@ The equalizer (2)
 ============================================
 
 <img style=height:500px src="women-in-cs.jpg"></img>
-
-
-
 
 
 
@@ -148,6 +150,14 @@ Data Science & Visualization
 
 
 
+
+
+# The Danger
+
+[!](highlight)
+
+
+
 [!](break)
 
 [!](columns 4:)
@@ -176,8 +186,9 @@ Data Science & Visualization
 
 
 
+# Instant gratification <br> for the instructors
 
-# Instant gratification for the instructors
+[!](highlight)
 
 # Don't discount Google Education App
 
@@ -235,6 +246,8 @@ Realtime monitoring
 
 # Closing Remarks
 
+[!](highlight)
+
 [!](break)
 
 > *First, I try to dramatically increase a student's self-expectations and, of
@@ -258,21 +271,28 @@ Technology is inherently disruptive.  Disruptive technology is **bad** 51% of th
 
 # AMA on
 
-[!](columns 6:)
+[!](highlight)
 
 *Experimental technology*
 ----
 
-- Docker
+> - Docker
 - SSH over HTTPS
 - Jupyter Notebook
 
-[!](split)
+---
 
 *Rock solid*
 ---
 
-- Google Quiz
+> - Google Quiz, but still...
 
-   > Lots of improvements to be made.
-   > Foresee market for a professional testing service
+---
+
+"In the midst of chaos, there is also opportunity"
+
+危中機 (\ˈwā\ zhü \ˈȯn \ˈjē)
+
+<p style=text-align:right>
+<i>Sun Tzu</i>, Art of War
+</p>

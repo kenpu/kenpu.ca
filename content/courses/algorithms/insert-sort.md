@@ -17,10 +17,6 @@ of catching up.
 
 - https://www.codecademy.com/learn/python
 
-> [!](break) 
-> No idea what to say about this
-> ==============================================
-
 # Programming & This Course
 
 
@@ -36,10 +32,9 @@ But ...
 
 The reality is that *programming* is absolutely essential.
 
-[!](break)
-=================================================================
 
-# Basic programming for this course
+Basic programming for this course
+==============================================================
 
 
 [!](columns 8:)
@@ -55,9 +50,7 @@ print "The middle number is %d" % x[1]
 
 We need arrays as a fundamental data structure.
 
-[!](break)
-================================================================
-
+[!](break) =================================================
 
 [!](columns 8:)
 
@@ -78,8 +71,7 @@ print "%s: %s" % (jack.name, jack.age)
 
 We need objects.
 
-[!](break)
-==================================================================
+[!](break) =================================================
 
 [!](columns 8:)
 
@@ -100,8 +92,7 @@ for i in range(10):
 
 Various loops are needed.
 
-[!](break)
-==================================================================
+[!](break) ==================================================================
 
 [!](columns 8:)
 
@@ -137,8 +128,7 @@ nx.draw(G)
 plot.save("random-graph.png")
 ~~~
 
-[!](break)
-============================================================================
+[!](break) ================================================
 
 # The sorting problem
 
@@ -168,8 +158,7 @@ plot.save("random-graph.png")
 - The comparison function can be arbitrary, and it defines the ordering.
 
 
-[!](break)
-============================================================================
+[!](break) =========================================================
 
 # The sorting problem
 
@@ -185,8 +174,7 @@ plot.save("random-graph.png")
 
     `$$ \forall i,j\in [0, \mathrm{length}(x)],\ i < j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) < \pi(j) $$`
 
-[!](break)
-===========================================================================
+[!](break) =============================================================
 
 # Insertion sort
 
@@ -197,8 +185,7 @@ It's simple enough that:
 1. It's intuitive.
 2. It can be fully analyzed relatively easily.
 
-[!](break)
-===========================================================================
+[!](break) ============================================================
 
 # Insertion sort
 
@@ -221,8 +208,7 @@ def insertion_sort(A):
     A[i+1] = key
 ~~~
 
-[!](break)
-===========================================================================
+[!](break) ===========================================================
 
 # Analysis of correctness
 
@@ -232,8 +218,7 @@ def insertion_sort(A):
 
       But first, we need some machineries. 
 
-[!](break)
-===========================================================================
+[!](break) ===========================================================================
 
 
 ## Loop invariance
@@ -277,8 +262,7 @@ avg = total / count
     >       Note: for loop-invariance, we can refer to the iteration index
     >       $i\geq 0$.
 
-[!](break)
-=================================================================
+[!](break) =================================================================
 
 # Correctness of `INSERTION SORT` by loop-invariance
 
@@ -299,8 +283,7 @@ def insertion_sort(A):
 
 There are two loops, with `while`-loop nested in the `for`-loop.
 
-[!](break)
-=================================================================
+[!](break) =================================================================
 
 # Correctness of `INSERTION SORT` by loop-invariance
 
@@ -331,8 +314,7 @@ def insertion_sort(A):
 
 > Can we say anything about `A[j+1]` to `A[len(A)-1]`?
 
-[!](break)
-=================================================================
+[!](break) =================================================================
 
 # Correctness of `INSERTION SORT` by loop-invariance
 
@@ -367,8 +349,7 @@ def insertion_sort(A):
 > `A[i+1]` makes `A[0 .. j]` sorted.
 
 
-[!](break)
-=================================================================
+[!](break) =================================================================
 
 # Correctness of `INSERTION SORT` by loop-invariance
 
@@ -397,13 +378,13 @@ def insertion_sort(A):
 > with $j=$`len(A)-1`, the entire array `A[0 .. len(A)-1]` is sorted.
 
 
-[!](break)
-=================================================================
+[!](break) =================================================================
 
 # Performance analysis
 
-[!](break)
-=================================================================
+[!](highlight)
+
+[!](break) =================================================================
 
 ### Every statement takes the same amount of time.
 
@@ -419,8 +400,7 @@ def insertion_sort(A):
 
 > $T_\mathrm{LOC}(\mathrm{length}(A)) \Rightarrow T(n)$
 
-[!](break)
-=================================================================
+[!](break) =================================================================
 
 [!](columns 5:)
 
@@ -443,8 +423,7 @@ def insertion_sort(A):
 
 - Average case analysis
 
-[!](break)
-=================================================================
+[!](break) =================================================================
 
 [!](columns 5:)
 
@@ -471,11 +450,10 @@ Let $n = \mathrm{length}(A)$
 
 ---
 
-`$$ T(n) = \sum_{j=0}^n j = \frac{n(n-1)}{2}$$`
+`$$ T(n) \leq \sum_{j=0}^n j = \frac{n(n-1)}{2}$$`
 
 
-[!](break)
-=================================================================
+[!](break) =================================================================
 
 [!](columns 6:)
 
@@ -501,8 +479,7 @@ A more efficient algorithm (to be discussed later):
 | 1000000 | 13815510 | 13.8 $s$ |
 
 
-[!](break)
-====================================================================
+[!](break) ====================================================================
 
 [!](columns 4:)
 

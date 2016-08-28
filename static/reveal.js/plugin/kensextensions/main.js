@@ -48,7 +48,9 @@
                 justifyContent: "center",
                 alignItems: "center",
                 height: 600,
-            });
+                padding: 20,
+            }).append("<div>");
+
             $a.closest("section").css({
                 background: "#888",
                 color: "white",

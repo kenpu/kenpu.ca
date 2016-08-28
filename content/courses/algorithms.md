@@ -24,9 +24,12 @@ math = "yes"
 <div class=col-md-4>
 <img src="textbook.jpg" width=100%></img>
 </div>
-<div class=col-md-4>
-Introduction to Algorithms,
-<i>third edition</i>
+<div class=col-md-8 style=font-size:200%>
+<h2>Text book for the course:</h2>
+    <blockquote>
+    Introduction to Algorithms, Third Edition,
+    <i>Coremen, Leiserson, Rivest and Stein</i>
+    </blockquote>
 </div>
 </div>
 
