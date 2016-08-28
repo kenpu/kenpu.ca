@@ -43,8 +43,8 @@ math = "yes"
 > 
 >  - [Insertion sort](insert-sort)
 >  - [Mergesort](merge-sort)
->  - Quicksort
->  - Comparison based sorting vs numeric sorting
+>  - [Quicksort](quicksort)
+>  - [Comparison based sorting vs numeric sorting](optimal-sorting)
 >  - Counting sort and radix sort
 >  - Bucket sort
 
@@ -115,10 +115,10 @@ math = "yes"
 
 # Marking Scheme
 
-| Evaluation              | Grade |
-|-------------------------|-----|
-| There are many quizzes. | 10% |
-| Three assignments       | 30% |
-| Two tests               | 30% |
-| Final exam              | 30% |
+| Evaluation                             |Grade|
+|----------------------------------------|-----|
+| There are many quizzes.                | 10% |
+| [Three assignments](assignments)       | 30% |
+| Two tests                              | 30% |
+| Final exam                             | 30% |
 
