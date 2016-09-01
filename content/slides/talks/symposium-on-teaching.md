@@ -258,6 +258,8 @@ Realtime monitoring
 
 [!](break)
 
+[!](columns 4:)
+
 Technology is inherently disruptive.  Disruptive technology is **bad** 51% of the time.
 
 <br><br>
@@ -267,6 +269,10 @@ Technology is inherently disruptive.  Disruptive technology is **bad** 51% of th
 <br><br>
 
 ... and transformational 3.99999% of the time.
+
+[!](split)
+
+<img src="vnc.jpg" width="100%"></img>
 
 
 # AMA on
