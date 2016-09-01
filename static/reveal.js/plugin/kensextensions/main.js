@@ -57,6 +57,13 @@
             }).wrapInner(div);
             $a.detach();
         }
+        else if(cmd[0] == "box") {
+            $a.parent().css({
+                border: "thin solid #aaa",
+                padding: 20,
+            });
+            $a.detach();
+        }
     }
 
     $(".slides section").each(function() {

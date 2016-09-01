@@ -1,11 +1,11 @@
 +++
 slide = true
+footnote = "Programming Languages, Ken Pu"
 +++
 
 # Computation & the Turing Machine
 
-[!](break)
-========================================================
+[!](highlight)
 
 # Computation
 
@@ -18,9 +18,6 @@ slide = true
 - Hilbert's Ten's problem, 1900
 - Entscheidungsproblem, 1928
 
-[!](break)
-========================================================
-
 # Computation
 
 [!](columns 5:)
@@ -31,9 +28,6 @@ slide = true
 
 - Entscheidungsproblem, 1928
 - Gödel's incompleteness theorem
-
-[!](break)
-========================================================
 
 # Computation
 
@@ -47,9 +41,6 @@ slide = true
 - Turing machine
 
 
-[!](break)
-========================================================
-
 # Computation
 
 [!](columns 6:)
@@ -60,9 +51,6 @@ slide = true
 
 - Entscheidungsproblem, 1928
 - $\lambda$-calculus
-
-[!](break)
-========================================================
 
 # Computation
 
@@ -76,9 +64,6 @@ slide = true
 - EDVAC
 
 
-
-[!](break)
-========================================================
 
 # Turing Machine
 
@@ -100,15 +85,11 @@ slide = true
     > Up to know, we don't know any other computing models more powerful than
     > a TM.
 
-[!](break)
-=========================================================
 
 # Turing Machine
 
 <div pdf="turing-machine.pdf" scale=0.8></div>
 
-[!](break)
-=========================================================
 
 # Computational power of TM
 
@@ -123,8 +104,6 @@ slide = true
 
 > If a mechanism is equivalent to TM, then it's called _Turing Complete_.
 
-[!](break)
-=========================================================
 
 # Simulation of a function
 
@@ -181,8 +160,6 @@ By Church-Turing thesis, **eval** is computable, so there is a TM for it.
 
 > The TM $\mathbf{U}$ that computes **eval** is called *universal*.
 
-[!](break)
-
 
 # Universal TM
 
@@ -205,7 +182,6 @@ Modern Computer:
 
 - $\mathbf{U}$ is the general purpose computer
 
-[!](break)
 
 # TM-Programming
 
@@ -213,3 +189,13 @@ Modern Computer:
 
 2. The universal programming language is the encoding of $M$.
 
+
+# Summary
+
+[!](highlight)
+
+- Turing Machine is a mechanically realizable device.
+- TM is as powerful (but a lot slower) as any modern computers.
+- There is a very special TM that is called the *Universal TM*.  It can be
+  *programmed*!
+- [!](comfortable)

@@ -1,5 +1,4 @@
 +++
-title = "Optimal Sorting"
 slide = true
 +++
 

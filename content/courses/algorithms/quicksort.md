@@ -1,6 +1,5 @@
 +++
 slide = true
-title = "Quicksort"
 +++
 
 # Quicksort

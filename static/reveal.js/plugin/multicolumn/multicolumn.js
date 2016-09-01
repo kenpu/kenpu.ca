@@ -68,7 +68,7 @@
         var widths = null;
 
         // Get the column configuration
-        // and collect the childrent should be distributed
+        // and collect the children that should be distributed
         // into columns
         for(var i=0; i < children.length; i++) {
             var c = $(children[i]);

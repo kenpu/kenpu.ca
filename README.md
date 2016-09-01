@@ -13,6 +13,7 @@ slide = true
     [!](comfort) (in list as the only li)
     [!](---) hr with padding
     [!](highlight) converts section to middle aligned inverted
+    [!](box)
 
     # title (also breaks)
 
