@@ -1,6 +1,6 @@
 +++
 level = "undergrad"
-code = "CSCI 3055U"
+course = "CSCI 3055U"
 title = "Programming Languages"
 +++
 
@@ -38,7 +38,7 @@ This course is divided into three parts.
 >
 > - [Stateful computation](stateful-computation)
 > - [Functional computation](functional-computation)
-> - [Programming languages: at a glance](intro-to-languages)
+> - [A tour of languages](tour-of-languages)
 
 <br>
 

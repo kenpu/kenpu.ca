@@ -1,6 +1,6 @@
 +++
 level = "undergrad"
-code = "CSCI 3070U"
+course = "CSCI 3070U"
 title = "Algorithms"
 math = "yes"
 +++

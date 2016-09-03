@@ -10,9 +10,6 @@ slide = true
 
 - Hybrid languages
 
-[!](break)
-==============================================================
-
 # Stateful computation
 
 [!](columns 4:)
@@ -51,14 +48,11 @@ def QuickSort(X):
   return quicksort(X, 0, len(X)-1)
 ```
 
-[!](break)
-==============================================================
+# Breakdown of python 
 
-<div pdf="qsort-py.pdf"></div>
+<div pdf="qsort-py.pdf" scale=0.8></div>
 
 
-[!](break)
-==============================================================
 
 # Python v.s. Javascript
 
