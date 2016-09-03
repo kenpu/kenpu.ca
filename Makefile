@@ -1,12 +1,9 @@
-TARGET = kenpuca.github.io
+.PHONY: deploy
 
 dev: pubs
 	hugo server -w
 
 deploy: pubs db github
-	hugo
-	cp -R ./public/* ../$(TARGET)/
-	cd ../$(TARGET)/; git add --all .; git commit -m 'new'; git push
 
 db:
 	hugo --config db.science.uoit.ca.toml -d ../db.science.uoit.ca

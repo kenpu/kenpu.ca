@@ -1,5 +1,9 @@
-{{ if .Title }}
+{{ if .Params.course }}
 <a href="{{.Permalink}}" class="list-group-item">
     {{.Title}} 
+    <div style=float:right>
+        <span class="label label-primary" style="margin-right: 10px"> {{.Params.course}} </span>
+        <span class="label label-info"> {{.Params.level}} </span>
+    </div>
 </a>
 {{ end }}
