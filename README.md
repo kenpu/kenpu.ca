@@ -14,6 +14,7 @@ slide = true
     [!](---) hr with padding
     [!](highlight) converts section to middle aligned inverted
     [!](box)
+    [!](note <note-width:Integer>)
 
     # title (also breaks)
 

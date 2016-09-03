@@ -22,12 +22,30 @@
         });
     }
 
+    // [!](note)
+    // Gets the previous sibling, and wrap $a parent
+    // in a two column row with fixed ratio
+    function processNote($a, ratio) {
+        var noteWidth = ratio ? parseInt(ratio, 10) : 4;
+        var mainWidth = 12 - noteWidth;
+        var note = $a.parent();
+        var sibling = note.prev();
+        var row = $("<div>").addClass("row");
+        var c1 = $("<div>").addClass("col-md-" + mainWidth).appendTo(row);
+        var c2 = $("<div>").addClass("col-md-" + noteWidth).appendTo(row);
+        note.after(row);
+        note.detach().appendTo(c2);
+        sibling.detach().appendTo(c1);
+        note.css({
+            fontSize: "85%",
+            marginLeft: 20,
+        });
+    }
+
     function processCmd($a) {
-        var cmd = ($a.attr('href') || "").split();
-        console.debug("cmd:", cmd);
+        var cmd = ($a.attr('href') || "").split(/\s+/);
         // =========================================
         if(cmd[0].startsWith("comfort")) {
-            console.debug("ding");
             $a.closest("ul,ol").children().css({
                 marginBottom: 20,
             });
@@ -42,6 +60,7 @@
             }));
             $a.detach();
         }
+        // =========================================
         else if(cmd[0] == "highlight") {
             var div = $("<div>").css({
                 display: "flex",
@@ -57,11 +76,17 @@
             }).wrapInner(div);
             $a.detach();
         }
+        // =========================================
         else if(cmd[0] == "box") {
             $a.parent().css({
                 border: "thin solid #aaa",
                 padding: 20,
             });
+            $a.detach();
+        }
+        // =========================================
+        else if(cmd[0] = "note") {
+            processNote($a, (cmd.length > 1) ? cmd[1] : "");
             $a.detach();
         }
     }
