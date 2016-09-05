@@ -85,7 +85,7 @@
             $a.detach();
         }
         // =========================================
-        else if(cmd[0] = "note") {
+        else if(cmd[0] == "note") {
             processNote($a, (cmd.length > 1) ? cmd[1] : "");
             $a.detach();
         }
