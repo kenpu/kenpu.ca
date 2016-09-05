@@ -147,8 +147,7 @@ We want to be able to merge to sorted list into a larger list.
 
 [!](break)
 
-<script src="https://gist.github.com/kenpu/df50d5b42ed4abb0c4749284111005d6.js?file=merge.py"></script>
-
+{{<gist "kenpu" "df50d5b42ed4abb0c4749284111005d6" "merge.py">}}
 
 
 # Bottom-up Mergesort
@@ -188,7 +187,7 @@ def mergesort(list):
 
 # Bottom-up Mergesort
 
-<script src="https://gist.github.com/kenpu/df50d5b42ed4abb0c4749284111005d6.js?file=mergesort.py"></script>
+{{<gist "kenpu" "df50d5b42ed4abb0c4749284111005d6" "mergesort.py">}}
 
 # Bottom-up Mergesort
 
