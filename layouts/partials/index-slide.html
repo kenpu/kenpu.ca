@@ -39,7 +39,7 @@
 	</head>
 	<body>
         <div class="reveal">
-            <div class="slides">{{.Content}}</div>
+            <div class="slides" style="opacity: 0">{{.Content}}</div>
         </div>
 
         <script src="/js/jquery-2.2.1.min.js"></script>
@@ -65,7 +65,7 @@
             return false;
         }
         $(function() {
-            var $reveal = $(".reveal > .slides").hide();
+            var $reveal = $(".reveal > .slides");
             var $elems = $reveal.children();
             var $section = $("<section>");
             for(var i=0; i < $elems.length; i++) {
@@ -86,40 +86,40 @@
                 $section.appendTo($reveal);
             }
 
-            $reveal.show();
-
-            startReveal();
+            startReveal($reveal);
         });
 
-        function startReveal() {
+        function startReveal($slides) {
 			Reveal.initialize({
-				history: true,
-
+				history: false,
                 slideNumber: true,
-
                 center: false,
-
                 transition: "zoom",
                 transitionSpeed: "fast",
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/notes/notes.js', 
-                        async: true },
-                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/highlight/highlight.js', 
-                        async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    {src: '{{.Site.BaseURL}}/reveal.js/plugin/notes/notes.js', async: true },
+                    {src: '{{.Site.BaseURL}}/reveal.js/plugin/highlight/highlight.js', 
+                        async: true, 
+                        callback: function() { hljs.initHighlightingOnLoad(); } },
                     {{ if .Params.nochalk }}
                         // slip chalkboard
                     {{ else }}
-                        { src: '{{.Site.BaseURL}}/reveal.js/plugin/chalkboard/chalkboard.js', async: false },
+                        { src: '{{.Site.BaseURL}}/reveal.js/plugin/chalkboard/chalkboard.js', async: true },
                     {{ end }}
-                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/math/math.js', async: true },
-                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
-                    { src: '{{.Site.BaseURL}}/reveal.js/plugin/kensextensions/main.js', async: true },
-                    {src: '{{.Site.BaseURL}}/reveal.js/plugin/pdfviewer/pdfviewer.js', 
-                        async: true}
+                    {src: '{{.Site.BaseURL}}/reveal.js/plugin/math/math.js', async: true },
+                    {src: '{{.Site.BaseURL}}/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
+                    {src: '{{.Site.BaseURL}}/reveal.js/plugin/kensextensions/main.js', async: true },
+                    {src: '{{.Site.BaseURL}}/reveal.js/plugin/pdfviewer/pdfviewer.js', async: true},
 				]
 			});
+            Reveal.addEventListener('ready', function() {
+                console.debug("Ready to reveal");
+                $slides.animate({
+                    opacity: 1.0,
+                });
+            });
         }
 		</script>
 	</body>
