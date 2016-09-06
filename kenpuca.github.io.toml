@@ -1,3 +1,7 @@
 baseurl = "https://kenpuca.github.io"
 languageCode = "en-us"
 title = "db@uoit"
+
+[params]
+
+gotty = "http://db.science.uoit.ca:8080"

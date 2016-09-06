@@ -1,3 +1,7 @@
 baseurl = "http://kenpu.ca"
 languageCode = "en-us"
 title = "kenpu.ca"
+
+[params]
+
+gotty = "http://db.science.uoit.ca:8080"

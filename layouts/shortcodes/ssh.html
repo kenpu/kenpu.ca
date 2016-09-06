@@ -1,0 +1,7 @@
+{{if .Site.Params.gotty}}
+<iframe 
+    data-src='{{.Site.Params.gotty}}/?arg={{.Get "image"}}' 
+    style='width:100%;height:{{.Get "height" | default "400px"}}'></iframe>
+{{else}}
+<div>Workspace hosting not available</div>
+{{end}}
