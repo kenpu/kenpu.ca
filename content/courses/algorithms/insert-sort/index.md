@@ -479,13 +479,8 @@ A more efficient algorithm (to be discussed later):
 | 1000000 | 13815510 | 13.8 $s$ |
 
 
-[!](break) ====================================================================
+# Summary
 
-[!](columns 4:)
-
-## Summary
-
-[!](split)
 
 - INSERTION sort
 - Analysis of correctness by loop-invariance
@@ -494,3 +489,13 @@ A more efficient algorithm (to be discussed later):
 ---
 
 Text: 2.1, 2.2,
+
+# Challenge
+
+Is `INSERTSORT` a stable sorting algorithm?
+
+Recall:
+
+> Stable sorting requires an additional condition on the permutation:
+>
+> `$$ \forall i,j\in [0, \mathrm{length}(x)],\ i < j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) < \pi(j) $$`

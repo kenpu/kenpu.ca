@@ -1,5 +1,6 @@
 {{ define "course" }}
-    {{ $file := substr .LogicalName 0 -3 }}
+    {{ $filearray := findRE "^([^.]+)" .LogicalName }}
+    {{ $file := index $filearray 0 }}
     <div class="col-md-6">
         <div class="panel panel-primary">
           <div class="panel-heading">

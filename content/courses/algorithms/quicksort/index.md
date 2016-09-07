@@ -152,10 +152,71 @@ def quicksort(L, p, r):
 ```
 
 
+# Performance Analysis
+
+[!](highlight)
+
+> We will only give a terse outline of the analysis.  The full version is deferred to later lectures.
+
+# Performance Analysis
+
+Let there be $n$ elements in the array.
+
+Key obsevation:
+
+- `partition(L, p, r)` takes $(r - p)$ iterations.  Each iteration has a fixed number of instructions.  So, $T_\mathrm{partition} = c_1 (r-p) \leq c\cdot n$.
+
+- At each *invocation* of `quicksort(L, p, k-1)` and `quicksort(L, k+1, r)`, we need to determine the number of elements: $k-1-p$, and $r-k-1$.
+
+# Performance Analysis: Worst-case
+
+- The worst case for $T_\mathrm{partition} = n$
+- The worst case for $k-1-p = n-1$
+- The worst case for $r-k-1 = n-1$
+
+---
+
+We have enough to set-up an equation to estimate the number of instructions of `quicksort(L, a, b)`:
+
+Let $|L[a\dots b]| = n$.
+
+`$$\begin{eqnarray}
+T_\mathrm{quicksort}(n) &=& n + 2\cdot T_\mathrm{quicksort}(n-1)
+\end{eqnarray}$$`
+
+---
+
+[!](columns 8:)
+
+This leads to a (poor) performance characteristics of: $\approx n^2$
+
+[!](split note)
+
+> We will show how to solve such equations (known as recurrence equations) in the next section of this course.
 
 
+# Performance Analysis: average case
 
+Quicksort as the name suggests is actually quite quick (most of the time...)
 
+---
+
+Revisiting `k = partition(L, p, q)`.
+
+> The pivot value should be somewhere in the middle of the subarray.
+> Namely: $k\approx p+q/2$, and so $k-1-p \approx n/2$, and $q-k-1\approx n/2$.
+
+---
+
+Revisiting the recurrence equation:
+
+> `$$\begin{eqnarray}
+T_\mathrm{quicksort}(n) &=& n + 2\cdot T_\mathrm{quicksort}(n/2)
+\end{eqnarray}$$`
+
+---
+
+This leads to a satisfying performance characteristics of: $\approx n\log(n)$
 
 # Summary
 
@@ -168,3 +229,12 @@ def quicksort(L, p, r):
 - Quicksort: a recursive sorting algorithm
 
 
+# Challenge
+
+Is `QUICKSORT` a stable sorting algorithm?
+
+Recall:
+
+> Stable sorting requires an additional condition on the permutation:
+>
+> `$$ \forall i,j\in [0, \mathrm{length}(x)],\ i < j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) < \pi(j) $$`

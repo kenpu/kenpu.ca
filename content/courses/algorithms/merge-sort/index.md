@@ -421,3 +421,12 @@ Spoiler Alert:
 - Top-down mergesort
 
 
+# Challenge
+
+Is `MERGESORT` a stable sorting algorithm?
+
+Recall:
+
+> Stable sorting requires an additional condition on the permutation:
+>
+> `$$ \forall i,j\in [0, \mathrm{length}(x)],\ i < j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) < \pi(j) $$`
