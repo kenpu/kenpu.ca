@@ -1,6 +1,11 @@
 {{if .Site.Params.gotty}}
+{{ $url := print .Site.Params.gotty "/?arg=" (.Get "image") }}
 <iframe 
-    data-src='{{.Site.Params.gotty}}/?arg={{.Get "image"}}' 
+    {{if .Page.Params.slide}}
+    data-src='{{$url}}'
+    {{else}}
+    src='{{$url}}'
+    {{end}}
     style='width:100%;height:{{.Get "height" | default "400px"}}'></iframe>
 {{else}}
 <div>Workspace hosting not available</div>
