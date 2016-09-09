@@ -82,7 +82,7 @@ footnote = "Programming Languages, Ken Pu"
 3. Turing-complete
 
     > TM is the most powerful computing model we know.
-    > Up to know, we don't know any other computing models more powerful than
+    > Up to now, we don't know any other computing models more powerful than
     > a TM.
 
 

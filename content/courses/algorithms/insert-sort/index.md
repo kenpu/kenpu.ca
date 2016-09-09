@@ -128,7 +128,6 @@ nx.draw(G)
 plot.save("random-graph.png")
 ~~~
 
-[!](break) ================================================
 
 # The sorting problem
 
@@ -158,7 +157,6 @@ plot.save("random-graph.png")
 - The comparison function can be arbitrary, and it defines the ordering.
 
 
-[!](break) =========================================================
 
 # The sorting problem
 
@@ -174,7 +172,6 @@ plot.save("random-graph.png")
 
     `$$ \forall i,j\in [0, \mathrm{length}(x)],\ i < j\ \mathrm{and}\ f(x[i], x[j]) = 0 \implies \pi(i) < \pi(j) $$`
 
-[!](break) =============================================================
 
 # Insertion sort
 
@@ -185,7 +182,19 @@ It's simple enough that:
 1. It's intuitive.
 2. It can be fully analyzed relatively easily.
 
-[!](break) ============================================================
+# Insertion sort: the intuition
+
+Suppose you have an array such that the *initial* subarray is already sorted.  But the last element may be out of place.
+
+```x
++---+---+---+----+---+
+| 2 | 4 | 5 | 10 | x |
++---+---+---+----+---+
+```
+
+*Q*:
+
+> What is a procedure to rearrange such array?  Imagine that `x=7`.
 
 # Insertion sort
 
@@ -197,7 +206,7 @@ Chapter 2, Figure 2.1 of textbook.
 
 [!](split)
 
-~~~python
+~~~{python}
 def insertion_sort(A):
   for j in range(1, len(A)):
     key = A[j]
@@ -208,20 +217,46 @@ def insertion_sort(A):
     A[i+1] = key
 ~~~
 
-[!](break) ===========================================================
+# Try it out
+
+[!](columns 6:)
+
+~~~{python sm clipboard}
+def insertion_sort(A):
+  for j in range(1, len(A)):
+    key = A[j]
+    i = j-1
+    while i >= 0 and A[i] > key:
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
+~~~
+
+~~~{python sm clipboard}
+import random
+A = [random.randint(0, 100) for i in range(10)]
+print A
+~~~
+
+~~~{python sm clipboard}
+insertion_sort(A)
+print A
+~~~
+
+[!](split)
+
+{{<ssh image="kenpu/python" height="500px">}}
+
 
 # Analysis of correctness
 
-- Intuition only takes us part way, *not the whole way*.
+- Intuition is not to be trusted.
 
-- Sometimes, we can formally prove that an algorithm is correct.
-
-      But first, we need some machineries. 
-
-[!](break) ===========================================================================
+- We can formally prove that an algorithm is correct.
+  But first, we need some machinery.
 
 
-## Loop invariance
+# Loop invariance
 
 [!](columns 4:)
 
@@ -256,13 +291,15 @@ avg = total / count
   of each iteration of
   the loop.
 
-    > - `count $\not=$ 0` 
-    > - `total``$_{i+1} \geq$` `total``$_i$`
-    >
-    >       Note: for loop-invariance, we can refer to the iteration index
-    >       $i\geq 0$.
+    At the _end_ of the $i$-th iteration:
 
-[!](break) =================================================================
+    > - [!](comfort)
+    > - `count`$_i$ $\not=$ `0` 
+    >    <i class="fa fa-thumbs-up"></i>
+    > - `total``$_{i+1} \geq$` `total``$_i$`
+    >    <i class="fa fa-thumbs-down"></i>:
+    >    This is not a loop-invariance because it may not be true.
+    >    Consider if $v=0$ for some iteration.
 
 # Correctness of `INSERTION SORT` by loop-invariance
 
@@ -283,7 +320,6 @@ def insertion_sort(A):
 
 There are two loops, with `while`-loop nested in the `for`-loop.
 
-[!](break) =================================================================
 
 # Correctness of `INSERTION SORT` by loop-invariance
 
@@ -304,17 +340,15 @@ def insertion_sort(A):
 
 **Inner-loop invariance**
 
-> `i` is an index such that 
+If we assume that $A[0 .. j-1]$ is sorted, then
+the following loop invariance holds for the `for` loop:
 
-> - `A[0 .. i]` are all smaller than `key`.
-> - `A[i+2 .. j]` are larger or equal to `key`. 
-> - `A[i] = A[i+1]`
+At the end of the iteration, we have $A[i\dots j]$ is sorted.
 
 ---
 
 > Can we say anything about `A[j+1]` to `A[len(A)-1]`?
 
-[!](break) =================================================================
 
 # Correctness of `INSERTION SORT` by loop-invariance
 
@@ -349,7 +383,6 @@ def insertion_sort(A):
 > `A[i+1]` makes `A[0 .. j]` sorted.
 
 
-[!](break) =================================================================
 
 # Correctness of `INSERTION SORT` by loop-invariance
 
@@ -481,6 +514,7 @@ A more efficient algorithm (to be discussed later):
 
 # Summary
 
+[!](highlight)
 
 - INSERTION sort
 - Analysis of correctness by loop-invariance

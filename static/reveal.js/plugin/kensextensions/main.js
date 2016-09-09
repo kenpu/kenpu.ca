@@ -28,7 +28,10 @@
     function processNote($a, ratio) {
         var noteWidth = ratio ? parseInt(ratio, 10) : 4;
         var mainWidth = 12 - noteWidth;
-        var note = $a.parent();
+        // assume blockquote being the note container
+        var note = $a.closest("blockquote");
+        // default to the parent
+        if(note.size() == 0) note = $a.parent();
         var sibling = note.prev();
         var row = $("<div>").addClass("row");
         var c1 = $("<div>").addClass("col-md-" + mainWidth).appendTo(row);

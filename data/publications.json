@@ -37,6 +37,14 @@
      "title": "ARC: A Pipeline Approach Enabling Large-Scale Graph Visualization", 
      "year": "2016", 
      "type": "conference"
+    }, 
+    {
+     "publisher": "", 
+     "authors": "M. A. Helala, K. Q. Pu, and F. Z. Qureshi", 
+     "publication": "in\u00a0Proc. 10th international conference on distributed smart cameras (ICDSC 16), Paris, 2016", 
+     "title": "A formal algebra implementation for distributed image and video stream processing,", 
+     "year": "2016", 
+     "type": "conference"
     }
    ], 
    "year": "2016"
@@ -499,9 +507,9 @@
   {
    "papers": [
     {
-     "publisher": "University of Ontario Institute of Technology", 
+     "publisher": "University of Toronto", 
      "authors": "Pu, Ken; ", 
-     "publication": ", 1998, University of Ontario Institute of Technology", 
+     "publication": ", 1998, University of Toronto", 
      "title": "Education BASc, University of Toronto, Division of Engineering Science, 1998 MASc, University of Toronto, Department of Electrical and Computer Engineering, 2000. Thesis title:\u201cModeling and control of hierarchical discrete event", 
      "year": "1998", 
      "type": "other"
