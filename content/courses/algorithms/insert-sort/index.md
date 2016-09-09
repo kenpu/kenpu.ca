@@ -299,7 +299,7 @@ avg = total / count
     > - `total``$_{i+1} \geq$` `total``$_i$`
     >    <i class="fa fa-thumbs-down"></i>:
     >    This is not a loop-invariance because it may not be true.
-    >    Consider if $v=0$ for some iteration.
+    >    Consider if $v < 0$ for some iteration.
 
 # Correctness of `INSERTION SORT` by loop-invariance
 
