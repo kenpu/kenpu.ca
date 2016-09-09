@@ -6,7 +6,7 @@
     {{else}}
     src='{{$url}}'
     {{end}}
-    style='width:100%;height:{{.Get "height" | default "400px"}}'></iframe>
+    style='max-width:100%;width:100%;height:{{.Get "height" | default "400px"}}'></iframe>
 {{else}}
 <div>Workspace hosting not available</div>
 {{end}}
