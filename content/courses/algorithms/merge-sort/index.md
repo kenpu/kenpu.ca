@@ -50,7 +50,7 @@ Combine:
 # Example: cleaning a mess
 
 <img src="Minion.jpg" style="float:left;width:80px;margin:0 20px 0px 0"></img>
-Consider how you can instruct a minion to clean a messy office.  The minion has
+Consider how you can instruct a minion to clean a messy office.  The minion
 is overwhelmed by the mess of the entire office.  Divide and conquer is a great
 way to solve the cleaning problem.
 
