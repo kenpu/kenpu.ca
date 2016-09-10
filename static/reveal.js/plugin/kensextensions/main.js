@@ -55,12 +55,20 @@
             $a.closest("li").detach();
         }
         // =========================================
-        else if(cmd[0].startsWith("---")) {
+        else if(cmd[0].startsWith("---") ||
+                cmd[0].startsWith("***")) {
             var n = cmd[0].length;
-            $a.after($("<hr>").css({
+            var i = $("<i class='fa fa-asterisk'></i>").css({
+                marginLeft: 5,
+                marginRight: 5,
+                color: '#888',
+            });
+            var div = $("<div></div>").css({
                 marginTop: 10*n,
                 marginBottom: 10*n,
-            }));
+                textAlign: "center"
+            }).append(i,i.clone(),i.clone());
+            $a.after(div);
             $a.detach();
         }
         // =========================================
