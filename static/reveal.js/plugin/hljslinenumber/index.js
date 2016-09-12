@@ -12,10 +12,6 @@
         });
     }
 
-    Reveal.addEventListener('slidechanged', function(e) {
-        process(e.currentSlide);
-    });
-
-    process(Reveal.getCurrentSlide());
+    process(".reveal .slides");
 })();
 
