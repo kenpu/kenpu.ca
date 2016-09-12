@@ -102,7 +102,9 @@
                     {src: '{{.Site.BaseURL}}/reveal.js/plugin/notes/notes.js', async: true },
                     {src: '{{.Site.BaseURL}}/reveal.js/plugin/highlight/highlight.js', 
                         async: true, 
-                        callback: function() { hljs.initHighlightingOnLoad(); } },
+                        callback: function() { hljs.initHighlightingOnLoad(); } 
+                    },
+                    {src: '{{.Site.BaseURL}}/reveal.js/plugin/hljslinenumber/index.js', async: true},
                     {{ if .Params.nochalk }}
                         // slip chalkboard
                     {{ else }}
