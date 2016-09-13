@@ -206,7 +206,7 @@ Chapter 2, Figure 2.1 of textbook.
 
 [!](split)
 
-~~~{python}
+~~~{python nu}
 def insertion_sort(A):
   for j in range(1, len(A)):
     key = A[j]
@@ -526,7 +526,7 @@ Text: 2.1, 2.2,
 
 # Challenge
 
-Is `INSERTSORT` a stable sorting algorithm?
+Is INSERTION sort a stable sorting algorithm?
 
 Recall:
 

@@ -363,6 +363,44 @@ So,
 
 $$ \mathbf{Y} f x \implies f (\mathbf{Y} f) x \implies f f \dots f x $$
 
+> [!](note) $\mathbf{Y} f$ is a _fixed point_.
+
+# Using Y-combinator to implement factorial
+
+Consider a function $F$ as:
+
+$$\lambda fx. (\mathrm{ifzero}\ x)\ 1\ (*\ x\ (f\ (\mathrm{dec}\ x)))$$
+
+If we apply the Y-combinator to $F$, we get:
+
+$$ (\mathbf{Y} F) n = F (\mathbf{Y} F) n $$
+
+You can check the following:
+
+$$ (\mathbf{Y} F) n = (\mathrm{ifzero}\ n)\ 1\ (*\ n\ ((\mathbf{Y} F)\ (\mathrm{dec}\ n))) $$
+
+> [!](note) This is really quite amazing.  We have achieved Turing-completeness via recursion.  The amazing part is that we don't need variables to refer to any values.  So $F$ is just for convenience and readability.
+
+# Summary
+
+[!](highlight)
+
+- [!](comfort)
+
+- LC is purely symbolic.
+
+- It carries out computation by very simple string rewrites:
+
+    1. Function application
+    2. Variable renaming
+
+- It solves problem by:
+
+    1. Encode the problem as a single (huge) string of LC expression.
+    2. Using the rules to rewrite the string to a *normal* form.
+    3. The resulting LC expression is the answer.
+
+- No variables are needed.
 
 
 
