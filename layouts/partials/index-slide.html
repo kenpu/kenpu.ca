@@ -12,8 +12,9 @@
         <link rel="stylesheet" href="{{ .Site.BaseURL }}/reveal.js/css/reveal.css">
         <link rel="stylesheet" href="{{ .Site.BaseURL }}/reveal.js/css/theme/white.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-        <link rel="stylesheet" href="{{ .Site.BaseURL }}/reveal.js/lib/css/zenburn.css">
+		<!-- Theme used for syntax highlighting of code, zenburn or github -->
+        {{$HLStyle := "github"}}
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/reveal.js/lib/css/{{$HLStyle}}.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
