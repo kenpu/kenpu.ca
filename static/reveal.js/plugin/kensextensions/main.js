@@ -61,6 +61,7 @@
             var i = $("<i class='fa fa-asterisk'></i>").css({
                 marginLeft: 5,
                 marginRight: 5,
+                fontSize: 15,
                 color: '#888',
             });
             var div = $("<div></div>").css({
