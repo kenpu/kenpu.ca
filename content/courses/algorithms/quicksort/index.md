@@ -50,7 +50,7 @@ def partition(L, p, r):
     x = L[r]
     L1 = [y for y in L[p:r] if y <= x]
     L2 = [y for y in L[p:r] if y > x]
-    L[p:r] = L1 + [x] + L2
+    L[p:r+1] = L1 + [x] + L2
 ```
 
 
@@ -68,7 +68,7 @@ def partition(L, p, r):
         if L[j] <= x:
             i += 1
             L[i], L[j] = L[j], L[i]
-    L[i+1], L[r] = L[r], L[i]
+    L[i+1], L[r] = L[r], L[i+1]
 ```
 
 [!](split)
@@ -92,7 +92,7 @@ def partition(L, p, r):
         if L[j] <= x:
             i += 1
             L[i], L[j] = L[j], L[i]
-    L[i+1], L[r] = L[r], L[i]
+    L[i+1], L[r] = L[r], L[i+1]
 ```
 
 [!](split)
@@ -123,7 +123,7 @@ def partition(L, p, r):
         if L[j] <= x:
             i += 1
             L[i], L[j] = L[j], L[i]
-    L[i+1], L[r] = L[r], L[i]
+    L[i+1], L[r] = L[r], L[i+1]
 ```
 
 [!](split)

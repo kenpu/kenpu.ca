@@ -12,7 +12,8 @@ slide = true
     [!](break)
     [!](comfort) (in list as the only li)
     [!](---) separator with padding proportional to number of chars
-    [!](***) same as above
+    [!](***) asterisk
+    [!](&&&) a leaf
     [!](highlight) converts section to middle aligned inverted
     [!](box)
     [!](note <note-width:Integer>)

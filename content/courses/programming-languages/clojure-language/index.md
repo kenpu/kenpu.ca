@@ -3,7 +3,7 @@ slide = true
 title = "Clojure: the language"
 +++
 
-# Clojure: the language
+# Clojure: Part I
 
 [!](highlight)
 
@@ -78,7 +78,7 @@ gets evaluated to:
 
 > An _atom_ is a value that can be an element of a list.
 
-[!](*******)
+[!](&&&&&&)
 
 Let's go through the different atoms of the core-clojure langauge.
 
@@ -210,7 +210,7 @@ Clojure uses other brackets to improve the parentheses overload.
 
 We will focus on the core Clojure - which is a Turing-complete implementation of Lambda Calculus.
 
-[!](***)
+[!](&&&)
 
 - [!](comfort)
 - Function application
@@ -265,4 +265,110 @@ Symbols are just names, and they can be used to represent anything, such as:
 **Definition**: _Symbols Binding_
 
 > When we associate a symbol to something else, the *association* is called a _binding_.
+
+# Symbol binding
+
+<span style=color:red>Insert diagram here</span>
+
+# Global symbol binding
+
+~~~clojure
+(def <symbol> <expression>)
+~~~
+
+[!](note) Creates a global symbol binding that exists throughout the entire _namespace_.
+
+More on _namespaces_ later...
+
+[!](---)
+
+*Example*:
+
+> ~~~clojure
+(def PI 3.1415)
+~~~
+
+> ~~~clojure
+(def area-of-circle (fn [r] (* r r PI)))
+~~~
+
+> ~~~clojure
+(area-of-circle 100)
+~~~
+
+# Global symbol binding
+
+- Must resist the usage of global symbol binding.
+
+	> Java/C/C++ tend to bind functions to global symbols.
+
+- Because functions are values, think of functions as simple as _integers_.
+  So, Clojure requires minimal global symbol binding.
+
+- Use _local binding_ (coming up next) as much as you can.
+
+# Local symbol binding
+
+We want to create new symbol bindings in expressions _on-the-fly_.
+
+<pre><code class="lang-nosyntax" data-noescape>(def two-circles
+  <span style="color:#944;
+  				border:thin solid #888;
+  				padding:5px;
+  				margin:5px;
+  				font-weight: bold;
+  				display:inline-block">(+ (* 3.1415 100 100) (* 3.1415 100 100))</span>)
+</code></pre>
+
+[!](note) Let's create a symbol bindings which are _only_ valid in the inner-expression.
+
+
+## <span style=color:red>BAD IDEA</span>
+
+```clojure
+(def PI 3.1415)
+(def radius 100)
+(def area (* 3.1415 radius radius))
+(def two-circles (+ area area))
+```
+
+> [!](note)
+> Why is it bad?
+>
+> - `radius` is not really a universal constant.  It's 100 only for this expression.
+> - same for area.
+
+# Local Symbol Binding
+
+```clojure
+(...
+  (let [<symbol> <expression>
+        <symbol> <expression>
+        ...]
+    <inner-expression>) ...)
+```
+
+[!](&&&)
+
+*Example*:
+
+```clojure
+(def PI 3.1415)
+(def two-circle
+  (let [r    100
+        area (* PI r r)]
+    (+ r r)))
+```
+
+[!](note) Can you summarize why local symbol binding is more desirable to compute the value of `two-circle`?
+
+# Summary
+
+[!](highlight)
+
+- Atoms
+- Lists as code and code as lists
+- Functions
+- Invocation of functions
+- Symbol bindings (global v.s. local)
 
