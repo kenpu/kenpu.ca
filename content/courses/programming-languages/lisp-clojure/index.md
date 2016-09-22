@@ -124,7 +124,7 @@ Every language must support data structures:
 
 # Homoiconic Languages
 
-Every language must support a (sometimes VAST) collectio of programming constructs:
+Every language must support a (sometimes VAST) collection of programming constructs:
 
 - C:
 

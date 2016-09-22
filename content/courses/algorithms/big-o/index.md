@@ -88,12 +88,73 @@ We want to define all function which are measure of algorithms which are better 
 
 **Definition**: The Big-O notation
 
-> `$$\mathcal{O}(g(n)) = \{f(n) : \exists n_0, c > 0,\forall n > n_0, \ 0 < f(n) < c\dots g(n)\}$$`
+> `$$\mathcal{O}(g(n)) = \{f(n) : \exists n_0, c > 0,\forall n > n_0, \ 0 < f(n) < c\cdot g(n)\}$$`
 
-We call $g(n)$ the asymptotic upper bound.
+We call $g(n)$ the asymptotic upper bound of the functions in $\mathcal{O}(g(n))$.
+
+<img src="big-o.png" style=float:right;height:300px></img>
+
+# Significance of asymptotic analysis
+
+[!](columns 6:)
+
+- If we have an algorithm $A$, and its precise time measurement (on a specific hardware) is given precisely as `$T(n)$`, where $n$ is the input size in _bytes_.
+
+- If `$T(n)\in\mathcal{O}(g(n))$`, we are saying that $A$ is **better** than $g(n)$.
+
+[!](split)
+
+*Challenge*:
+
+---
+
+Check that the variations on the way that the efficiency of $A$ is 
+measured also are in $\mathcal{O}(g(n))$.
+
+1. $T_1(n)$ is the time that $A$ runs on a slow processor.
+
+2. $T_2(n)$ is the time that $A$ if the input is measured in the array length.
+
+
+
 
 # $\Omega$-notation - worse than
 
 **Definition**: The $\Omega$-notation
 
-> `$$\mathcal{O}(g(n)) = \{f(n) : \exists n_0, c > 0,\forall n > n_0, \ 0  < c\dots g(n) < f(n) \}$$`
+> `$$\Omega(g(n)) = \{f(n) : \exists n_0, c > 0,\forall n > n_0, \ 0  < c\cdot g(n) < f(n) \}$$`
+
+We say that $g(n)$ is the asymptotic lower bound of the functions in $\Omega(g(n))$.
+
+<img src="omega.png" style=float:right;height:300px></img>
+
+
+# $\Theta$-notation - same as
+
+**Definition*: The $\Theta$-notation
+
+> `$$\Theta(g(n)) = \mathcal{O}(g(n)) \cap \Omega(g(n))$$`
+
+More precisely,
+
+
+`$$
+\begin{eqnarray}
+&& \Theta(g(n)) \\
+&=& 
+\{f(n): \exists n_0, c_1, c_2 > 0,\forall n > n_0,\ 0 \leq c_1\cdot g(n) \leq f(n) \leq c_2\cdot g(n)\}
+\end{eqnarray}
+$$`
+
+
+<img src="theta.png" style=float:right;height:300px></img>
+
+# Recap
+
+- $\mathcal{O}(g(n))$ is the collection of **all** the performance measures that are better (or equivalent) to $g(n)$.
+
+- $\Omega(g(n))$ is the collection of **all** the performance measures that are worse (or equivalent) to $g(n)$.
+
+- $\Theta(g(n))$ is the collection of **all** the performance measures that are equivalent to $g(n)$.
+
+# Why is 

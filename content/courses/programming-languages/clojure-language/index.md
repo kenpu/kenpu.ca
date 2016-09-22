@@ -268,7 +268,7 @@ Symbols are just names, and they can be used to represent anything, such as:
 
 # Symbol binding
 
-<span style=color:red>Insert diagram here</span>
+<img src="binding.png"></img>
 
 # Global symbol binding
 
