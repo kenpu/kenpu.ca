@@ -62,7 +62,7 @@ The leaf records the final ordering of the original index.
 
 - What is the height of the tree if there are $n!$ leaf nodes?
 
-	> $\log_2(n!) \approx c\dot n\log(n)$
+	> $\log_2(n!) \approx c\cdot n\log(n)$
 
 # Optimal Comparison Based Sorting
 
