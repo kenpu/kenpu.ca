@@ -170,7 +170,7 @@ def bucketsort(A, n):
     # distribute the buckets
     for a in A:
         i = int(math.floor(a * n))
-        INSERT_SORT(buckets[i])
+        bucket[i].append(a)
     # sort each bucket
     for bucket in buckets:
         bucket.sort()

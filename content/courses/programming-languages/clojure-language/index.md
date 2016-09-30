@@ -357,7 +357,7 @@ We want to create new symbol bindings in expressions _on-the-fly_.
 (def two-circle
   (let [r    100
         area (* PI r r)]
-    (+ r r)))
+    (+ area area)))
 ```
 
 [!](note) Can you summarize why local symbol binding is more desirable to compute the value of `two-circle`?
