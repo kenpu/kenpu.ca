@@ -3,8 +3,15 @@ slide = true
 title = "Asymptotic notation"
 +++
 
-# Asymptotic notation
+# Complexity classes
 
+[!](highlight)
+
+- Asymptotic notations and complexity classes
+- Intuition
+- Properties 
+
+# Asymptotic notation
 
 We will develop a way to measure the efficiency of algorithms which is _invariant_ to the non-essential issues such as the speed of computer hardware and the effiency of the programming language used.
 
@@ -157,4 +164,80 @@ $$`
 
 - $\Theta(g(n))$ is the collection of **all** the performance measures that are equivalent to $g(n)$.
 
-# Why is 
+# Functions we use:
+
+- Polynomials:
+
+    $$f(n) = \sum_{i=0}^d a_i n^i$$
+
+- Exponentials:
+
+    $$f(n) = a^n$$
+
+- Logorithms
+
+    $$f(n) = \log_a(n)$$
+
+- Factorials
+
+    $$f(n) = n!$$
+
+# More about Exponents
+    
+- [!](comfortable)
+- `$(a^m)^n = a^{mn}$`
+- `$(a^m) (a^n) = a^{m+n}$`
+- `$\lim_{n\to\infty} \frac{n^d}{a^n} = 0$`
+
+
+# More about Logorithms
+
+- [!](comfortable)
+- `$a^{\log_a(n)} = n$`
+- `$\log_a(mn) = \log_a(m) + \log_a(n)$`
+- `$\log_a(n^d) = d\cdot \log_a(n)$`
+- `$\log_b(a) \cdot \log_a(n) = \log_b(n)$`
+- `$a^{\log_a (n)} = n^{\log_b(a)}$`
+
+# More about Factorial
+
+Stirling's approximation:
+
+$$ n! \approx \sqrt{2\pi n} \left(\frac{n}{e}\right)^n $$
+
+# Comparisons
+
+For any $a > 1$, $b > 0$ and $c > 1$, we have:
+
+`$$ 
+\mathcal{O}(\log_a(n)) \subseteq \mathcal{O}(n^b) \subseteq \mathcal{O}(c^n)
+$$`
+
+We can show that:
+
+$$ n! \in\mathcal{O}(n^n) $$
+
+In fact:
+
+$$ \mathcal{O}(2^n) \subset \mathcal{O}(n^n) $$
+
+
+# Notation
+
+It's convenient to treat complexity classes as _variables_ in equations.
+
+So, we use the following notations:
+
+- If $f\in \mathcal{O}(g)$, we write it as equality $f=\mathcal{O}(g)$.
+
+# Test your understanding
+
+1. If $f = \mathcal{O}(g)$ and $g = \mathcal{O}(h)$, can you prove that $f =
+   \mathcal{O}(h)$?
+
+    > Does it make sense intuitively?
+    >
+    > Does it work out mathematically?
+
+2. So that $n^2 + 10000= \mathcal{O}(n^3)$.
+

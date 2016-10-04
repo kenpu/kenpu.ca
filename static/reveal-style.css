@@ -67,11 +67,13 @@
     margin-bottom: 20px;
 }
 
-.reveal p > code,
-.reveal li > code {
+.reveal p code,
+.reveal li code {
     background: transparent;
-    font-size: 90%;
+    font-size: 85%;
 }
+.reveal .MathJax { font-size: 85%; }
+.reveal code .MathJax { font-size: 85%; }
 
 .reveal pre {
     font-size: 80%;
@@ -91,6 +93,7 @@
     padding: 20px;
     max-height: 700px;
 }
+
 
 .reveal pre code.small,
 .reveal pre code.sm

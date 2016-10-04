@@ -378,6 +378,27 @@ Example:
     :else   0))
 ```
 
+# DO block
+
+> ```clojure
+(do expr
+    expr
+    ...
+    expr)
+```
+
+Evaluates every expression in the `(do ...)` form.  The `(do ...)` form
+evaluates to the last expression.
+
+Example:
+
+```{clojure sm}
+(def x (do (println "Hello there.")
+           (+ 1 2 3)))
+; 6
+```
+
+
 # Iteration: a first look
 
 > ```clojure
@@ -400,6 +421,27 @@ Example:
 ```clojure
 (for [i (range 10)]
   (str "Hi, this is the " i "th iteration."))
+```
+
+# For-loop super charged
+
+```clojure
+(for [sym seq-expr :when cond :while cond] body)
+```
+
+- `:when cond` causes the `for` iteration to evaluate `body` only when the
+  condition is true.
+
+- `:while cond` causes the `for` iteration to terminate when the conditon
+  becomes false.
+
+_Example_:
+
+```{clojure sm clipboard}
+(for [x (range 100)
+      y (range 100)
+      :when (= (+ x y) 42)]
+  (println x y))
 ```
 
 # More iterations:
@@ -426,25 +468,6 @@ This is equivalent to:
 (doseq [i (range n)] body)
 ```
 
-# DO block
-
-> ```clojure
-(do expr
-    expr
-    ...
-    expr)
-```
-
-Evaluates every expression in the `(do ...)` form.  The `(do ...)` form
-evaluates to the last expression.
-
-Example:
-
-```{clojure sm}
-(def x (do (println "Hello there.")
-           (+ 1 2 3)))
-; 6
-```
 
 # Summary
 
@@ -455,3 +478,10 @@ Example:
 - Branch
 - Iteration
 
+---
+
+Things to come:
+
+1. Data structural transformations
+2. Sequences and lazy evaluation
+3. Looping through recursion
