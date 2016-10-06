@@ -148,7 +148,7 @@ T(n) &=& \Theta(n) + T(\alpha n) + T((1-\alpha) n) \\
 
 Note, without loss of generality, we assume `$\alpha \geq 1/2$`.
 
-# Solving recurrence equations by substitution
+# Recurrence Equation
 
 1. Assume that $T(n) = \mathcal{O}(f(n))$ for some initial _guess_ of $f(n)$.
 2. Show by induction on $n$, that the recurrence equation is satisfied.
@@ -167,3 +167,23 @@ Example:
 > 
 > `$T(n) \leq \Theta(n) + T(n-1)$`
 
+# Solving by substitution
+
+1. Guess a solution $T(n) = \Theta(f(n))$.
+2. Check if the solution satisfies the recurrence equation.
+
+[!](-------)
+
+1. Guess a complexity class $T(n) = \mathcal{O}(f(n))$.
+2. Check if the solution satisfies the recurrence inequality.
+
+# Example
+
+$T(n) = \Theta(n) + T(n-1)$.
+
+Let's show that $T(n) = \mathcal{O}(n^2)$.
+
+`$$
+\begin{eqnarray}
+\end{eqnarray}
+$$`
