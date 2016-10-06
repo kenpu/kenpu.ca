@@ -360,11 +360,11 @@ It can be used to test if _pred_ holds for some element of the seq.
 # Seq in action
 
 ```{clojure clipboard}
-(defn even-nat (filter even? nat))
+(def even-nat (filter even? nat))
 ```
 
 ```{clojure clipboard}
-(defn odd-nat (filter #(not (even? %1)) nat))
+(def odd-nat (filter #(not (even? %1)) nat))
 ```
 
 ```{clojure clipboard}
@@ -433,7 +433,7 @@ Theorem:
 [!](&&&)
 
 ```{clojure clipboard}
-(defn g [n] (if (> n 0) (/ (float n) (Math/log n)) 1))
+(defn g [n] (if (> n 1) (/ (float n) (Math/log n)) 1))
 (def alpha (map #(/ %1 (g %2)) prime-counts nat))
 ```
 
