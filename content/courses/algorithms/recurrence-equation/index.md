@@ -183,7 +183,142 @@ $T(n) = \Theta(n) + T(n-1)$.
 
 Let's show that $T(n) = \mathcal{O}(n^2)$.
 
+---
+
+**Note**:
+
+Always state the **assumptions**, and the next step **clearly** as _"Need to
+show"_.
+
+> **Assumption**:
+> 
+> $T(n) = T(n-1) + \Theta(n)$.
+
+and
+
+> **Need to show**:
+>
+> $T(n) = \mathcal{O}(n^2)$
+
+# Example
+
+**Need to show**:
+
+There exists some $a, b, c$ such that $T(n) < a n^2 + b n + c$ for all large $n$.
+
+[!](note) We observe that $a n^2 + bn + c = \mathcal{O}(n^2)$ for all $a, b, c$ (verify).
+
+---
+
+We prove by induction that such $a, b, c$ exist.
+
+Suppose that $T(k) \leq a k^2 + bk + c$ for all $k < n$, we **need to show**
+$T(n) \leq a n^2 + bn + c$.
+
+# Example
+
+**Know**
+
+- $T(n) = T(n-1) + \Theta(n)$
+
+- $T(k) \leq a k^2 + bk + c$ for all $k < n$
+
+**Need to show**
+
+- $T(n) \leq a n^2 + bn + c$.
+
+---
+
 `$$
 \begin{eqnarray}
+T(n) &=& T(n-1) + \Theta(n) \\
+     &\leq& a (n-1)^ + b(n-1) + c + dn \\
+     &\leq& an^2 + (b+d-2a)n + (c+1)
 \end{eqnarray}
 $$`
+
+**Need to solve** for $(a, b, c)$ so that $T(n) \leq an^2$.
+
+$\implies$ $a \geq (b+d)/2$, <br>
+$\implies$ $c < -1$
+
+# Example
+
+So we have demonstrated that
+
+$$ T(n) = T(n-1) + \Theta(n) $$
+
+implies that there exists a choice for $a, b, c$ such that
+
+$$ T(n) \leq a n^2 + bn + c$$
+
+This further implies that
+
+$$ T(n) = \mathcal{O}(n^2) $$
+
+
+
+__Q.E.D.__ (_quod erat demonstrandum_)
+
+# Recurrence Tree
+
+Recurrence tree is another method for solving recurrence equations.
+
+- It is sometimes harder, and sometimes easier than substitution.
+- It requires the skill of observing a _pattern_ in an arithmetic series.
+
+Consider a recurrence equation, we can use it to successively expand the terms
+$T(\dots)$, and form a tree.  We do so until $T(1)$, and add up all the weights
+in the tree, level by level (intermediate **and** the leaf-level).
+
+We hope that there is a simple expression for each level of the tree, and that
+the height of the tree is also known (as a function of $n$).
+
+# Example
+
+[!](note) This taken from the text book (Section 4.4)
+
+Consider the recurrence equation:
+
+$$T(n) = 3T(n/4) + \Theta(n^2)$$
+
+We can successively expand $T(n)$:
+
+<img src="recurrence-tree.png"></img>
+
+[!](note 2) How many levels can there be?
+
+# Example
+
+<img src="full-recurrence-tree.png"></img>
+
+# Example
+
+There are $L = \log_4 n$ levels.
+
+> - At each intermediate level, we have the weights as: `$cn^2, (3/16)cn^2, \dots (3/16)^i cn^2, \dots$`.
+  Call this $\alpha^i cn^2$ where $\alpha = \frac{3}{16}$.
+
+> - At each level, we have the number of nodes: $1, 3, 3^2, 3^3, \dots, 3^i, \dots$ 
+
+The weights at the intermediate levels:
+
+`$$ T_1 = cn^2\cdot \sum_{i=0}^L \alpha^i = cn^2 \frac{\alpha^L-1}{\alpha-1} = \Theta(n^2)$$`
+
+The weights at the leaf level are:
+
+`$$ T_2 = T(1) 3^L = T(1) 3^{\log_4(n)} = T(1) n^{\log_4 3} < T(1) n = \Theta(n) $$`
+
+The total complexity is:
+
+$$T(n) = \Theta(n^2) + \Theta(n) = \Theta(n^2)$$
+
+# Summary
+
+[!](highlight)
+
+- Recurrence equations are needed when the algorithm is recursive.
+
+- We can use substitution to *verify* that a guess is correct.
+
+- We can use recurrence tree to analytically derive the solution by counting.
