@@ -27,7 +27,9 @@
         {{ end }}
         <h3>Undergraduate Students</h3>
         {{ range where .Site.Sections.people "Page.Params.role" "undergrad" }}
-        {{ block "person" .Page }}{{ end }}
+            {{ if not .Page.Params.completed }}
+                {{ block "person" .Page }}{{ end }}
+            {{ end }}
         {{ end }}
     </div>
 </div>

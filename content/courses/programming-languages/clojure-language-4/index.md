@@ -3,15 +3,13 @@ slide = true
 title = "Clojure 4"
 +++
 
-# Turning Complete & Efficient Programming in Clojure
+# Turing Complete & Efficient Programming in Clojure
 
 [!](highlight)
 
 - Function and recursion
 - Tail-recursion with `recur`
 - `loop` and `recur`
-- Breaking depth of recursio with lazy evaluation
-- Trampoline: breaking depth of mutual recursion
 
 # Turing-complete
 
@@ -20,7 +18,7 @@ title = "Clojure 4"
 Q:
 
 > Given an input seq of elements, how do we compute 
-the cummulative aggregates of each distinct elements
+the cummulative aggregates of each distinct element
 seen in the input seq.
 
 A:
@@ -65,7 +63,7 @@ def count_seq(input_seq):
 [!](note) A recursive formulation
 
 ```{python sm}
-def increments(key, counts):
+def increment(key, counts):
     if key in counts:
         counts[key] += 1
     else:
@@ -76,7 +74,7 @@ def increments(key, counts):
 
 # Clojure's recursion (version 1)
 
-```{clojure sm}
+```{clojure sm clipboard}
 (defn inc-or-1 [n] (if (nil? n) 1 (inc n)))
 
 (defn count-seq [xs]
@@ -165,7 +163,7 @@ def count_seq(seq, cnt):
     else:
         head = seq[0]
         tail = seq[1:]
-        return count_seq(tail, inc(cnt, head))
+        return count_seq(tail, increment(cnt, head))
 ```
 [!](note) This is tail-recursive.
 
@@ -191,8 +189,8 @@ Clojure gives programmer a special way for a function to call itself if it is
 tail-recursive.
 
 ```{clojure}
-(defn f [..]
-  ...  (recur f) ...)
+(defn f [<args>]
+  ...  (recur <args>) ...)
 ```
 
 ---
@@ -302,9 +300,12 @@ Now, we can reimplement count-seq once more:
 
 <div style=height:200px></div>
 
-```{clojure }
+```{clojure clipboard}
+(defn increment [cnt key]
+  (update cnt key inc-or-1))
+
 (defn count-seq [input-seq]
-  (reduce inc-or-1 {} input-seq))
+  (reduce increment {} input-seq))
 ```
 
 [!](note) If you have trouble understanding this, try it out with the sequence

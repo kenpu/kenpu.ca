@@ -1,6 +1,7 @@
 +++
 role = "undergrad"
 weight = 2016
+completed = true
 +++
 
 > **Alex Mihaylov**
