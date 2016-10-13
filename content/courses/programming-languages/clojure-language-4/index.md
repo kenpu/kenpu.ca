@@ -10,6 +10,7 @@ title = "Clojure 4"
 - Function and recursion
 - Tail-recursion with `recur`
 - `loop` and `recur`
+- Infinite sequences with lazy-evaluation
 
 # Turing-complete
 
@@ -283,19 +284,6 @@ Now, we can reimplement count-seq once more:
       (recur (rest xs) (update cnt (first xs) inc-or-1)))))
 ```
 
-# Summary
-
-[!](highlight)
-
-- Recursion is better than loops.
-
-- Recursion requires better runtime support (beyond the TM-style architecture).
-
-- Tail recursion can be optimized to `loop` efficiency.
-
-- Clojure supports tail recursion for both functions and `loop`-expressions.
-
-
 # `count-seq` yet again version
 
 <div style=height:200px></div>
@@ -315,7 +303,7 @@ Now, we can reimplement count-seq once more:
 
 <div style=height:100px></div>
 
-```{clojure }
+```{clojure}
 (defn count-seq [input-seq] (frequencies input-seq))
 ```
 
@@ -325,3 +313,185 @@ Now, we can reimplement count-seq once more:
 (def count-seq frequencies)
 ```
 [!](note) This is my favourite version :-)
+
+# Lazy Evaluation
+
+[!](highlight)
+
+- Creating infinite sequences
+
+- Tractable recursion without blowing up the stack
+
+# Infinite sequences
+
+```clojure
+(def nat (iterate inc 0))
+```
+[!](note) This is an infinite sequence.  The function `iterate` is used to
+create the infinite sequence.
+
+```clojure
+(def zeros (repeat 0))
+```
+[!](note) This is an infinite sequence of zeros.  The function `repeat` creates
+the infinite sequence.
+
+[!](***)
+
+What makes _infinity_ possible?
+
+> The computation of each element is performed *only* when that element is
+> *required*.
+>
+> [!](box) This is called _lazy evaluation_.
+
+# Infinite sequences
+
+- How do we make infinite sequences?
+
+- How do we make program with lazy evaluation?
+
+# Introducing `lazy-seq`
+
+```{nosyntax}
+user=> (doc lazy-seq)
+-------------------------
+clojure.core/lazy-seq
+([& body])
+Macro
+  Takes a body of expressions that returns an ISeq or nil, and yields
+  a Seqable object that will invoke the body only the first time seq
+  is called, and will cache the result and return it on all subsequent
+  seq calls. See also - realized?
+```
+
+# Lazy-seq
+
+Consider ways of creating a seq consisting of values returned by `(f i)` for
+i=1, 2, 3.
+
+```clojure
+[(f 1) (f 2) (f 3)]
+```
+[!](note) Remember that vectors are seqs.
+
+```clojure
+`((f 1) (f 2) (f 3))
+```
+[!](note) Lists are also seqs.
+
+```clojure
+(map f (range 100))
+```
+
+Say `f` is a very expensive function to invoke:
+
+```{clojure clipboard}
+(defn f [x]
+  (do (println "zzz..." x)
+      (Thread/sleep 1500)
+      (str "a long sleep (" x ")")))
+```
+
+# Lazy-seq
+
+So what's wrong with this code?
+
+```{clojure}
+(take 2 (map f (range 100)))
+```
+
+or this code:
+
+```{clojure}
+(first (map f (range 10000)))
+```
+
+[!](&&&)
+
+Lazy seq to the rescue:
+
+# Lazy-seq
+
+[!](columns 7:)
+
+```{nosyntax sm}
+user=> (doc lazy-seq)
+-------------------------
+clojure.core/lazy-seq
+([& body])
+Macro
+  Takes a body of expressions that returns
+  an ISeq or nil, and yields a Seqable
+  object that will invoke the body only the 
+  first time seq is called, and will cache 
+  the result and return it on all subsequent 
+  seq calls.
+```
+
+[!](split)
+
+```{clojure}
+(lazy-seq <expr>)
+```
+
+- `<expr>` returns a seq, but it will *not* be called
+   until the first element is accessed.
+
+# Creating a lazy-seq version
+
+```clojure
+(cons (f 1) nil)                          ;=> ((f 1))
+(cons (f 1) (cons (f 2) nil)              ;=> ((f 1) (f 2))
+(cons (f 1) (cons (f 2) (cons (f 3) nil)) ;=> ((f 1) (f 2) (f 3))
+```
+
+The problem is that they are not lazy.
+
+[!](&&&)
+
+```clojure
+(lazy-seq 
+  (cons 
+    (f 1)
+    (lazy-seq
+      (cons
+        (f 2)
+        (lazy-seq
+          (cons (f 3) nil))))))
+```
+
+[!](note) This is a lazy sequence.
+
+# Creating a lazy-seq version
+
+Let's generalize.
+
+```{clojure clipboard}
+(defn fs [n]
+  (if (zero? n)
+    nil
+    (lazy-seq (cons (f n) (fs (dec n))))))
+```
+[!](note) Note that this is *not* tail-recursive.  But it's *okay*...
+
+[!](***)
+
+Now try out:
+
+```{clojure}
+(take 3 (fs 1000))
+(first (fs 1000))
+```
+
+# Other forms of lazy evaluation
+
+Clojure supports other forms of lazy evaluation.  See `(doc delay)`
+
+# Summary
+
+[!](highlight)
+
+- Tail recursion with recur
+- Loop/recur
+- Lazy sequences
