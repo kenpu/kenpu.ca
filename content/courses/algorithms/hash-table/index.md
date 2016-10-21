@@ -239,7 +239,7 @@ $$ |T| \simeq 1.3 |S| $$
 # Properties of a good integer hash function
 
 *Assumption*: a hash function $h$ maps *all* natural numbers $[0, 1, \dots]$ to a finite interval $[0
-\dots m]$.
+\dots m-1]$.
 
 ---
 
@@ -261,7 +261,7 @@ def h_div(key, m):
 
 The choice of $m$ can makes `h_div` rather poor in uniformity:
 
-- $m = 2^p$: observe that `key mod m` is the $p$-th bit of `key` in binary.
+- $m = 2^p$: observe that `key mod m` is the last $p$ bits of `key` in binary.
 
 # The multiplication method
 
@@ -282,7 +282,7 @@ to be selected wisely.
 
 A good choice is:
 
-$$ A = \sqrt{5} - 1 \simeq 0.618034 $$
+$$ A = \frac{\sqrt{5} - 1}{2} \simeq 0.618034 $$
 
 # Hashing general byte arrays.
 
