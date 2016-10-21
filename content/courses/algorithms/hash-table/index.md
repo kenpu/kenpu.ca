@@ -236,12 +236,174 @@ Typically, we want to keep the load factor as 0.75:
 
 $$ |T| \simeq 1.3 |S| $$
 
-# Summary
+# Properties of a good integer hash function
 
-- Dynamic sets
+*Assumption*: a hash function $h$ maps *all* natural numbers $[0, 1, \dots]$ to a finite interval $[0
+\dots m]$.
 
-- Direct address table as an implementation
+---
 
-- Hash tables with chaining
+*Uniformity*:
 
+Given any two keys, there is no relationship between $|a - b|$ and $|h(a) - h(b)|$.
+
+So, if two keys are close to each other, there hash values are still randomly
+distributed in $[0, m]$.
+
+# The division method
+
+```python
+def h_div(key, m):
+    return key % m
+```
+
+---
+
+The choice of $m$ can makes `h_div` rather poor in uniformity:
+
+- $m = 2^p$: observe that `key mod m` is the $p$-th bit of `key` in binary.
+
+# The multiplication method
+
+```python
+import math
+
+def h_mul(key, m, A):
+    assert(0 < A < 1)
+    prod = key * A
+    frac = prod - math.floor(prod)
+    return math.floor(m * frac)
+```
+
+---
+
+This hash function is more versatile because we can set `m` freely.  `A` needs
+to be selected wisely.
+
+A good choice is:
+
+$$ A = \sqrt{5} - 1 \simeq 0.618034 $$
+
+# Hashing general byte arrays.
+
+What if the key is not an integer, but rather a byte array?
+
+---
+
+Many solutions:
+
+- Consider the key as a large integer of radix based 128 (signed int).
+
+- Consider the key as a vector of integers 
+
+    `$$[k_1, k_2, \dots, k_n]$$`
+
+    The final hash value is: $h(\sum_i k_i)$.
+
+# Universal hashing
+
+- Hash table's performance degenerates when we have collisions.
+
+- Adversorial attack on hash table implementations:
+
+    > Feed data with different keys, but all hash to the same bucket,
+    > causing the search time to degenerate to linear time (bad), and thus
+    > choke the processing of search queries.
+
+- Adversory needs to know the hash function used to generate keys to cause
+  collision.
+
+---
+
+*Premise*:
+
+The source code of the hash table implementation is *public* and *open sourced*.
+
+# Universal hashing
+
+What if we have a family of hash functions to choose from: `H`?
+
+```python
+import random
+
+class RandomHashTable:
+  def __init__(self, m, H):
+    self.h = random.sample(H, 1)
+    self.T = [[] for i in range(m)]
+
+  def insert(self, x):
+    index = self.h(x.key)
+    self.T[index].append(x)
+
+  def search(self, key):
+    index = self.h(key)
+    for x in self.T[index]:
+      if x.key == key:
+        return x
+    return None
+```
+
+[!](note) How does this stop the adversary?
+
+# Universal hashing
+
+The choice of `H` must be good.  
+
+Consider the following *bad* choices of `H`:
+
+- non-uniform hash functions:
+
+    `h_div($\circ$, $2^p$) $\in$ H` 
+
+- all hash functions are too similar.
+
+# Property of universal hashing
+
+*Definition*:
+
+The collection of hash functions `H` is *universal* if:
+
+> for all distinct keys $a, b$, the number of hash functions `$h\in$ H` with
+> $h(a) = h(b)$ is at most $|H| / m$.
+
+[!](&&&)
+
+*Theorem*
+
+> If `H` is universal, then the implementation of `RandomHashTable` has
+> collision with probability of 1/$m$.
+
+# Proof
+
+Let `$H = \{h_1, h_2, \dots h_n\}$.
+
+Let $a, b$ be two distinct keys: $a\not= b$.
+
+What is the probability that `RandomHashTable` has a collision?
+
+Let $h\in H$ be **randomly** selected.
+
+What is the probability that $h(a) = h(b)$?
+
+`$$\begin{eqnarray}
+\mathbf{E}\{p(h(a) = p(h(b)): h\in H\} 
+&=&  p(h(a) = h(b) | h = h_1)p(h=h_1) \\
+&&   +  p(h(a) = h(b) | h = h_2)p(h=h_2) \\
+&&   +  p(h(a) = h(b) | h = h_3)p(h=h_3) + \dots \\
+&=&  |H| \times (1/m) \times (1/|H|) \\
+&=& 1/m
+\end{eqnarray}
+$$`
+
+<div style="float:right"><b>Q.E.D.</b></div>
+
+# Designing Universal Hashing
+
+- $h_{ab}(k) = ((a\cdot k + b)\ \mathrm{mod}\ p)\ \mathrm{mod}\ m$
+
+    > where $p$ is a prime number.
+
+- `$\mathcal{H}_{pm} = \{h_{ab} : a\in[1\dots p-1], b\in [0\dots p-1]\}$`
+
+    > *Theorem*: $\mathcal{H}_{pm}$ is universal.
 
