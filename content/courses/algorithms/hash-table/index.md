@@ -407,3 +407,14 @@ $$`
 
     > *Theorem*: $\mathcal{H}_{pm}$ is universal.
 
+# Summary
+
+[!](highlight)
+
+- Hash tables with chaining
+
+- Hash functions
+
+- Universal hashing
+
+
