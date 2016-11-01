@@ -6,7 +6,7 @@
         $section.addClass("copybtned");
         $("code.clipboard", $section).each(function() {
             var code = $(this);
-            var btn = $('<button class="btn btn-sm">Copy</button>')
+            var btn = $('<button class="btn btn-sm cmd">Copy</button>')
                 .css({
                     position: "absolute",
                     right: 0,
@@ -125,4 +125,5 @@
             processCmd($a);
         }
     });
+
 })();

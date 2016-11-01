@@ -94,10 +94,10 @@ class Graph
         self.edges[(v1,v2)] = data
 
     def node(self, v):
-        return self.node[v]
+        return self.nodes[v]
 
     def edge(self, v1, v2):
-        return self.edge[v]
+        return self.edges[v]
 ```
 
 [!](note) the additional hashmaps are used to map vertex and edge identifiers to
@@ -246,7 +246,7 @@ The keys are the vertices (as their identifiers), and values as their parents.
 - Makes sure that each vertex is visited at most once.
 
 - Makes sure that all vertices _reachable_ from the starting vertex will be
-  visisted. 
+  visited. 
 
 [!](&&&)
 

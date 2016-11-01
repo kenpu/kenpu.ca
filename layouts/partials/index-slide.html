@@ -29,18 +29,26 @@
 		</script>
 
         <link rel="stylesheet" href="{{ .Site.BaseURL }}/reveal-style.css">
-
-        {{ if .Params.footnote }}
-<style>
-.reveal:after {
-    content: "{{.Params.footnote}}" !important;
-}
-</style>
-        {{ end }}
 	</head>
 	<body>
         <div class="reveal">
             <div class="slides" style="opacity: 0">{{.Content}}</div>
+        </div>
+
+        {{ $footnote := default "© KEN PU, 2016" .Params.footnote }}
+        <div style="position: fixed; 
+            bottom:0; 
+            left:0;
+            padding: 10px;
+            font-family: Roboto;
+            font-weight: 600;
+            font-size: 12pt;
+            color: #88a;">
+            <a href="?print-pdf" class="cmd" style="color:
+                red;margin-right:10px; font-size: 200%">
+                <i class="fa fa-file-pdf-o"></i>
+            </a>
+            <span> {{$footnote}} </span>
         </div>
 
         <script src="/js/jquery-2.2.1.min.js"></script>
@@ -51,6 +59,11 @@
         <script src="{{.Site.BaseURL}}/reveal.js/js/reveal.js"></script>
 
 		<script>
+            if(window.print_pdf) {
+                setTimeout(function() {
+                    window.print();
+                }, 2000);
+            }
         // parsing the compiled markdown to Reveal structure
         function isBreak($p, $section) {
             if($p.is("h1") && $section.children().size() > 0)
@@ -98,6 +111,12 @@
                 transition: "zoom",
                 transitionSpeed: "fast",
 
+                chalkboard: { 
+                    // toggleChalkboardButton: { left: "30px", bottom: "30px", top: "auto", right: "auto" },
+                    //toggleNotesButton: { left: "30px", bottom: "30px", top: "auto", right: "auto" },
+                },
+
+
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
                     {src: '{{.Site.BaseURL}}/reveal.js/plugin/notes/notes.js', async: true },
@@ -106,16 +125,13 @@
                         callback: function() { hljs.initHighlightingOnLoad(); } 
                     },
                     {src: '{{.Site.BaseURL}}/reveal.js/plugin/hljslinenumber/index.js', async: true},
-                    {{ if .Params.nochalk }}
-                        // slip chalkboard
-                    {{ else }}
-                        { src: '{{.Site.BaseURL}}/reveal.js/plugin/chalkboard/chalkboard.js', async: true },
-                    {{ end }}
+                    {src: '{{.Site.BaseURL}}/reveal.js/plugin/chalkboard/chalkboard.js',
+                    async: true },
                     {src: '{{.Site.BaseURL}}/reveal.js/plugin/math/math.js', async: true },
                     {src: '{{.Site.BaseURL}}/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
                     {src: '{{.Site.BaseURL}}/reveal.js/plugin/kensextensions/main.js', async: true },
                     {src: '{{.Site.BaseURL}}/reveal.js/plugin/pdfviewer/pdfviewer.js', async: true},
-				]
+                ],
 			});
             Reveal.addEventListener('ready', function() {
                 console.debug("Ready to reveal");

@@ -158,3 +158,5 @@ ul, ol, div, p {
 	font-size: 14px;
 }
 
+button.cmd,
+a.cmd { display: none; }

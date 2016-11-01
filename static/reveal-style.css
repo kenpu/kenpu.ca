@@ -5,8 +5,7 @@
 
 .reveal .slides { text-align: left; }
 
-.reveal:after {
-    content: "Copyright, Ken Pu";
+.reveal-footer {
     font-family: Roboto;
     font-weight: 300;
     font-style: normal;
