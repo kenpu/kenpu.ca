@@ -36,7 +36,7 @@
         </div>
 
         {{ $footnote := default "© KEN PU, 2016" .Params.footnote }}
-        <div style="position: fixed; 
+        <div class="footnote" style="position: fixed; 
             bottom:0; 
             left:0;
             padding: 10px;
@@ -59,11 +59,11 @@
         <script src="{{.Site.BaseURL}}/reveal.js/js/reveal.js"></script>
 
 		<script>
-            if(window.print_pdf) {
-                setTimeout(function() {
-                    window.print();
-                }, 2000);
-            }
+
+        if(window.print_pdf) {
+            $("div.footnote").remove();
+        }
+
         // parsing the compiled markdown to Reveal structure
         function isBreak($p, $section) {
             if($p.is("h1") && $section.children().size() > 0)
@@ -125,8 +125,7 @@
                         callback: function() { hljs.initHighlightingOnLoad(); } 
                     },
                     {src: '{{.Site.BaseURL}}/reveal.js/plugin/hljslinenumber/index.js', async: true},
-                    {src: '{{.Site.BaseURL}}/reveal.js/plugin/chalkboard/chalkboard.js',
-                    async: true },
+                    // {src: '{{.Site.BaseURL}}/reveal.js/plugin/chalkboard/chalkboard.js', async: true },
                     {src: '{{.Site.BaseURL}}/reveal.js/plugin/math/math.js', async: true },
                     {src: '{{.Site.BaseURL}}/reveal.js/plugin/multicolumn/multicolumn.js', async: true },
                     {src: '{{.Site.BaseURL}}/reveal.js/plugin/kensextensions/main.js', async: true },

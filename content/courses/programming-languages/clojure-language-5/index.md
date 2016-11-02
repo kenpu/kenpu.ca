@@ -474,8 +474,23 @@ _re·i·fy_ <br>
   (tuition [x credits] ...))
 ```
 
+# Summary
 
+[!](highlight)
 
+- Polymorphism is a fundamental tool in organizing code.
+
+- Multimethod is a lightweight language feature to implement polymorphism.
+
+- Protocol is a more object-oriented feature of the language to organize
+  (unimplemented) functions into interfaces.
+
+- There are several ways providing implementations:
+
+    > 1. Define a type or record from scratch to implement the protocol.
+    > 2. Extend an existing type with additional methods to implement the
+    protocol.
+    > 3. Creating an object that implements the protocol using `reify`.
 
 
 
