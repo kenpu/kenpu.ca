@@ -59,6 +59,7 @@
 .reveal blockquote blockquote {
     border: none;
     margin: 0;
+    text-align: center;
 }
 
 .reveal p {
@@ -162,3 +163,6 @@ code,
 pre {
     color: inherit;
 }
+
+.reveal section ul ul { font-size: 90%; }
+
