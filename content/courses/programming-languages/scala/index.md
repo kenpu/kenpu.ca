@@ -46,3 +46,55 @@ Computations as method invocations:
 ```java
 System.out.println(message.substring(3, 6));
 ```
+
+# Java as non-OOP
+
+1. Types are not classes:
+
+    > - `int`, `float`, etc. are not classes.
+    >
+    > - Try: `List<int> numbers;`
+
+2. Data are not objects:
+
+    > - `"Hello world".hashCode()` works because `"Hello world"` is an object,
+    >    and all objects are with the method `int hashCode()`.
+    >
+    > - `123.hashCode()` fails.
+
+3. Computation is not method invocation:
+
+    > ```java
+    i = 1 + 2
+    ```
+    The integer addition `+` is not a method.
+
+
+# Scala
+
+- Every type is a class.
+
+```scala
+List[Int]
+Array[Float]
+```
+[!](note)
+Parameteric types
+
+- Everything is an object.
+
+```scala
+print(1.toBinaryString)
+```
+[!](note) Invoking a method of integer that accepts no arguments.
+
+- All operators are methods.
+
+```scala
+1 + 2
+1.+(2)
+```
+[!](note)
+Addition `+` is a method of an integer `1`.
+
+
