@@ -429,4 +429,147 @@ def bfs(G, s):
         G.nodes(u)["color"] = "black"
 ```
 
+# Depth-first search
 
+[!](highlight)
+
+# Depth-first search (DFS)
+
+- Recall BFS discovers a vertex when it's colored _gray_, and finishes with the
+  discovery of a vertex when it's colored _black_.
+
+- Not all vertices are guaranteed to be discovered by BFS.
+
+- DFS is a more powerful enumeration method:
+
+    1. It discovers all the vertices of a graph.
+
+    2. It records the discovery time of each vertex.
+
+# DFS
+
+- Each vertex has:
+
+    - A color: white, gray and black.
+
+    - Two timestamps: discovery time (from white to gray) and finishing time
+      (gray to black).
+
+# DFS
+
+```python
+def dfs(G):
+    for u in G.nodes():
+        G.node(u)["color"] = "white"
+        G.node(u)["parent"] = None
+    t = 0
+    for u in G.nodes():
+        if G.node(u)["color"] == "white":
+            t = dfs_visit(G, u, t)
+```
+
+# DFS-Visit
+
+```python
+def dfs_visit(G, u, t):
+    t = t + 1
+    G.node(u)["color"] = "gray"
+    G.node(u)["d"] = t              # discovery time
+
+    for v in G.neighbours(u):
+        if G.node(v)["color"] == "white"
+            G.node(v)["parent"] = u
+            t = dfs_visit(G, v, t)
+
+    G.node(v)["color"] = "black"
+    t = t + 1
+    G.node(v)["f"] = t              # finishing time
+    return t
+```
+
+# Example
+
+[!](columns 5:)
+
+<img src="dfs.png"></img>
+
+[!](split)
+
+*Chanllenge*:
+
+1. Work out the execution of `dfs_visit(G,u,0)`.
+
+2. Work out the excution of `dfs(G)`.
+
+3. Which vertices would not have been visited by `bfs(G, u)`?
+
+# Properties of DFS:
+
+[!](columns 6:)
+
+*Theorem* (Parenthesis theorem)
+
+> For any graph $G$, given any two vertices $(u, v)$, we have exactly one of the
+> three possibilities:
+
+> 1. $[u.d, u.f]$ and $[v.d, v.f]$ are disjoint.
+
+> 1. $[u.d, u.f] \subset [v.d, v.f]$
+
+> 1. $[u.d, u.f] \supset [v.d, v.f]$
+
+[!](split)
+
+<img src="parenthesis-thm.png"></img>
+
+# Predecessor subgraph of DFS
+
+[!](columns 6:)
+
+- Recall that each vertex has a data `["parent"]`.
+
+- This induces one or more trees.
+
+- Together, the trees are called the _predecessor subgraph_ of $G$.
+
+[!](split)
+
+<img src="predecessor-subgraph-1.png"></img>
+<img src="predecessor-subgraph-2.png"></img>
+
+# Applications of DFS: Topological sort
+
+We have a list of tasks, which are interdependent by prerequisites:
+
+> <img src="topo-sort.png" width=500px></img>
+
+We would have to generate a plan to carry out the tasks:
+
+> <img src="topo-sort-result.png"></img>
+
+# Applications of DFS: Topological sort
+
+1. Form the dependency graph of the tasks.  Each task is a vertex, and an edge
+   $u\to v$ means that $v$ must be done sometime after *after* $u$.
+
+2. Perform DFS on the dependency graph.
+
+3. Sort the vertices (tasks) based on the decreasing ordering of the _finishing_
+   time.
+
+```python
+def topo_sort(G):
+    dfs(G)
+    return sort(G.nodes(), key=\lambda u: G.node(u)["f"], reverse=True)
+```
+
+# Application: Strongly connected components
+
+Recall the definition of _reachablility_:
+
+> Vertex $u$ can reach $v$ if there exists path $p$ starting with $u$ to $v$.
+
+Transpose of a directed graph:
+
+> The transpose $G^T$ of a graph $G$ is the graph obtained by reversing all the
+> edges.
