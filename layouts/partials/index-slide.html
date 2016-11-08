@@ -21,6 +21,9 @@
             if(window.location.search.match(/print-pdf/gi)) {
                 window.print_pdf = true;
             }
+            if(window.location.search.match(/receiver/)) {
+                window.remote_controller = true;
+            }
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
@@ -44,8 +47,10 @@
             font-weight: 600;
             font-size: 12pt;
             color: #88a;">
-            <a href="?print-pdf" class="cmd" style="color:
-                red;margin-right:10px; font-size: 200%">
+            <a href="#" class="btn btn-default cmd-fullscreen">
+                <i class="fa fa-arrows-alt"></i></a>
+            <a href="?print-pdf" class="btn btn-default cmd" style="color:
+                red;margin-right:10px; font-size: 100%">
                 <i class="fa fa-file-pdf-o"></i>
             </a>
             <span> {{$footnote}} </span>
@@ -60,9 +65,43 @@
 
 		<script>
 
-        if(window.print_pdf) {
+        if(window.print_pdf || window.remote_controller) {
             $("div.footnote").remove();
         }
+        var fullscreen = false;
+        $("body").on("click", ".cmd-fullscreen", function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            function exitFullscreen() {
+              if(document.exitFullscreen) {
+                document.exitFullscreen();
+              } else if(document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+              } else if(document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+              }
+              fullscreen = false;
+            }
+
+            function launchIntoFullscreen(element) {
+              if(element.requestFullscreen) {
+                element.requestFullscreen();
+              } else if(element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+              } else if(element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+              } else if(element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+              }
+              fullscreen = true;
+            }
+
+            if(fullscreen)
+                exitFullscreen();
+            else
+                launchIntoFullscreen(document.documentElement); 
+        });
 
         // parsing the compiled markdown to Reveal structure
         function isBreak($p, $section) {
