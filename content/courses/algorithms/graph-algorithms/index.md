@@ -567,9 +567,119 @@ def topo_sort(G):
 
 Recall the definition of _reachablility_:
 
-> Vertex $u$ can reach $v$ if there exists path $p$ starting with $u$ to $v$.
+> Vertex $u$ can reach $v$, written $u\Rightarrow v$,
+if there exists path $p$ starting with $u$ to $v$.
 
 Transpose of a directed graph:
 
 > The transpose $G^T$ of a graph $G$ is the graph obtained by reversing all the
 > edges.
+
+[!](&&&)
+
+```python
+# returns a new graph 
+# that is the transpose of G
+def tranpose(G):
+    ...
+```
+[!](note) Can you complete the implementation of `transpose`?
+
+# Strongly connected components
+
+*Definition*:
+
+> A _strongly connected component_ **(SCC)** is a largest set of vertices $\{v_1, v_2, \dots,
+v_n\}$ such that 
+
+$$\forall i,j,\,v_i \Rightarrow v_j\ \mathrm{and}\ v_j\Rightarrow v_i$$
+
+*Problem*:
+
+Given a graph $G$, find all its SCC.
+
+# _____
+
+<img src="scc-ex1.png"></img>
+
+> - There are *four* SCC in the graph.
+- Also note that predecessor trees are **not** SCCs.
+[!](note)
+
+
+# _____
+
+*Theorem*:
+
+> 1. Compute the transpose $G^T$ of the graph $G$.
+> 2. Apply DFS of $G^T$ according to a *topological* ordering of $G$ (<span
+> class="label label-danger">important</span>).
+> 3. Each predecessor tree of `dfs($G^T$)` is a strongly connected component of
+> $G$.
+> 4. [!](comfortable)
+
+# _______
+
+```python
+def strongly_connected_components(G):
+    H = transpose(G)
+    for u in H.nodes():
+        H.node(u).["color"] = "white"
+        H.node(u).["parent"] = None
+    t = 0
+    for v in topo_sort(G):
+        if H.node(v)["color"] == "white"
+        t = dfs_visit(H, v)
+
+    return get_components(H)
+```
+
+> [!](note)
+Note: `G` is the original graph and `H` is the transpose of `G`.
+
+# _____
+
+```python
+def get_root(H, v):
+    parent = H.node(v)["parent"] 
+    if parent == None:
+        return v
+    else:
+        return get_root(H, parent)
+```
+[!](note)
+Get the root vertex of the precedessor tree that `v` belongs to.
+
+```
+def get_components(H):
+    components = dict()
+    for v in H.nodes():
+        if H.node(v)["parent"] == None:
+            components[v] = []
+    for u in H.nodes():
+        root = get_root(H, u)
+        components[root].append(u)
+
+    return components
+```
+[!](note)
+Gets the strongly connected components based on the predecessor trees of the
+transpose graph.
+
+# _____
+
+<img src="scc-ex2.png"></img>
+
+
+# SCC Application: graph abstraction
+
+<img src="scc-ex3.png"></img>
+
+# SCC Applications...
+
+<img src="scc-app.png"></img>
+
+[!](note)
+Can you think of an application for S.C.C.?
+
+<img src="scc-paper.png" width=500px></img>
