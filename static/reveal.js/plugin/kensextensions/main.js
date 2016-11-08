@@ -126,4 +126,17 @@
         }
     });
 
+    // ======== duplicate heading if necessary ==============
+    // for h1 with "____"
+    var $lasth1 = null;
+    $(".slides section > h1").each(function() {
+        var $h1 = $(this);
+        var text = $h1.text();
+        if(/^_{3,}$/.exec(text) && $lasth1) {
+            console.debug("h1", text, $lasth1);
+            $h1.html($lasth1.html());
+        }
+        $lasth1 = $h1;
+    });
+
 })();
