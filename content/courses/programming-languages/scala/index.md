@@ -98,3 +98,40 @@ print(1.toBinaryString)
 Addition `+` is a method of an integer `1`.
 
 
+# _____
+
+
+- Scala insists on pure object oriented programming (OOP)
+
+- Using syntactic resolution rules, Scala programmers can
+  create rich syntactic constructs that are built on
+  objects.
+
+- Scala promotes functional programming built on OOP.
+  
+# Hello world
+
+Setting up the compiler:
+
+> 1. Download `scala-2.xx.x.tgz` from the download site:
+> http://www.scala-lang.org/download/
+>
+> 2. Uncompress the file, and you will find
+> `bin/scala` which is the interpreter for Scala.
+
+REPL
+
+> ```{nosyntax sm}
+$ scala
+Welcome to Scala 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_111).
+Type in expressions for evaluation. Or try :help.
+
+scala> println("Hello world")
+```
+
+Scripting
+
+> 1. Create a file `hello.scala`
+2. Run it `scala hello.scala`
+
+
