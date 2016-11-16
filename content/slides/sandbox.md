@@ -1,6 +1,8 @@
 +++
-slide = 1
+slide = true
 title = "Hello sandbox"
+date = "2016-09-01"
+script = "myscript.js"
 +++
 
 # Sandbox
@@ -11,4 +13,25 @@ This is clojure.
 
 [!](split)
 
-{{<ssh image="kenpu/clojure" height="500px">}}
+```clojure
+(defn hello [world] (println world))
+```
+
+# ___________
+
+Another slide
+
+<a class="my-first-slide"></a>
+
+<button id="click">Click me</button>
+
+
+<style>
+button {
+  font-family: "Roboto";
+  background: #aaa;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+</style>

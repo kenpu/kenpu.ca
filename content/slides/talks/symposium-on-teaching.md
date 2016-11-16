@@ -1,4 +1,5 @@
 +++
+slide = "true"
 title = "Symposium"
 nochalk = true
 footnote = "Symposium on Teaching, Faculty of Science, 2016"
