@@ -3,7 +3,6 @@
 (function() {
     function process(slide) {
         $(slide).find("pre code").each(function() {
-            console.debug("Looking at...");
             var $elem = $(this);
             if($elem.hasClass("nu") && !$elem.hasClass("has-linenumbers")) {
                 hljs.lineNumbersBlock($elem[0]);

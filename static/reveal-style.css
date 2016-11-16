@@ -164,5 +164,21 @@ pre {
     color: inherit;
 }
 
+code i.template {
+    color: blue;
+    border: thin solid #aaa;
+    padding: 1px;
+    margin: 2px;
+    display: inline-block;
+    border-radius: 3px;
+}
+code i.template:hover {
+    transform: scale(1.2);
+    border: 3px solid red;
+}
+code i.template span {
+    color: blue !important;
+}
+
 .reveal section ul ul { font-size: 90%; }
 

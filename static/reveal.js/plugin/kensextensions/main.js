@@ -22,6 +22,22 @@
         });
     }
 
+    function processCodeTemplate($section) {
+        if($section.is(".codetemplated"))
+            return;
+
+        $section.addClass("codetemplated");
+        $("code.template", $section).each(function() {
+            var code = $(this);
+            var html = code.html();
+            html = html.replace(/__(\w+)__/g, function(m, w) {
+                return '<i class="template">' + w + '</i>';
+            });
+            code.html(html);
+            console.debug(code.html());
+        });
+    }
+
     // [!](note)
     // Gets the previous sibling, and wrap $a parent
     // in a two column row with fixed ratio
@@ -117,6 +133,7 @@
 
     $(".slides section").each(function() {
         processCopyBtn($(this));
+        processCodeTemplate($(this));
     });
 
     $(".slides section a").each(function() {
