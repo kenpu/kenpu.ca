@@ -71,10 +71,17 @@
         <script src="{{.Site.BaseURL}}/reveal.js/lib/js/head.min.js"></script>
         <script src="{{.Site.BaseURL}}/reveal.js/js/reveal.js"></script>
 
-		<script>
+        {{if .Params.script }}
+        <script src="{{.Params.script}}"></script>
+        {{end}}
 
+        <script>
+        window.invokeHandler = function(f, args) {
+            if(f) f.apply(null, args);
+        };
         if(window.print_pdf || window.remote_controller) {
             $("div.footnote").remove();
+            window.invokeHandler = function() { }
         }
         var fullscreen = false;
         $("body").on("click", ".cmd-fullscreen", function(e) {
@@ -184,7 +191,40 @@
                 $slides.animate({
                     opacity: 1.0,
                 });
+                if(window.myEvents) myEventReady(window.myEvents);
             });
+
+            Reveal.addEventListener("slidechanged", function(e) {
+                if(window.myEvents) myEventSlide(window.myEvents, e);
+            });
+        }
+
+        function myEventReady(evs) {
+            console.debug("myEventReady", evs);
+            for(var selector in evs) {
+                var handlers = evs[selector];
+                $(".reveal section").each(function() {
+                    var $section = $(this);
+                    if($section.find(selector).size() > 0) {
+                        window.invokeHandler(handlers.init, [$section]);
+                    }
+                });
+            }
+        }
+
+        function myEventSlide(evs, e) {
+            var $current = $(e.currentSlide);
+            for(var selector in evs) {
+                var handlers = evs[selector];
+                var $anchor = $current.find(selector);
+                if($anchor.size() > 0) {
+                    if(! $anchor.is(".invoked-once")) {
+                        window.invokeHandler(handlers.once, [$current]);
+                        $anchor.addClass("invoked-once");
+                    }
+                    window.invokeHandler(handlers.enter, [$current]);
+                }
+            }
         }
 		</script>
 	</body>
