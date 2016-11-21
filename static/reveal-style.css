@@ -49,6 +49,7 @@
     padding-left: 20px;
     margin-left: 0;
     width: 100%;
+    background: transparent;
 }
 
 .reveal blockquote p:first-child,
@@ -61,6 +62,13 @@
     margin: 0;
     text-align: center;
 }
+
+.reveal blockquote blockquote blockquote {
+    border: none;
+    margin: 0;
+    text-align: right;
+}
+
 
 .reveal p {
     margin: 0;
@@ -87,6 +95,12 @@
 }
 .reveal pre:first-child {
     margin-top: 0;
+}
+.reveal .row:first-child {
+    margin-top: 0;
+}
+.reveal .row {
+    margin-top: 20px;
 }
 
 .reveal pre code {
