@@ -2,6 +2,7 @@
 slide = true
 title = "Hello sandbox"
 date = "2016-09-01"
+draft = true
 script = "myscript.js"
 +++
 

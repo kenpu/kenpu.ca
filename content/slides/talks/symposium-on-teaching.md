@@ -1,8 +1,8 @@
 +++
 slide = "true"
 title = "Symposium"
-nochalk = true
 footnote = "Symposium on Teaching, Faculty of Science, 2016"
+date = "2016-09-01"
 +++
 
 # Instant gratification 
