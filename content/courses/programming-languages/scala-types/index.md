@@ -375,3 +375,168 @@ layers of an onion.
 This is called linearization of trait mixins.
 
 
+# Type parameterization
+
+- Scala supports generic types and generic methods.
+
+```scala
+class MyList[T] {
+    ...
+}
+```
+
+```scala
+def selectOne[T](list: Array[T]):T = ...
+```
+
+- The syntax is that after the symbol, we indicate the type parameters by `[U,
+  V, W]`.
+
+# Bounds on type parameters
+
+Consider the following:
+
+```scala
+def max[T](list: Array[T]): T = {
+    var x = list[0]
+    for(i <- 1 until list.length) {
+        val y = list[i]
+        if(x < y) x = y
+    }
+    return x
+}
+```
+
+- What is `x < y`?
+
+- It's a syntactic short-hand for `x.<(y)`.
+
+- This means that `T` must have the method `def <(T):Boolean`.
+
+# _______________________________
+
+Scala has a trait:
+
+```scala
+scala.math.Ordered[A]
+```
+[!](note) The `Ordered` trait provides the implementation for `<`.  But it
+_requires_ the implementation of `def compare(A):Int`
+
+```scala
+def max[T <: Ordered[T]](list: Array[T]): T = {
+    ...
+}
+```
+
+The syntax `[T <: U]` states that `T` must be a subtype of `U`.
+In this case, we want `T` to be a type with the trait of `Ordered[T]`.
+
+# Variance
+
+If `Apple <: Fruit`, should `Box[Apple] <: Box[Fruit]`?
+
+- The answer depends on the definition of `Box[T]`.
+
+- A type parameter can have an optional _variance_.
+
+    1. Default is _no variance_.
+
+    2. Covariance: `[+T]` means that the subtype relation is preserved.
+
+    3. Contravariance: `[-T]` means that the subtype relation is reversed.
+
+---
+
+The variance is to provide maximal class reusability while preserving type
+correctness.
+
+# ______________________
+
+Consider the implementation:
+
+```scala
+class Box[T](val item: T)
+```
+
+Is it safe to assume `Box[Apple] <: Box[Fruit]`?
+
+Suppose _yes_, we allow `Box[Apple] <: Box[Fruit]`.
+
+```scala
+val box: Box[Fruit] = new Box[Apple](🍎)         ✓
+box.item : Fruit    = 🍎:Apple                   ✓
+```
+
+So, we can safely declare the type parameter of Box covariant.
+
+```scala
+class Box[+T](val item: T)
+```
+[!](note) The reason we can do so is that _Box_ is read-only.
+
+
+# __________________________
+
+Now, consider:
+
+```scala
+class Box[T](var item: T)
+```
+[!](note) The only difference is that _item_ is now mutable.
+
+Can we still assume `Box[Apple] <: Box[Fruit]`?
+
+Assume _yes_.  This means that we have:
+
+`Box[Apple] <: Box[Fruit]` and `Box[Banana] <: Box[Fruit]`
+
+Let's see what can happen:
+
+```scala
+val box1: Box[Apple] = new Box[Apple](🍎)        ✓
+val box2: Box[Fruit] = box1                     ✓ // by assumption
+box2.item = 🍌                                   ✓
+// box1.item:Apple == 🍌:Banana                  ✘ type error
+```
+
+# _______________________
+
+Now, consider:
+
+```scala
+class Box[T](private var item: T) {
+    def set(x:T) = this.item = x
+}
+```
+[!](note) _Box_ is write-only.
+
+You can check that it is _safe_ to declare the write-only `Box` with a
+contravariant type parameter.
+
+```scala
+class Box[-T](private var item: T) {
+    def set(x:T) = this.item = x
+}
+```
+
+# ____________________________
+
+Can you justify why functions have the following trait?
+
+```scala
+trait Function1[-T, +R]
+```
+
+- The input is contravariant, and
+
+- the output is covariant.
+
+[!](***)
+
+This means:
+
+`Fruit $\to$ Cat` is a subtype of `Apple $\to$ Animal`
+
+[!](note) Can you verify it?
+

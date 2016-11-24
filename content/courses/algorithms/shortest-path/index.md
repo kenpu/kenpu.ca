@@ -153,7 +153,7 @@ def bellman_ford(G, w, s):
 
 [!](columns 8:)
 
-```{python sm nu}
+```{python sm nu template}
 def bellman_ford(G, w, s):
     d = dict()
     parent = dict()
