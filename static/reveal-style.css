@@ -153,24 +153,9 @@ blockquote blockquote {
     padding-left: 15px;
 }
 
-table {
-    width: 100%;
-    font-family: Roboto;
-    font-size: 85%;
+.reveal table {
     margin-top: 20px;
     margin-bottom: 20px;
-}
-table td {
-    border: 1px solid #aaa;
-    border-collapse: collapse;
-    padding: 10px;
-}
-
-table th {
-    background: #eee;
-    border: 1px solid #aaa;
-    border-collapse: collapse;
-    padding: 10px;
 }
 
 code,
@@ -195,4 +180,10 @@ code i.template span {
 }
 
 .reveal section ul ul { font-size: 90%; }
+.reveal section ul {
+    margin-bottom: 20px;
+}
 
+.reveal section ul:last-child {
+    margin-bottom: 0px;
+}

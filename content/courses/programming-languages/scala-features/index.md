@@ -48,7 +48,7 @@ Patterns used in `match` case clauses can be very powerful.
 ```scala
 val x: List[Int] = ...
 
-expr match {
+x match {
   case Nil         => println("empty list")
   case List(1,2,3) => println("ready, set, go")
   case List(0, _*) => println("Starts with zero")
@@ -62,7 +62,7 @@ expr match {
 Destructuring with match:
 
 ```scala
-val point: Tuple[Float, Float] = (3.14, 8)
+val point: Tuple2[Double, Double] = (3.14, 8)
 
 point match {
   case (x, y) => println(s"First coordinate is ${x}")
