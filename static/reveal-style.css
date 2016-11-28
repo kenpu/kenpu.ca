@@ -40,6 +40,10 @@
 .reveal h3 {font-size: 120%;}
 .reveal h4 {font-size: 100%;}
 
+.reveal h2,
+.reveal h3,
+.reveal h4 { color: #277CA1; }
+
 .reveal blockquote { 
     font-style: normal; 
     border: none;
