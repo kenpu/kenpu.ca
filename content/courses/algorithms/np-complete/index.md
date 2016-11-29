@@ -272,3 +272,54 @@ So, $\mathbf{KNAPSACK} \in \mathbf{P}$ ???
 
 <img src="np-complete.jpg"></img>
 
+
+# Polynomial reduction
+
+*Definition*
+
+Let $X$ be a decision problem, and $Y$ another decision problem.  We can say
+that $X$ no harder than $Y$ if there exists a polynormial-time algorithm 
+
+`$$\theta:\mathrm{instance}(X)\to \mathrm{instance}(Y)$$`
+
+such that:
+
+$$ \forall P\in\mathrm{instance}(X), P\mathrm{\ is\ true} \iff \theta(P)
+\mathrm{\ is\ true}$$
+
+If there exists such $\theta$, then we say that
+
+$$ X\leq^P Y $$
+
+which reads $X$ is reduced to $Y$, and $\theta$ is the reduction.
+
+# _______________________
+
+*Intuition*
+
+
+If $X\leq^P Y$, then $X$ can be solved using a solver for $Y$.  Furthermore,
+since the reduction must be in polynormial time, we have:
+
+$$ Y\in\mathbf{P} \implies X\in\mathcal{P} $$
+
+---
+
+$X$ is no harder than $Y$.
+
+
+
+
+# NP-hard problems
+
+*Definition*
+
+A problem $Y$ is NP-hard if:
+
+$$\forall\ X\in \mathbf{NP},\ X\leq^P Y$$
+
+---
+
+*A surprising discovery*:
+
+There exists $Y\in\mathbf{NP}$ that is NP-hard.
