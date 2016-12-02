@@ -14,6 +14,9 @@ var myEvents = {
             alert("Ding");
         });
       },
+      once: function($slide) {
+        alert("Bye, forever.");
+      },
       enter: function($slide) {
                  $("#click", $slide).text("Click " + counter);
                  counter += 1;

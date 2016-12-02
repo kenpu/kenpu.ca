@@ -1,6 +1,7 @@
 +++
 slide = true
 title = "NP Completeness"
+script = "myscript.js"
 +++
 
 # NP-completeness
@@ -301,7 +302,7 @@ which reads $X$ is reduced to $Y$, and $\theta$ is the reduction.
 If $X\leq^P Y$, then $X$ can be solved using a solver for $Y$.  Furthermore,
 since the reduction must be in polynormial time, we have:
 
-$$ Y\in\mathbf{P} \implies X\in\mathcal{P} $$
+$$ Y\in\mathbf{P} \implies X\in\mathbf{P} $$
 
 ---
 
@@ -318,8 +319,205 @@ A problem $Y$ is NP-hard if:
 
 $$\forall\ X\in \mathbf{NP},\ X\leq^P Y$$
 
----
+# NP-completeness
+
+[!](columns 6:)
 
 *A surprising discovery*:
 
 There exists $Y\in\mathbf{NP}$ that is NP-hard.
+
+---
+
+*Definition*:
+
+$\newcommand{\npc}{\mathbf{NP}\text{-complete}}$
+$\newcommand{\nphard}{\mathbf{NP}\text{-hard}}$
+
+`$$\npc = \mathbf{NP}\cap\nphard$$`
+
+[!](split)
+
+<img src="cook.jpg"></img>
+
+*Stephen Cook*, University of Toronto, 2013
+
+# The significance of NP-complete problems
+
+- They are easy to verify.
+
+- They are the hardest problems to solve in NP.
+
+- They are all equally hard to solve:
+
+    $\forall X, Y\in\npc, X\leq^P Y \mathrm{\ and\ } Y\leq^P X$ (by definition)
+
+    Therefore, $ X\simeq^P Y $
+
+# Knapsack revisited
+
+*Theorem*:
+
+The decision problem of KNAPSACK is NP-complete.
+
+$$ \mathbf{KNAPSACK} \in \npc $$
+
+# Finding over NP-complete problems
+
+The key is to use *reduction*.
+
+*Observation*:
+
+> If:
+> 
+> - $Y\in\mathbf{NP}$, and
+> - $\exists X\in\npc$ such that $X\leq^P Y$
+> 
+> Then $Y\in\npc$.
+
+# Our second NP-complete problem
+
+*Integer linear programming* (ILP)
+
+---
+
+[!](columns 6:)
+
+- A matrix
+    
+    `$$ A = \left[\begin{array}{ccc}
+                  a_{11} & a_{12} & \dots \\
+                  a_{21} & a_{22} & \dots \\
+                  \vdots & \vdots & \ddots \\
+                  \end{array}\right]_{mn} $$`
+
+- Vectors
+
+    `$$ C = \left[\begin{array}{c}
+                  c_1 \\
+                  c_2 \\
+                  \vdots \\
+                  \end{array}\right]_{m1}
+    \quad
+    B = \left[\begin{array}{c}
+                  b_1 \\
+                  b_2 \\
+                  \vdots \\
+                  \end{array}\right]_{n1} 
+    \quad
+    k \in \mathbb{R} $$`
+
+- variables: 
+
+    `$$ x = \left[\begin{array}{c}
+                  x_1 \\
+                  x_2 \\
+                  \vdots \\
+                  \end{array}\right]_{n1} $$`
+
+[!](split)
+
+Does there exists a solution for $x$ such that $x_i$ are integers satisfying:
+
+1. $A\cdot x \leq C$, and
+
+2. $B^T\cdot x \leq k$ ?
+
+# Integer Linear Programming
+
+
+*Claim*:
+
+[!](box) $\mathbf{ILP}\in\npc$
+
+*Proof*:
+
+We can reduce KNAPSACK to ILP:
+
+- $A$ is a diagonal matrix with the diagonal being the weights $w_i$.
+
+- For each element $i$, we create an integer variable $x_i$.
+
+- For each $x_i$, we impose $x_i <= 1$ and $-x_i <= 0$.  This forces each
+  $x_i\in\{0, 1\}$.
+
+- $C$ is the capacity.
+
+- $B = [v_1 v_2 \dots v_n]$, so $B^T x$ is the total selected value.
+
+# ______________
+
+*Proof* continue
+
+So we can see that KNAPSACK is _yes_ if and only if the corresponding ILP is
+_yes_.
+
+The transformation from KNAPSACK to ILP can be done in polynomial time, so
+
+$$\mathbf{KNAPSACK}\leq^P\mathbf{IPL}$$
+
+Since KNAPSACK$\in\npc$, we conclude IPL$\in\nphard$.
+
+
+It's almost trivial to check that IPL can be _verified_ in polynomial time.
+Therefore, $\mathbf{IPL}\in\mathbf{NP}$.
+
+Therefore,
+
+$$\mathbf{IPL}\in\npc$$
+
+
+# Intractability
+
+It's been over 30 years since we have tried to decide if $\npc\in\mathbf{P}$.
+
+We know:
+
+$$\npc\in\mathbf{P} \iff \mathbf{P} = \mathbf{NP}$$
+
+
+The 3 decades of "failure" certainly means _one_ thing:
+
+1. No human has ever come up with a polynomial algorithm for a NP-complete problem.
+
+2. If you have a NP-hard optimization problem, don't bother trying to obtain the
+optimal solution.  It's been a failed attempt for 30+ years.
+
+# _________________
+
+There are thousands of NP-complete problems known to us:
+
+[!](box) https://en.wikipedia.org/wiki/List_of_NP-complete_problems
+
+---
+
+- Scheduling
+
+- Pattern matching
+
+- Chess
+
+- Cracking passwords
+
+and of course, Knapsack.
+
+# The end
+
+<button class="the-end show btn btn-primary" style="font-size: 100%">Thanks</button>
+
+<div id="terminal" 
+    style="display: none;">
+    <img src="holiday.jpg" height=300px></img>
+    <p>
+    <a style="font-family:Roboto; font-size: 80%"
+       href="http://www.bensound.com/">Bensound.com</a></span>
+       <button class="btn btn-default stop">Stop</button>
+    </p>
+
+    <div style="text-align:right">
+    Best wishes, <br>
+
+    Ken Pu, 2016.
+    </div>
+
+</div>
