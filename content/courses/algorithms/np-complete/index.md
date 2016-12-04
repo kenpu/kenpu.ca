@@ -421,7 +421,7 @@ Does there exists a solution for $x$ such that $x_i$ are integers satisfying:
 
 1. $A\cdot x \leq C$, and
 
-2. $B^T\cdot x \leq k$ ?
+2. $B^T\cdot x \geq k$ ?
 
 # Integer Linear Programming
 
@@ -454,17 +454,17 @@ _yes_.
 
 The transformation from KNAPSACK to ILP can be done in polynomial time, so
 
-$$\mathbf{KNAPSACK}\leq^P\mathbf{IPL}$$
+$$\mathbf{KNAPSACK}\leq^P\mathbf{ILP}$$
 
-Since KNAPSACK$\in\npc$, we conclude IPL$\in\nphard$.
+Since KNAPSACK$\in\npc$, we conclude ILP$\in\nphard$.
 
 
-It's almost trivial to check that IPL can be _verified_ in polynomial time.
-Therefore, $\mathbf{IPL}\in\mathbf{NP}$.
+It's almost trivial to check that ILP can be _verified_ in polynomial time.
+Therefore, $\mathbf{ILP}\in\mathbf{NP}$.
 
 Therefore,
 
-$$\mathbf{IPL}\in\npc$$
+$$\mathbf{ILP}\in\npc$$
 
 
 # Intractability
