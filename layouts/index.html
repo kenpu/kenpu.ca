@@ -16,9 +16,19 @@
 <div class="index container"
      style="padding-top: 50px">
 
-    <a name="people"></a>
-    <h1>About Us</h1>
-    {{ partial "index-about.html" . }}
+    <div class="row">
+        <div class="col-sm-8">
+            <a name="people"></a>
+            <h1>About Us</h1>
+            {{ partial "index-about.html" . }}
+        </div>
+        <div class="col-sm-4" 
+            style="border: thin solid lightblue;
+                   margin-top: 20px;">
+            <a name="announcements"></a>
+            {{ partial "index-announcements.html" . }}
+        </div>
+    </div>
 
     <a name="teaching"></a>
     <h1> Teaching </h1>

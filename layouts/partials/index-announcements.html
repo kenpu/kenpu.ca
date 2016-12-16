@@ -1,0 +1,41 @@
+<div class="announcements">
+{{ range $i, $p := .Site.Sections.announcements }}
+  {{if modBool $i 2}}
+  <div class="even">
+  {{else}}
+  <div class="odd">
+  {{end}}
+    <div class="announcement">{{$p.Page.Content}}</div>
+  </div>
+{{ end }}
+</div>
+
+<style>
+    .announcement {
+        padding: 20px;
+    }
+    .announcement > h1 {
+        font-size: 100%;
+        font-weight: 600;
+        background: lightblue;
+        color: white;
+        padding: 10px;
+    }
+    .announcement > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .announcement > ul > li {
+        padding: 10px;
+    }
+    .announcement > ul > li > blockquote {
+        padding: 0 0 0 10px;
+        margin: 0;
+        font-weight: 100;
+        font-style: normal;
+        font-family: Roboto;
+        font-size: 75%;
+    }
+</style>
+
