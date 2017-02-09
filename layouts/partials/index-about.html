@@ -23,7 +23,9 @@
     <div class="col-md-6">
         <h3>Graduate Students</h3>
         {{ range where .Site.Sections.people "Page.Params.role" "grad" }}
-        {{ block "person" .Page }}{{ end }}
+            {{ if not .Page.Params.completed }}
+                {{ block "person" .Page }}{{ end }}
+            {{ end }}
         {{ end }}
         <h3>Undergraduate Students</h3>
         {{ range where .Site.Sections.people "Page.Params.role" "undergrad" }}

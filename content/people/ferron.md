@@ -2,6 +2,7 @@
 role = "grad"
 weight = 2014
 name = "ferron"
+completed = true
 +++
 
 > **Michael Ferron**
