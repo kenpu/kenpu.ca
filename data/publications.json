@@ -32,6 +32,19 @@
    "papers": [
     {
      "publisher": "", 
+     "authors": "Adele Hedrick, Ken Q Pu, and Ying Zhu", 
+     "publication": "In Proc. 2016 International Conference on Computational Science and Computational Intelligence (CSCI 2016), Las Vegas, NV. pp. 8 pages, Dec 15-17, 2016", 
+     "title": "Hierarchical Temporal Mobility Analysis with Semantic Labeling", 
+     "year": "Dec 15-17, 2016", 
+     "type": "conference"
+    }
+   ], 
+   "year": "Dec 15-17, 2016"
+  }, 
+  {
+   "papers": [
+    {
+     "publisher": "", 
      "authors": "Ferron, Michael; Pu, Ken Q; Szlichta, Jaroslaw;", 
      "publication": "The 2016 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining pp. 4 pages, 2016", 
      "title": "ARC: A Pipeline Approach Enabling Large-Scale Graph Visualization", 
@@ -40,8 +53,8 @@
     }, 
     {
      "publisher": "", 
-     "authors": "M. A. Helala, K. Q. Pu, and F. Z. Qureshi", 
-     "publication": "in\u00a0Proc. 10th international conference on distributed smart cameras (ICDSC 16), Paris pp. 84-91, 2016", 
+     "authors": "M. A. Helala, Ken Q. Pu, and Faisal Z. Qureshi", 
+     "publication": "In Proc. 10th international conference on distributed smart cameras (ICDSC 16), Paris pp. 84-91, 2016", 
      "title": "A formal algebra implementation for distributed image and video stream processing,", 
      "year": "2016", 
      "type": "conference"
@@ -103,7 +116,7 @@
     }, 
     {
      "publisher": "", 
-     "authors": "Hassanzadeh, Oktie; Pu, Ken Q; Yeganeh, Soheil Hassas; Miller, Rene\u0301e J; Popa, Lucian; Herna\u0301ndez, Mauricio A; Ho, Howard; ", 
+     "authors": "Hassanzadeh, Oktie; Pu, Ken Q; Yeganeh, Soheil Hassas; Miller, Renee J; Popa, Lucian; Hernandez, Mauricio A; Ho, Howard; ", 
      "publication": "Linking Semistructured Data on the Web. In WebDB, 2011", 
      "title": "Linkage Points over Web Data", 
      "year": "2011", 
@@ -116,7 +129,7 @@
    "papers": [
     {
      "publisher": "ACM", 
-     "authors": "Pu, Ken Q; Hassanzadeh, Oktie; Drake, Richard; Miller, Ren\u00e9e J; ", 
+     "authors": "Pu, Ken Q; Hassanzadeh, Oktie; Drake, Richard; Miller, Rene J; ", 
      "publication": "Proceedings of the 19th ACM international conference on Information and knowledge management pp. 29-38, 2010, ACM", 
      "title": "Online annotation of text streams with structured entities", 
      "year": "2010", 
@@ -170,7 +183,7 @@
     {
      "publisher": "", 
      "authors": "Zhu, Ying; Howard, William; Pu, Ken Q; ", 
-     "publication": "GLOBECOM pp. 1-6, 2009", 
+     "publication": "GLOBECOM pp. 06-Jan, 2009", 
      "title": "Spatial Inference Using Networks of RFID Receiver: A Bayesian Approach.", 
      "year": "2009", 
      "type": "conference"
@@ -183,7 +196,7 @@
     {
      "publisher": "IEEE", 
      "authors": "Zhu, Ying; Pu, Ken Q; ", 
-     "publication": "IEEE GLOBECOM 2008-2008 IEEE Global Telecommunications Conference pp. 1-5, 2008, IEEE", 
+     "publication": "IEEE GLOBECOM 2008-2008 IEEE Global Telecommunications Conference pp. 05-Jan, 2008, IEEE", 
      "title": "Adaptive multicast tree construction for elastic data streams", 
      "year": "2008", 
      "type": "conference"
@@ -228,7 +241,7 @@
     {
      "publisher": "", 
      "authors": "Pu, Ken Q; Zhu, Ying; ", 
-     "publication": "SSDBM\u201907 pp. 34-42, 2007", 
+     "publication": "SSDBM07 pp. 34-42, 2007", 
      "title": "Efficient Indexing of Heterogeneous Data Streams with Automatic Performance Tuning", 
      "year": "2007", 
      "type": "conference"
@@ -270,7 +283,7 @@
     {
      "publisher": "ACM", 
      "authors": "Pu, Ken Q; ", 
-     "publication": "Proceedings of the 8th ACM international workshop on Data warehousing and OLAP pp. 1-8, 2005, ACM", 
+     "publication": "Proceedings of the 8th ACM international workshop on Data warehousing and OLAP pp. 08-Jan, 2005, ACM", 
      "title": "Modeling, querying and reasoning about OLAP databases: a functional approach", 
      "year": "2005", 
      "type": "conference"
@@ -344,7 +357,7 @@
    "papers": [
     {
      "publisher": "VLDB Endowment", 
-     "authors": "Zhu, Erkang; Nargesian, Fatemeh; Pu, Ken Q; Miller, Ren\u00e9e J; ", 
+     "authors": "Zhu, Erkang; Nargesian, Fatemeh; Pu, Ken Q; Miller, Rene J; ", 
      "publication": "Proceedings of the VLDB Endowment, 2016, VLDB Endowment", 
      "title": "LSH Ensemble: Internet Scale Domain Search", 
      "year": "2016", 
@@ -378,7 +391,7 @@
    "papers": [
     {
      "publisher": "VLDB Endowment", 
-     "authors": "Hassanzadeh, Oktie; Pu, Ken Q; Yeganeh, Soheil Hassas; Miller, Ren\u00e9e J; Popa, Lucian; Hern\u00e1ndez, Mauricio A; Ho, Howard; ", 
+     "authors": "Hassanzadeh, Oktie; Pu, Ken Q; Yeganeh, Soheil Hassas; Miller, Rene J; Popa, Lucian; Hernndez, Mauricio A; Ho, Howard; ", 
      "publication": "Proceedings of the VLDB Endowment 6 (6) pp. 445-456, 2013, VLDB Endowment", 
      "title": "Discovering linkage points over web data", 
      "year": "2013", 
@@ -510,7 +523,7 @@
      "publisher": "University of Toronto", 
      "authors": "Pu, Ken; ", 
      "publication": ", 1998, University of Toronto", 
-     "title": "Education BASc, University of Toronto, Division of Engineering Science, 1998 MASc, University of Toronto, Department of Electrical and Computer Engineering, 2000. Thesis title:\u201cModeling and control of hierarchical discrete event", 
+     "title": "Education BASc, University of Toronto, Division of Engineering Science, 1998 MASc, University of Toronto, Department of Electrical and Computer Engineering, 2000. Thesis title:Modeling and control of hierarchical discrete event", 
      "year": "1998", 
      "type": "other"
     }

@@ -3,7 +3,7 @@
 dev: pubs
 	hugo server -w
 
-deploy: pubs db github
+deploy: pubs db
 
 db:
 	hugo --config db.science.uoit.ca.toml -d ../db.science.uoit.ca

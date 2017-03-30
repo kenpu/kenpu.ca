@@ -2,13 +2,20 @@ import csv
 import itertools as i
 from pprint import pprint
 import json
+from StringIO import StringIO
 
 def parse():
-    with open("data/citations.csv") as f:
-        reader = csv.reader(f)
+    with open("./citations.csv") as f:
+        txt = f.read()
+        buf = StringIO(txt.decode('ascii', errors='ignore'))
+
+        reader = csv.reader(buf)
         reader.next()
         for line in reader:
-            authors, typ, title, publication, vol, num, pages, year, publisher = line
+            try:
+                authors, typ, title, publication, vol, num, pages, year, publisher = line
+            except:
+                continue
 
             if vol and num:
                 publication = "%s %s (%s)" % (publication, vol, num)

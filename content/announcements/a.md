@@ -1,5 +1,7 @@
 # Bulletin board
 
+- (March 1, 2017): **Welcome** to Amin to the group
+
 - (Feb 1, 2017): **Congratulations** to Michael 
 
     > Michael has successfully defended his Master's thesis.
