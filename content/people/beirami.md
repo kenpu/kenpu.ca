@@ -9,4 +9,5 @@ name = "beirami"
 >
 > Master in Computer Science
 >
-> To be decided.
+> _Building blockchain based trusted relational
+   database systems_

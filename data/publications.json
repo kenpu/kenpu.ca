@@ -78,10 +78,23 @@
  ],
  "journal": [
   {
+   "year": "2017",
+   "papers": [
+    {
+     "authors": "Erkang Zhu,Ken Q. Pu,Fatemeh Nargesian andRene J. Miller",
+     "title": "Interactive Navigation of Open Data Linkages",
+     "publication": "Proceedings of the VLDB Endowment 10 (12) pp. 1837-1840, 2017, (Best Demo Award)",
+     "publisher": "(Best Demo Award)",
+     "year": "2017",
+     "type": "journal"
+    }
+   ]
+  },
+  {
    "year": "2016",
    "papers": [
     {
-     "authors": "Zhu, Erkang; Nargesian, Fatemeh; Pu, Ken Q; Miller, Ren\u0329e J; ",
+     "authors": "Zhu, Erkang; Nargesian, Fatemeh; Pu, Ken Q; Miller, Rene J; ",
      "title": "LSH Ensemble: Internet Scale Domain Search",
      "publication": "Proceedings of the VLDB Endowment, 2016, VLDB Endowment",
      "publisher": "VLDB Endowment",
@@ -115,7 +128,7 @@
    "year": "2013",
    "papers": [
     {
-     "authors": "Hassanzadeh, Oktie; Pu, Ken Q; Yeganeh, Soheil Hassas; Miller, Ren\u0329e J; Popa, Lucian; Hernndez, Mauricio A; Ho, Howard; ",
+     "authors": "Hassanzadeh, Oktie; Pu, Ken Q; Yeganeh, Soheil Hassas; Miller, Rene J; Popa, Lucian; Hernndez, Mauricio A; Ho, Howard; ",
      "title": "Discovering linkage points over web data",
      "publication": "Proceedings of the VLDB Endowment 6 (6) pp. 445-456, 2013, VLDB Endowment",
      "publisher": "VLDB Endowment",
@@ -316,7 +329,7 @@
    "year": "2010",
    "papers": [
     {
-     "authors": "Pu, Ken Q; Hassanzadeh, Oktie; Drake, Richard; Miller, Ren\u0329e J; ",
+     "authors": "Pu, Ken Q; Hassanzadeh, Oktie; Drake, Richard; Miller, Rene J; ",
      "title": "Online annotation of text streams with structured entities",
      "publication": "Proceedings of the 19th ACM international conference on Information and knowledge management pp. 29-38, 2010, ACM",
      "publisher": "ACM",
@@ -429,7 +442,7 @@
     {
      "authors": "Pu, Ken Q; Zhu, Ying; ",
      "title": "Efficient Indexing of Heterogeneous Data Streams with Automatic Performance Tuning",
-     "publication": "SSDBM\u06ea07 pp. 34-42, 2007",
+     "publication": "SSDBM07 pp. 34-42, 2007",
      "publisher": "",
      "year": "2007",
      "type": "conference"
