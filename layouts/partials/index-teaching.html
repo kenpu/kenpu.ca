@@ -17,10 +17,10 @@
     </div>
 {{ end }}
 
-<h2>Undergraduate courses</h2>
 
-<div class="alert alert-danger">
-    <h3> This is <em>out-dated material</em></h3>
+<h4>Past courses</h4>
+
+<div class="">
     <div class="row">
         {{ range where .Site.Sections.courses "Page.Params.level" "undergrad" }}
         {{ block "course" .Page }}{{end}}
@@ -28,15 +28,13 @@
     </div>
 </div>
 
-<div class="alert alert-success">
-    <p>We are moving all the course material to an external Web service
-    in order to support a better typesetting system.</p>
+<h2>Current courses</h2>
 
-    <p>Go 
-        <a href="/library" class="alert-link"> here 
+<div class="alert alert-success">
+    <p>
+        <a href="/library/teaching" class="alert-link"> Go to... 
             <span class="label label-info"><i class="fa fa-external-link"></i></span>
         </a>
-    to access the
-    update-to-date material.</p>
+    </p>
 </div>
 

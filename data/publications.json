@@ -1,534 +1,542 @@
 {
  "patent": [
   {
+   "year": "2012",
    "papers": [
     {
-     "publisher": "US Patent 8,126,871", 
-     "authors": "Malloy, William Earl; Pu, Ken Qian; ", 
-     "publication": ", 2012, US Patent 8,126,871", 
-     "title": "Systems and computer program products to identify related data in a multidimensional database", 
-     "year": "2012", 
+     "authors": "Malloy, William Earl; Pu, Ken Qian; ",
+     "title": "Systems and computer program products to identify related data in a multidimensional database",
+     "publication": ", 2012, US Patent 8,126,871",
+     "publisher": "US Patent 8,126,871",
+     "year": "2012",
      "type": "patent"
     }
-   ], 
-   "year": "2012"
-  }, 
+   ]
+  },
   {
+   "year": "2008",
    "papers": [
     {
-     "publisher": "US Patent 7,472,127", 
-     "authors": "Malloy, William Earl; Pu, Ken Qian; ", 
-     "publication": ", 2008, US Patent 7,472,127", 
-     "title": "Methods to identify related data in a multidimensional database", 
-     "year": "2008", 
+     "authors": "Malloy, William Earl; Pu, Ken Qian; ",
+     "title": "Methods to identify related data in a multidimensional database",
+     "publication": ", 2008, US Patent 7,472,127",
+     "publisher": "US Patent 7,472,127",
+     "year": "2008",
      "type": "patent"
     }
-   ], 
-   "year": "2008"
+   ]
   }
- ], 
- "conference": [
-  {
-   "papers": [
-    {
-     "publisher": "", 
-     "authors": "Adele Hedrick, Ken Q Pu, and Ying Zhu", 
-     "publication": "In Proc. 2016 International Conference on Computational Science and Computational Intelligence (CSCI 2016), Las Vegas, NV. pp. 8 pages, Dec 15-17, 2016", 
-     "title": "Hierarchical Temporal Mobility Analysis with Semantic Labeling", 
-     "year": "Dec 15-17, 2016", 
-     "type": "conference"
-    }
-   ], 
-   "year": "Dec 15-17, 2016"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "", 
-     "authors": "Ferron, Michael; Pu, Ken Q; Szlichta, Jaroslaw;", 
-     "publication": "The 2016 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining pp. 4 pages, 2016", 
-     "title": "ARC: A Pipeline Approach Enabling Large-Scale Graph Visualization", 
-     "year": "2016", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "", 
-     "authors": "M. A. Helala, Ken Q. Pu, and Faisal Z. Qureshi", 
-     "publication": "In Proc. 10th international conference on distributed smart cameras (ICDSC 16), Paris pp. 84-91, 2016", 
-     "title": "A formal algebra implementation for distributed image and video stream processing,", 
-     "year": "2016", 
-     "type": "conference"
-    }
-   ], 
-   "year": "2016"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "", 
-     "authors": "Helala, Mohamed A; Pu, Ken Q; Qureshi, Faisal Z; ", 
-     "publication": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops pp. 786-793, 2014", 
-     "title": "A stream algebra for computer vision pipelines", 
-     "year": "2014", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "Springer International Publishing", 
-     "authors": "Helala, Mohamed A; Pu, Ken Q; Qureshi, Faisal Z; ", 
-     "publication": "Asian Conference on Computer Vision pp. 314-329, 2014, Springer International Publishing", 
-     "title": "Towards Efficient Feedback Control in Streaming Computer Vision Pipelines", 
-     "year": "2014", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "IEEE", 
-     "authors": "Drake, Richard; Pu, Ken Q; ", 
-     "publication": "Information Reuse and Integration (IRI), 2014 IEEE 15th International Conference on pp. 841-844, 2014, IEEE", 
-     "title": "Using document space for relational search", 
-     "year": "2014", 
-     "type": "conference"
-    }
-   ], 
-   "year": "2014"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "IEEE", 
-     "authors": "Helala, Mohamed A; Pu, Ken Q; Qureshi, Faisal Z; ", 
-     "publication": "Advanced Video and Signal-Based Surveillance (AVSS), 2012 IEEE Ninth International Conference on pp. 428-433, 2012, IEEE", 
-     "title": "Road boundary detection in challenging scenarios", 
-     "year": "2012", 
-     "type": "conference"
-    }
-   ], 
-   "year": "2012"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "IEEE", 
-     "authors": "Rachevsky, Lev; Pu, Ken Q; ", 
-     "publication": "Information Reuse and Integration (IRI), 2011 IEEE International Conference on pp. 15-20, 2011, IEEE", 
-     "title": "Selection of features for surname classification", 
-     "year": "2011", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "", 
-     "authors": "Hassanzadeh, Oktie; Pu, Ken Q; Yeganeh, Soheil Hassas; Miller, Renee J; Popa, Lucian; Hernandez, Mauricio A; Ho, Howard; ", 
-     "publication": "Linking Semistructured Data on the Web. In WebDB, 2011", 
-     "title": "Linkage Points over Web Data", 
-     "year": "2011", 
-     "type": "conference"
-    }
-   ], 
-   "year": "2011"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "ACM", 
-     "authors": "Pu, Ken Q; Hassanzadeh, Oktie; Drake, Richard; Miller, Rene J; ", 
-     "publication": "Proceedings of the 19th ACM international conference on Information and knowledge management pp. 29-38, 2010, ACM", 
-     "title": "Online annotation of text streams with structured entities", 
-     "year": "2010", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "IEEE", 
-     "authors": "Pu, Ken Q; Cheung, Russell; ", 
-     "publication": "Information Reuse and Integration (IRI), 2010 IEEE International Conference on pp. 364-367, 2010, IEEE", 
-     "title": "Tag grid: supporting collaborative and fuzzy multidimensional queries of tagged datasets", 
-     "year": "2010", 
-     "type": "conference"
-    }
-   ], 
-   "year": "2010"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "ACM", 
-     "authors": "Pu, Ken Q; ", 
-     "publication": "Proceedings of the First International Workshop on Keyword Search on Structured Data pp. 27-32, 2009, ACM", 
-     "title": "Keyword query cleaning using hidden markov models", 
-     "year": "2009", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "IEEE", 
-     "authors": "Bourennani, Farid; Pu, Ken Q; Zhu, Ying; ", 
-     "publication": "Information Reuse & Integration, 2009. IRI'09. IEEE International Conference on pp. 132-137, 2009, IEEE", 
-     "title": "Visual integration tool for heterogeneous data type by unified vectorization", 
-     "year": "2009", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "IEEE", 
-     "authors": "Bourennani, Farid; Pu, Ken Q; Zhu, Ying; ", 
-     "publication": "Advances in Databases, Knowledge, and Data Applications, 2009. DBKDA'09. First International Conference on pp. 155-160, 2009, IEEE", 
-     "title": "Visualization and integration of databases using self-organizing map", 
-     "year": "2009", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "IEEE", 
-     "authors": "Pu, Ken Q; Yu, Xiaohui; ", 
-     "publication": "2009 IEEE 25th International Conference on Data Engineering pp. 1531-1534, 2009, IEEE", 
-     "title": "Frisk: Keyword query cleaning and processing in action", 
-     "year": "2009", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "", 
-     "authors": "Zhu, Ying; Howard, William; Pu, Ken Q; ", 
-     "publication": "GLOBECOM pp. 06-Jan, 2009", 
-     "title": "Spatial Inference Using Networks of RFID Receiver: A Bayesian Approach.", 
-     "year": "2009", 
-     "type": "conference"
-    }
-   ], 
-   "year": "2009"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "IEEE", 
-     "authors": "Zhu, Ying; Pu, Ken Q; ", 
-     "publication": "IEEE GLOBECOM 2008-2008 IEEE Global Telecommunications Conference pp. 05-Jan, 2008, IEEE", 
-     "title": "Adaptive multicast tree construction for elastic data streams", 
-     "year": "2008", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "IEEE", 
-     "authors": "Pu, Ken Q; Zhu, Ying; ", 
-     "publication": "Information Reuse and Integration, 2008. IRI 2008. IEEE International Conference on pp. 46-51, 2008, IEEE", 
-     "title": "Modeling and synthesis of service composition using tree automata", 
-     "year": "2008", 
-     "type": "conference"
-    }
-   ], 
-   "year": "2008"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "IEEE", 
-     "authors": "Pu, Ken Q; Zhu, Ying; ", 
-     "publication": "Scientific and Statistical Database Management, 2007. SSBDM'07. 19th International Conference on pp. 34-34, 2007, IEEE", 
-     "title": "Efficient indexing of heterogeneous data streams with automatic performance configurations", 
-     "year": "2007", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "IEEE", 
-     "authors": "Chandel, Amit; Koudas, Nick; Pu, Ken Q; Srivastava, Divesh; ", 
-     "publication": "2007 IEEE 23rd International Conference on Data Engineering pp. 776-785, 2007, IEEE", 
-     "title": "Fast identification of relational constraint violations", 
-     "year": "2007", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "IEEE", 
-     "authors": "Pu, Ken Q; ", 
-     "publication": "Data Engineering Workshop, 2007 IEEE 23rd International Conference on pp. 379-386, 2007, IEEE", 
-     "title": "Service description and analysis from a type theoretic approach", 
-     "year": "2007", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "", 
-     "authors": "Pu, Ken Q; Zhu, Ying; ", 
-     "publication": "SSDBM07 pp. 34-42, 2007", 
-     "title": "Efficient Indexing of Heterogeneous Data Streams with Automatic Performance Tuning", 
-     "year": "2007", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "", 
-     "authors": "Zhu, Ying; Pu, Ken Q; ", 
-     "publication": ", 2007", 
-     "title": "Fast Archiving and Querying of Heterogeneous Sensor Data Streams", 
-     "year": "2007", 
-     "type": "conference"
-    }
-   ], 
-   "year": "2007"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "IEEE", 
-     "authors": "Pu, Ken; Hristidis, Vagelis; Koudas, Nick; ", 
-     "publication": "22nd International Conference on Data Engineering (ICDE'06) pp. 31-31, 2006, IEEE", 
-     "title": "Syntactic rule based approach toweb service composition", 
-     "year": "2006", 
-     "type": "conference"
-    }
-   ], 
-   "year": "2006"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "IEEE", 
-     "authors": "Yu, Xiaohui; Pu, Ken Q; Koudas, Nick; ", 
-     "publication": "21st International Conference on Data Engineering (ICDE'05) pp. 631-642, 2005, IEEE", 
-     "title": "Monitoring k-nearest neighbor queries over moving objects", 
-     "year": "2005", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "ACM", 
-     "authors": "Pu, Ken Q; ", 
-     "publication": "Proceedings of the 8th ACM international workshop on Data warehousing and OLAP pp. 08-Jan, 2005, ACM", 
-     "title": "Modeling, querying and reasoning about OLAP databases: a functional approach", 
-     "year": "2005", 
-     "type": "conference"
-    }, 
-    {
-     "publisher": "ACM", 
-     "authors": "Pu, Ken Q; Mendelzon, Alberto O; ", 
-     "publication": "Proceedings of the 14th ACM international conference on Information and knowledge management pp. 233-234, 2005, ACM", 
-     "title": "Typed functional query languages with equational specifications", 
-     "year": "2005", 
-     "type": "conference"
-    }
-   ], 
-   "year": "2005"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "", 
-     "authors": "Pu, Ken Q; ", 
-     "publication": "Proceedings of VLDB Workshop on Information Integration on the Web (IIWeb-2004) pp. 97, 2004", 
-     "title": "Functional Integration of Relational, OLAP and XML Data", 
-     "year": "2004", 
-     "type": "conference"
-    }
-   ], 
-   "year": "2004"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "ACM", 
-     "authors": "Mendelzon, Alberto O; Pu, Ken Q; ", 
-     "publication": "Proceedings of the twenty-second ACM SIGMOD-SIGACT-SIGART symposium on Principles of database systems pp. 123-133, 2003, ACM", 
-     "title": "Concise descriptions of subsets of structured sets", 
-     "year": "2003", 
-     "type": "conference"
-    }
-   ], 
-   "year": "2003"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "Citeseer", 
-     "authors": "Pu, Ken Qian; ", 
-     "publication": ", 2000, Citeseer", 
-     "title": "Modeling and control of discrete-event systems with hierarchical abstraction", 
-     "year": "2000", 
-     "type": "conference"
-    }
-   ], 
-   "year": "2000"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "Citeseer", 
-     "authors": "Pu, Ken Qian; ", 
-     "publication": ", 1998, Citeseer", 
-     "title": "Theory Of Discrete Wavelet Transform And An Error Analysis Of The Pyramid Algorithm", 
-     "year": "1998", 
-     "type": "conference"
-    }
-   ], 
-   "year": "1998"
-  }
- ], 
- "journal": [
-  {
-   "papers": [
-    {
-     "publisher": "VLDB Endowment", 
-     "authors": "Zhu, Erkang; Nargesian, Fatemeh; Pu, Ken Q; Miller, Rene J; ", 
-     "publication": "Proceedings of the VLDB Endowment, 2016, VLDB Endowment", 
-     "title": "LSH Ensemble: Internet Scale Domain Search", 
-     "year": "2016", 
-     "type": "journal"
-    }
-   ], 
-   "year": "2016"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "IEEE", 
-     "authors": "Yu, Ziqiang; Liu, Yang; Yu, Xiaohui; Pu, Ken Q; ", 
-     "publication": "IEEE Transactions on Knowledge and Data Engineering 27 (5) pp. 1383-1396, 2015, IEEE", 
-     "title": "Scalable distributed processing of K nearest neighbor queries over moving objects", 
-     "year": "2015", 
-     "type": "journal"
-    }, 
-    {
-     "publisher": "International Society for Optics and Photonics", 
-     "authors": "Helala, Mohamed A; Qureshi, Faisal Z; Pu, Ken Q; ", 
-     "publication": "Journal of Electronic Imaging 24 (5) pp. 053020-053020, 2015, International Society for Optics and Photonics", 
-     "title": "Automatic parsing of lane and road boundaries in challenging traffic scenes", 
-     "year": "2015", 
-     "type": "journal"
-    }
-   ], 
-   "year": "2015"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "VLDB Endowment", 
-     "authors": "Hassanzadeh, Oktie; Pu, Ken Q; Yeganeh, Soheil Hassas; Miller, Rene J; Popa, Lucian; Hernndez, Mauricio A; Ho, Howard; ", 
-     "publication": "Proceedings of the VLDB Endowment 6 (6) pp. 445-456, 2013, VLDB Endowment", 
-     "title": "Discovering linkage points over web data", 
-     "year": "2013", 
-     "type": "journal"
-    }
-   ], 
-   "year": "2013"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "Springer Vienna", 
-     "authors": "Pu, Ken Q; Cheung, Russell; ", 
-     "publication": "Recent Trends in Information Reuse and Integration pp. 331-342, 2012, Springer Vienna", 
-     "title": "Tag Grid: Supporting Multidimensional Queries of Tagged Datasets", 
-     "year": "2012", 
-     "type": "journal"
-    }, 
-    {
-     "publisher": "Elsevier", 
-     "authors": "Hedrick, Adele; Pu, Ken Q; ", 
-     "publication": "Procedia Computer Science pp. 752-757, 2012, Elsevier", 
-     "title": "Authoring relational queries on the mobile devices", 
-     "year": "2012", 
-     "type": "journal"
-    }
-   ], 
-   "year": "2012"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "Bentham Science Publishers", 
-     "authors": "Q Pu, Ken; ", 
-     "publication": "Recent Patents on Computer Science 3 (3) pp. 186-194, 2010, Bentham Science Publishers", 
-     "title": "Recent Patents on Information Retrieval Using Natural Language and Keyword Query", 
-     "year": "2010", 
-     "type": "journal"
-    }
-   ], 
-   "year": "2010"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "IEEE", 
-     "authors": "Zhu, Ying; Li, Baochun; Pu, Ken Qian; ", 
-     "publication": "IEEE Transactions on Parallel and Distributed Systems 20 (7) pp. 925-939, 2009, IEEE", 
-     "title": "Dynamic multicast in overlay networks with linear capacity constraints", 
-     "year": "2009", 
-     "type": "journal"
-    }, 
-    {
-     "publisher": "", 
-     "authors": "Bourennani, Farid; Pu, Ken Q; Zhu, Ying; ", 
-     "publication": "International Journal on Advances in Systems and Measurements Volume 2, Numbers 2&3, 2009, 2009", 
-     "title": "Unified Vectorization of Numerical and Textual Data using Self-Organizing Map", 
-     "year": "2009", 
-     "type": "journal"
-    }
-   ], 
-   "year": "2009"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "VLDB Endowment", 
-     "authors": "Pu, Ken Q; Yu, Xiaohui; ", 
-     "publication": "Proceedings of the VLDB Endowment 1 (1) pp. 909-920, 2008, VLDB Endowment", 
-     "title": "Keyword query cleaning", 
-     "year": "2008", 
-     "type": "journal"
-    }
-   ], 
-   "year": "2008"
-  }, 
-  {
-   "papers": [
-    {
-     "publisher": "ACM", 
-     "authors": "Pu, Ken Q; Mendelzon, Alberto O; ", 
-     "publication": "ACM Transactions on Database Systems (TODS) 30 (1) pp. 211-248, 2005, ACM", 
-     "title": "Concise descriptions of subsets of structured sets", 
-     "year": "2005", 
-     "type": "journal"
-    }
-   ], 
-   "year": "2005"
-  }
- ], 
+ ],
  "other": [
   {
+   "year": "2006",
    "papers": [
     {
-     "publisher": "University of Toronto", 
-     "authors": "Pu, Qian Ken; ", 
-     "publication": ", 2006, University of Toronto", 
-     "title": "On formal methods of multidimensional databases", 
-     "year": "2006", 
+     "authors": "Pu, Qian Ken; ",
+     "title": "On formal methods of multidimensional databases",
+     "publication": ", 2006, University of Toronto",
+     "publisher": "University of Toronto",
+     "year": "2006",
      "type": "other"
-    }, 
+    },
     {
-     "publisher": "", 
-     "authors": "Pu, Ken Q; ", 
-     "publication": ", 2006", 
-     "title": "Algorithm and Complexity of the Unification Problem of a Polymorphic Attribute-based Type System", 
-     "year": "2006", 
+     "authors": "Pu, Ken Q; ",
+     "title": "Algorithm and Complexity of the Unification Problem of a Polymorphic Attribute-based Type System",
+     "publication": ", 2006",
+     "publisher": "",
+     "year": "2006",
      "type": "other"
     }
-   ], 
-   "year": "2006"
-  }, 
+   ]
+  },
   {
+   "year": "2000",
    "papers": [
     {
-     "publisher": "Thesis, Dept. of Electl. & Cmptr. Engrg., Univ. of Toronto", 
-     "authors": "Pu, KQ; ", 
-     "publication": ", 2000, Thesis, Dept. of Electl. & Cmptr. Engrg., Univ. of Toronto", 
-     "title": "Modeling and Control of Discrete-Event systems with Hierarchical abstraction. Ma sc", 
-     "year": "2000", 
+     "authors": "Pu, KQ; ",
+     "title": "Modeling and Control of Discrete-Event systems with Hierarchical abstraction. Ma sc",
+     "publication": ", 2000, Thesis, Dept. of Electl. & Cmptr. Engrg., Univ. of Toronto",
+     "publisher": "Thesis, Dept. of Electl. & Cmptr. Engrg., Univ. of Toronto",
+     "year": "2000",
      "type": "other"
     }
-   ], 
-   "year": "2000"
-  }, 
+   ]
+  },
   {
+   "year": "1998",
    "papers": [
     {
-     "publisher": "University of Toronto", 
-     "authors": "Pu, Ken; ", 
-     "publication": ", 1998, University of Toronto", 
-     "title": "Education BASc, University of Toronto, Division of Engineering Science, 1998 MASc, University of Toronto, Department of Electrical and Computer Engineering, 2000. Thesis title:Modeling and control of hierarchical discrete event", 
-     "year": "1998", 
+     "authors": "Pu, Ken; ",
+     "title": "Education BASc, University of Toronto, Division of Engineering Science, 1998 MASc, University of Toronto, Department of Electrical and Computer Engineering, 2000. Thesis title:Modeling and control of hierarchical discrete event",
+     "publication": ", 1998, University of Toronto",
+     "publisher": "University of Toronto",
+     "year": "1998",
      "type": "other"
     }
-   ], 
-   "year": "1998"
+   ]
+  }
+ ],
+ "journal": [
+  {
+   "year": "2016",
+   "papers": [
+    {
+     "authors": "Zhu, Erkang; Nargesian, Fatemeh; Pu, Ken Q; Miller, Ren\u0329e J; ",
+     "title": "LSH Ensemble: Internet Scale Domain Search",
+     "publication": "Proceedings of the VLDB Endowment, 2016, VLDB Endowment",
+     "publisher": "VLDB Endowment",
+     "year": "2016",
+     "type": "journal"
+    }
+   ]
+  },
+  {
+   "year": "2015",
+   "papers": [
+    {
+     "authors": "Yu, Ziqiang; Liu, Yang; Yu, Xiaohui; Pu, Ken Q; ",
+     "title": "Scalable distributed processing of K nearest neighbor queries over moving objects",
+     "publication": "IEEE Transactions on Knowledge and Data Engineering 27 (5) pp. 1383-1396, 2015, IEEE",
+     "publisher": "IEEE",
+     "year": "2015",
+     "type": "journal"
+    },
+    {
+     "authors": "Helala, Mohamed A; Qureshi, Faisal Z; Pu, Ken Q; ",
+     "title": "Automatic parsing of lane and road boundaries in challenging traffic scenes",
+     "publication": "Journal of Electronic Imaging 24 (5) pp. 053020-053020, 2015, International Society for Optics and Photonics",
+     "publisher": "International Society for Optics and Photonics",
+     "year": "2015",
+     "type": "journal"
+    }
+   ]
+  },
+  {
+   "year": "2013",
+   "papers": [
+    {
+     "authors": "Hassanzadeh, Oktie; Pu, Ken Q; Yeganeh, Soheil Hassas; Miller, Ren\u0329e J; Popa, Lucian; Hernndez, Mauricio A; Ho, Howard; ",
+     "title": "Discovering linkage points over web data",
+     "publication": "Proceedings of the VLDB Endowment 6 (6) pp. 445-456, 2013, VLDB Endowment",
+     "publisher": "VLDB Endowment",
+     "year": "2013",
+     "type": "journal"
+    }
+   ]
+  },
+  {
+   "year": "2012",
+   "papers": [
+    {
+     "authors": "Pu, Ken Q; Cheung, Russell; ",
+     "title": "Tag Grid: Supporting Multidimensional Queries of Tagged Datasets",
+     "publication": "Recent Trends in Information Reuse and Integration pp. 331-342, 2012, Springer Vienna",
+     "publisher": "Springer Vienna",
+     "year": "2012",
+     "type": "journal"
+    },
+    {
+     "authors": "Hedrick, Adele; Pu, Ken Q; ",
+     "title": "Authoring relational queries on the mobile devices",
+     "publication": "Procedia Computer Science pp. 752-757, 2012, Elsevier",
+     "publisher": "Elsevier",
+     "year": "2012",
+     "type": "journal"
+    }
+   ]
+  },
+  {
+   "year": "2010",
+   "papers": [
+    {
+     "authors": "Q Pu, Ken; ",
+     "title": "Recent Patents on Information Retrieval Using Natural Language and Keyword Query",
+     "publication": "Recent Patents on Computer Science 3 (3) pp. 186-194, 2010, Bentham Science Publishers",
+     "publisher": "Bentham Science Publishers",
+     "year": "2010",
+     "type": "journal"
+    }
+   ]
+  },
+  {
+   "year": "2009",
+   "papers": [
+    {
+     "authors": "Zhu, Ying; Li, Baochun; Pu, Ken Qian; ",
+     "title": "Dynamic multicast in overlay networks with linear capacity constraints",
+     "publication": "IEEE Transactions on Parallel and Distributed Systems 20 (7) pp. 925-939, 2009, IEEE",
+     "publisher": "IEEE",
+     "year": "2009",
+     "type": "journal"
+    },
+    {
+     "authors": "Bourennani, Farid; Pu, Ken Q; Zhu, Ying; ",
+     "title": "Unified Vectorization of Numerical and Textual Data using Self-Organizing Map",
+     "publication": "International Journal on Advances in Systems and Measurements Volume 2, Numbers 2&3, 2009, 2009",
+     "publisher": "",
+     "year": "2009",
+     "type": "journal"
+    }
+   ]
+  },
+  {
+   "year": "2008",
+   "papers": [
+    {
+     "authors": "Pu, Ken Q; Yu, Xiaohui; ",
+     "title": "Keyword query cleaning",
+     "publication": "Proceedings of the VLDB Endowment 1 (1) pp. 909-920, 2008, VLDB Endowment",
+     "publisher": "VLDB Endowment",
+     "year": "2008",
+     "type": "journal"
+    }
+   ]
+  },
+  {
+   "year": "2005",
+   "papers": [
+    {
+     "authors": "Pu, Ken Q; Mendelzon, Alberto O; ",
+     "title": "Concise descriptions of subsets of structured sets",
+     "publication": "ACM Transactions on Database Systems (TODS) 30 (1) pp. 211-248, 2005, ACM",
+     "publisher": "ACM",
+     "year": "2005",
+     "type": "journal"
+    }
+   ]
+  }
+ ],
+ "conference": [
+  {
+   "year": "2017",
+   "papers": [
+    {
+     "authors": "Adele Hedrick, Ying Zhu, and Ken Q Pu",
+     "title": "Modeling Transitions and Mobility Patterns",
+     "publication": "Advances in Human Factors in Simulation and Modeling. AHFE 2017. Advances in Intelligent Systems and Computing (volumn 591) pp. 10 pages, 2017,  Springer",
+     "publisher": " Springer",
+     "year": "2017",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "2016",
+   "papers": [
+    {
+     "authors": "Ferron, Michael; Pu, Ken Q; Szlichta, Jaroslaw;",
+     "title": "ARC: A Pipeline Approach Enabling Large-Scale Graph Visualization",
+     "publication": "The 2016 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining pp. 4 pages, 2016",
+     "publisher": "",
+     "year": "2016",
+     "type": "conference"
+    },
+    {
+     "authors": "M. A. Helala, Ken Q. Pu, and Faisal Z. Qureshi",
+     "title": "A formal algebra implementation for distributed image and video stream processing,",
+     "publication": "In Proc. 10th international conference on distributed smart cameras (ICDSC 16), Paris pp. 84-91, 2016",
+     "publisher": "",
+     "year": "2016",
+     "type": "conference"
+    },
+    {
+     "authors": "Adele Hedrick, Ken Q Pu, and Ying Zhu",
+     "title": "Hierarchical Temporal Mobility Analysis with Semantic Labeling",
+     "publication": "In Proc. 2016 International Conference on Computational Science and Computational Intelligence (CSCI 2016), Dec 15-17, 2016, Las Vegas, NV. pp. 8 pages, 2016",
+     "publisher": "",
+     "year": "2016",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "2014",
+   "papers": [
+    {
+     "authors": "Helala, Mohamed A; Pu, Ken Q; Qureshi, Faisal Z; ",
+     "title": "A stream algebra for computer vision pipelines",
+     "publication": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops pp. 786-793, 2014",
+     "publisher": "",
+     "year": "2014",
+     "type": "conference"
+    },
+    {
+     "authors": "Helala, Mohamed A; Pu, Ken Q; Qureshi, Faisal Z; ",
+     "title": "Towards Efficient Feedback Control in Streaming Computer Vision Pipelines",
+     "publication": "Asian Conference on Computer Vision pp. 314-329, 2014, Springer International Publishing",
+     "publisher": "Springer International Publishing",
+     "year": "2014",
+     "type": "conference"
+    },
+    {
+     "authors": "Drake, Richard; Pu, Ken Q; ",
+     "title": "Using document space for relational search",
+     "publication": "Information Reuse and Integration (IRI), 2014 IEEE 15th International Conference on pp. 841-844, 2014, IEEE",
+     "publisher": "IEEE",
+     "year": "2014",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "2012",
+   "papers": [
+    {
+     "authors": "Helala, Mohamed A; Pu, Ken Q; Qureshi, Faisal Z; ",
+     "title": "Road boundary detection in challenging scenarios",
+     "publication": "Advanced Video and Signal-Based Surveillance (AVSS), 2012 IEEE Ninth International Conference on pp. 428-433, 2012, IEEE",
+     "publisher": "IEEE",
+     "year": "2012",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "2011",
+   "papers": [
+    {
+     "authors": "Rachevsky, Lev; Pu, Ken Q; ",
+     "title": "Selection of features for surname classification",
+     "publication": "Information Reuse and Integration (IRI), 2011 IEEE International Conference on pp. 15-20, 2011, IEEE",
+     "publisher": "IEEE",
+     "year": "2011",
+     "type": "conference"
+    },
+    {
+     "authors": "Hassanzadeh, Oktie; Pu, Ken Q; Yeganeh, Soheil Hassas; Miller, Renee J; Popa, Lucian; Hernandez, Mauricio A; Ho, Howard; ",
+     "title": "Linkage Points over Web Data",
+     "publication": "Linking Semistructured Data on the Web. In WebDB, 2011",
+     "publisher": "",
+     "year": "2011",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "2010",
+   "papers": [
+    {
+     "authors": "Pu, Ken Q; Hassanzadeh, Oktie; Drake, Richard; Miller, Ren\u0329e J; ",
+     "title": "Online annotation of text streams with structured entities",
+     "publication": "Proceedings of the 19th ACM international conference on Information and knowledge management pp. 29-38, 2010, ACM",
+     "publisher": "ACM",
+     "year": "2010",
+     "type": "conference"
+    },
+    {
+     "authors": "Pu, Ken Q; Cheung, Russell; ",
+     "title": "Tag grid: supporting collaborative and fuzzy multidimensional queries of tagged datasets",
+     "publication": "Information Reuse and Integration (IRI), 2010 IEEE International Conference on pp. 364-367, 2010, IEEE",
+     "publisher": "IEEE",
+     "year": "2010",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "2009",
+   "papers": [
+    {
+     "authors": "Pu, Ken Q; ",
+     "title": "Keyword query cleaning using hidden markov models",
+     "publication": "Proceedings of the First International Workshop on Keyword Search on Structured Data pp. 27-32, 2009, ACM",
+     "publisher": "ACM",
+     "year": "2009",
+     "type": "conference"
+    },
+    {
+     "authors": "Bourennani, Farid; Pu, Ken Q; Zhu, Ying; ",
+     "title": "Visual integration tool for heterogeneous data type by unified vectorization",
+     "publication": "Information Reuse & Integration, 2009. IRI'09. IEEE International Conference on pp. 132-137, 2009, IEEE",
+     "publisher": "IEEE",
+     "year": "2009",
+     "type": "conference"
+    },
+    {
+     "authors": "Bourennani, Farid; Pu, Ken Q; Zhu, Ying; ",
+     "title": "Visualization and integration of databases using self-organizing map",
+     "publication": "Advances in Databases, Knowledge, and Data Applications, 2009. DBKDA'09. First International Conference on pp. 155-160, 2009, IEEE",
+     "publisher": "IEEE",
+     "year": "2009",
+     "type": "conference"
+    },
+    {
+     "authors": "Pu, Ken Q; Yu, Xiaohui; ",
+     "title": "Frisk: Keyword query cleaning and processing in action",
+     "publication": "2009 IEEE 25th International Conference on Data Engineering pp. 1531-1534, 2009, IEEE",
+     "publisher": "IEEE",
+     "year": "2009",
+     "type": "conference"
+    },
+    {
+     "authors": "Zhu, Ying; Howard, William; Pu, Ken Q; ",
+     "title": "Spatial Inference Using Networks of RFID Receiver: A Bayesian Approach.",
+     "publication": "GLOBECOM pp. 06-Jan, 2009",
+     "publisher": "",
+     "year": "2009",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "2008",
+   "papers": [
+    {
+     "authors": "Zhu, Ying; Pu, Ken Q; ",
+     "title": "Adaptive multicast tree construction for elastic data streams",
+     "publication": "IEEE GLOBECOM 2008-2008 IEEE Global Telecommunications Conference pp. 05-Jan, 2008, IEEE",
+     "publisher": "IEEE",
+     "year": "2008",
+     "type": "conference"
+    },
+    {
+     "authors": "Pu, Ken Q; Zhu, Ying; ",
+     "title": "Modeling and synthesis of service composition using tree automata",
+     "publication": "Information Reuse and Integration, 2008. IRI 2008. IEEE International Conference on pp. 46-51, 2008, IEEE",
+     "publisher": "IEEE",
+     "year": "2008",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "2007",
+   "papers": [
+    {
+     "authors": "Pu, Ken Q; Zhu, Ying; ",
+     "title": "Efficient indexing of heterogeneous data streams with automatic performance configurations",
+     "publication": "Scientific and Statistical Database Management, 2007. SSBDM'07. 19th International Conference on pp. 34-34, 2007, IEEE",
+     "publisher": "IEEE",
+     "year": "2007",
+     "type": "conference"
+    },
+    {
+     "authors": "Chandel, Amit; Koudas, Nick; Pu, Ken Q; Srivastava, Divesh; ",
+     "title": "Fast identification of relational constraint violations",
+     "publication": "2007 IEEE 23rd International Conference on Data Engineering pp. 776-785, 2007, IEEE",
+     "publisher": "IEEE",
+     "year": "2007",
+     "type": "conference"
+    },
+    {
+     "authors": "Pu, Ken Q; ",
+     "title": "Service description and analysis from a type theoretic approach",
+     "publication": "Data Engineering Workshop, 2007 IEEE 23rd International Conference on pp. 379-386, 2007, IEEE",
+     "publisher": "IEEE",
+     "year": "2007",
+     "type": "conference"
+    },
+    {
+     "authors": "Pu, Ken Q; Zhu, Ying; ",
+     "title": "Efficient Indexing of Heterogeneous Data Streams with Automatic Performance Tuning",
+     "publication": "SSDBM\u06ea07 pp. 34-42, 2007",
+     "publisher": "",
+     "year": "2007",
+     "type": "conference"
+    },
+    {
+     "authors": "Zhu, Ying; Pu, Ken Q; ",
+     "title": "Fast Archiving and Querying of Heterogeneous Sensor Data Streams",
+     "publication": ", 2007",
+     "publisher": "",
+     "year": "2007",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "2006",
+   "papers": [
+    {
+     "authors": "Pu, Ken; Hristidis, Vagelis; Koudas, Nick; ",
+     "title": "Syntactic rule based approach toweb service composition",
+     "publication": "22nd International Conference on Data Engineering (ICDE'06) pp. 31-31, 2006, IEEE",
+     "publisher": "IEEE",
+     "year": "2006",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "2005",
+   "papers": [
+    {
+     "authors": "Yu, Xiaohui; Pu, Ken Q; Koudas, Nick; ",
+     "title": "Monitoring k-nearest neighbor queries over moving objects",
+     "publication": "21st International Conference on Data Engineering (ICDE'05) pp. 631-642, 2005, IEEE",
+     "publisher": "IEEE",
+     "year": "2005",
+     "type": "conference"
+    },
+    {
+     "authors": "Pu, Ken Q; ",
+     "title": "Modeling, querying and reasoning about OLAP databases: a functional approach",
+     "publication": "Proceedings of the 8th ACM international workshop on Data warehousing and OLAP pp. 08-Jan, 2005, ACM",
+     "publisher": "ACM",
+     "year": "2005",
+     "type": "conference"
+    },
+    {
+     "authors": "Pu, Ken Q; Mendelzon, Alberto O; ",
+     "title": "Typed functional query languages with equational specifications",
+     "publication": "Proceedings of the 14th ACM international conference on Information and knowledge management pp. 233-234, 2005, ACM",
+     "publisher": "ACM",
+     "year": "2005",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "2004",
+   "papers": [
+    {
+     "authors": "Pu, Ken Q; ",
+     "title": "Functional Integration of Relational, OLAP and XML Data",
+     "publication": "Proceedings of VLDB Workshop on Information Integration on the Web (IIWeb-2004) pp. 97, 2004",
+     "publisher": "",
+     "year": "2004",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "2003",
+   "papers": [
+    {
+     "authors": "Mendelzon, Alberto O; Pu, Ken Q; ",
+     "title": "Concise descriptions of subsets of structured sets",
+     "publication": "Proceedings of the twenty-second ACM SIGMOD-SIGACT-SIGART symposium on Principles of database systems pp. 123-133, 2003, ACM",
+     "publisher": "ACM",
+     "year": "2003",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "2000",
+   "papers": [
+    {
+     "authors": "Pu, Ken Qian; ",
+     "title": "Modeling and control of discrete-event systems with hierarchical abstraction",
+     "publication": ", 2000, Citeseer",
+     "publisher": "Citeseer",
+     "year": "2000",
+     "type": "conference"
+    }
+   ]
+  },
+  {
+   "year": "1998",
+   "papers": [
+    {
+     "authors": "Pu, Ken Qian; ",
+     "title": "Theory Of Discrete Wavelet Transform And An Error Analysis Of The Pyramid Algorithm",
+     "publication": ", 1998, Citeseer",
+     "publisher": "Citeseer",
+     "year": "1998",
+     "type": "conference"
+    }
+   ]
   }
  ]
 }

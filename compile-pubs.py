@@ -2,15 +2,15 @@ import csv
 import itertools as i
 from pprint import pprint
 import json
-from StringIO import StringIO
+from io import StringIO
 
 def parse():
-    with open("./citations.csv") as f:
+    with open("./citations.csv", 'rb') as f:
         txt = f.read()
-        buf = StringIO(txt.decode('ascii', errors='ignore'))
+        buf = StringIO(txt.decode('utf-8', errors='ignore'))
 
         reader = csv.reader(buf)
-        reader.next()
+        next(reader)
         for line in reader:
             try:
                 authors, typ, title, publication, vol, num, pages, year, publisher = line
@@ -44,4 +44,4 @@ for typ, papers in i.groupby(pubs, key=lambda x: x["type"]):
             year = "Others"
         data[typ].append(dict(year=year, papers=list(papers)))
 
-print json.dumps(data, indent=1)
+print(json.dumps(data, indent=1))

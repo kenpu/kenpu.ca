@@ -1,7 +1,7 @@
 +++
 role = "undergrad"
 weight = 2016
-completed = false
+completed = true
 +++
 
 > **Calvin Lo**
